@@ -1,0 +1,99 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  } */
+/* ! Pseudo-Elements */
+
+/* Mit dem First-letter kann man den ersten BUchstaben stylen */
+section p::first-letter {
+  font-size: 40px;
+  background-color: red;
+  text-transform: uppercase;
+}
+
+section p::first-line {
+  background-color: blue;
+  color: white;
+}
+
+section p:last-of-type::first-line {
+  background-color: green;
+}
+
+/* Damit kann ich einer Liste Symbole ändern */
+article li::marker {
+  content: "✅";
+}
+
+/* So lösche ich die Listensymbole
+article li{
+    list-style: none;
+} */
+
+/* Damit kann ich das markieren des Textes stylen */
+*::selection {
+  background-color: yellow;
+  color: red;
+}
+
+/* Damit können wir das Dahinter eines HTML-Codes ändern; WICHTIG: das wird nicht in html auftauchen, kann zB nicht kopiert werden auf der Seite; before funktioniert genauso, nur für das Davor eines HTML-Codes */
+article h4:nth-of-type(1)::after {
+  content: " 📨 - Ich bin After";
+  color: violet;
+}
+
+article h4:nth-of-type(2)::before {
+  content: " 📨 Ich bin Before - ";
+  color: violet;
+}
+
+/* Damit verändere ich das Element, sobald ich mit der Maus darüber fahre */
+article h4:nth-of-type(1):hover {
+  background-color: red;
+}
+
+/* Der Zustand, wenn man auf das Element klickt */
+article h4:nth-of-type(2):active {
+  background-color: green;
+}
+
+/* ! Class */
+/* mit Klassen kann ich besser selektieren, welche Elemente ich stylen will */
+
+.btn {
+  background: grey;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 20px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: rgb(66, 63, 63);
+}
+
+.btn:active {
+  background-color: black;
+}
+
+.ich-bin-eine-class h4 {
+  background-color: aqua;
+}
+
+.hallo h4 {
+  text-decoration: line-through;
+}
+
+/* ! Class vs. ID */
+/* IDs werden wir nicht wirklich benutzen, die gab es früher, vor der Class; hat man früher eher mit JS in Verbindung gebracht */
+/* funktionieren genau wie Klassen, nur eine Besonderheit: IDs sind mächtiger als Klassen*/
+.class-bsp {
+  background-color: violet;
+}
+
+#id-bsp {
+  background-color: red;
+}
+

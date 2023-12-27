@@ -1,0 +1,47 @@
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Visitenkarten */
+section {
+  width: 230px;
+  height: 100px;
+  display: inline-block;
+  border: 1px solid black;
+  padding: 20px 30px;
+  margin: 20px 30px 20px 20px;
+}
+
+/* Abstände von Mail und Telefon */
+li {
+  margin-top: 10px;
+  padding-left: 40px;
+}
+
+/* Abstand von Mail nach oben */
+li:first-of-type {
+  margin-top: 30px;
+}
+
+/* default settings der Liste entfernen */
+ul {
+  list-style: none;
+}
+
+/* Icon der Mail ändern */
+ul li:first-of-type:before {
+  content: "\0040";
+  display: inline-block;
+  width: 1.5em;
+  margin-left: -1em;
+}
+
+/* Icon des Telefons ändern */
+ul li:last-of-type:before {
+  content: "\0023";
+  display: inline-block;
+  width: 1.5em;
+  margin-left: -1em;
+}

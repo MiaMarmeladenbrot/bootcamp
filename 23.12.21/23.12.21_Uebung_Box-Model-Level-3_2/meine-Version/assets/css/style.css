@@ -1,0 +1,147 @@
+@font-face {
+  font-family: Fredericka the Great;
+  src: url(../font/FrederickatheGreat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Open Sans;
+  src: url(../font/OpenSans-Regular.ttf);
+}
+
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+header h1,
+h2 {
+  font-family: Fredericka the Great;
+}
+
+/* Hintergrundbild */
+header {
+  background: url(../img/959-1445x811.jpg) no-repeat;
+  height: 630px;
+}
+
+/* Logo */
+header h1 {
+  color: white;
+  margin: 20px 50px;
+  height: 200px;
+  width: 200px;
+  padding-top: 15px;
+}
+
+/* Willkommenstext */
+header section {
+  color: white;
+  background-color: rgba(36, 29, 29, 0.728);
+  text-align: center;
+  height: 200px;
+  width: 270px;
+  margin: 20px auto;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+header section p {
+  font-family: Open Sans;
+  olor: white;
+  text-align: center;
+  margin: 15px auto;
+  font-size: 13px;
+}
+
+/* Read-More-Button */
+header section a {
+  font-family: Open Sans;
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+  margin-top: 30px;
+  width: 100px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+/* Navigationsleiste */
+nav {
+  font-family: Open Sans;
+  color: white;
+  float: right;
+  margin-top: 60px;
+  margin-right: 40px;
+}
+
+nav p {
+  font-size: 13px;
+  text-align: right;
+  padding: 5px;
+}
+
+/* - ab hier Main Teil */
+main h2 {
+  text-align: center;
+  margin: 30px auto;
+}
+
+/* Beschreibungstext */
+main p {
+  font-family: Open Sans;
+  text-align: center;
+  font-size: 16px;
+  height: 254px;
+  width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+/* Contact-Button */
+main article {
+  height: 50;
+  width: 150px;
+  border: 2px solid black;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+main a {
+  font-family: Open Sans;
+  color: black;
+  text-decoration: none;
+}
+
+/* # Wie kann ich den Abstand zwischen Button und p- Tag darüber verkleinern? */
+/* # Wie kann ich den Abstand zwischen den beiden a-tags jetzt noch vergrößern? */
+/* main a:first-of-type {
+  padding-bottom: 10px;
+} */
+
+/* - ab hier footer */
+footer {
+  background-color: rgb(60, 58, 58);
+  color: white;
+  height: 100px;
+}
+
+/* Textfeld */
+footer p {
+  width: 600px;
+  font-family: Open Sans;
+  font-size: 16px;
+  margin: 20px;
+}
+
+/* Footer-Button */
+footer a {
+  font-family: Open Sans;
+  color: white;
+  text-decoration: none;
+  height: 50;
+  width: 150px;
+  border: 1px solid white;
+  margin: 10px 10px 10px 20px;
+  padding: 10px 20px;
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+* {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: url(../img/959-1445x811.jpg) no-repeat center;
+  height: 100vh;
+  width: 100vw;
+}
+
+nav {
+  font-family: sans-serif;
+  padding: 15px;
+  text-align: right;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.641);
+}
+
+nav p {
+  display: inline;
+  margin: 10px;
+  font-size: 14px;
+}

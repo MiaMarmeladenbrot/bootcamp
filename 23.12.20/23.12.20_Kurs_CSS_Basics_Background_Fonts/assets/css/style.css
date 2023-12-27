@@ -1,0 +1,93 @@
+/* * Kommentare über CMD, Shift, 7 */
+
+/* - Font einbinden in CSS; immer ganz oben ins CSS:  */
+@font-face {
+  font-family: Rubik;
+  src: url(../font/Rubik-Regular.ttf);
+}
+
+/* # wenn alle Schriften eine Schriftart sein sollen, dann über html stylen, NIE DEN BODY stylen */
+html {
+  font-family: Rubik, Arial, Helvetica, sans-serif;
+  /* fallback-Schriftart ist in diesem Fall Arial und danach Helvetica und danach irgendeine Schriftart ohne Serifen, falls Rubik aus irgendeinem Grund nicht geladen werden kann */
+}
+
+article {
+  background-color: pink;
+}
+/* so steuert man sämtliche article-Elemente an */
+
+article p {
+  background-color: red;
+}
+/* stylt nur p-Element in article-Elementen */
+
+article a {
+  background-color: green;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  background-color: aliceblue;
+}
+/* Man kann mehrere Elemente gleichzeitig ansteuern, indem man sie mit Kommata verbindet */
+
+section ul li:last-child {
+  background-color: aquamarine;
+}
+/* Pseudo-Selektor "last-child" steuert das das letzte Element an, das auf die Auswahl zutrifft */
+
+section h3:last-of-type {
+  background-color: green;
+}
+/* Pseudo-Selektor "last-of-type" steuert das letzte Element dieses Typen an */
+
+h3:first-of-type {
+  background-color: hotpink;
+}
+/* Pseudo-Selektor "first-of-type" steuert das erste Element dieses Typen an */
+
+section ul li:nth-of-type(2) {
+  background-color: hotpink;
+  color: white;
+}
+/* Pseudo-Selektor "nth-of-type" + die gewünschte Zahl in Klammern steuert das jeweils gewünschte Element dieses Typen an; wenn ich mehrere Stellen ansteuern will, dann so: section ul li:nth-of-type(2),
+section ul li:nth-of-type(4) {
+  background-color: hotpink;
+  color: white;
+}*/
+
+section {
+  width: 300px;
+  /* height: 400px; --> ABER: feste Höhen nur vorsichtig benutzen, das führt schnell dazu, dass das ganze Layout zerschossen wird*/
+}
+
+footer article {
+  height: 200px;
+  background: url(../img/ai-generated-7975784_1280.webp) no-repeat center;
+  /* background: = short-hand properties für alle folgenden Befehle */
+  /* um absolute Pfad zu erstellen: background-image: url("https://cdn.pixabay.com/photo/2023/05/07/06/56/ai-generated-7975784_1280.jpg"); */
+  /* um relativen Pfad zu erstellen: */
+  /* background-image: url(../img/ai-generated-7975784_1280.webp);
+  background-repeat: no-repeat;
+  background-position: center; */
+  background-size: contain;
+  /* mit contain das Bild wird an die Größe der vorgegebenen Höhe angepasst */
+}
+
+footer h2 {
+  font-size: 20px;
+  text-decoration: line-through;
+  text-shadow: 30px -10px 9px black;
+  /* text-shadow: x-Achse + y-Achse + blurring1-10 + Farbe */
+  letter-spacing: 10px;
+  word-spacing: 10px;
+}
+
+footer h3 {
+  font-family: Rubik Doodle Shadow;
+}

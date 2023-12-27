@@ -1,0 +1,47 @@
+h1 {
+  font-size: 48px;
+  background-color: rgb(57, 55, 55);
+  text-shadow: 4px 4px 7px black;
+  font-family: Tahoma, Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+main p:first-child {
+  text-indent: 20px;
+  word-spacing: 20px;
+  font-family: Lucida Sans Unicode, Arial, sans-serif;
+}
+
+main p:nth-child(2) {
+  word-spacing: 10px;
+  text-indent: 60px;
+}
+
+main p span:first-child {
+  font-weight: bold;
+}
+
+main p span:last-child {
+  font-style: italic;
+}
+h2 {
+  text-shadow: 4px 4px 3px grey;
+  letter-spacing: 10px;
+}
+
+p:nth-child(4) {
+  line-height: 20px;
+  background-color: blueviolet;
+}
+
+main p:last-child {
+  line-height: 50px;
+  background-color: darkgrey;
+}
+
+footer p:last-child {
+  line-height: 50px;
+  background-color: black;
+  color: white;
+}

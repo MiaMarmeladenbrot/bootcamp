@@ -1,0 +1,85 @@
+/* ! - Benutze diese Befehle: ::first-line, ::first-letter, ::before, ::after, ::selection. */
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../font/Montserrat-Regular.ttf);
+}
+
+h3::first-letter {
+  color: #2e8b57;
+  font-size: 40px;
+}
+
+/* ! Liste */
+ul li:nth-of-type(1)::first-letter {
+  color: #00bfff;
+  font-size: 30px;
+  text-decoration: overline;
+}
+
+ul li:nth-of-type(2)::first-letter {
+  color: #c71585;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+ul li:nth-of-type(3)::first-letter {
+  color: #32cd32;
+  font-size: 30px;
+  text-decoration: line-through;
+}
+
+ul li:nth-of-type(3) {
+  text-decoration: line-through;
+}
+
+/* ! alle Absätze */
+section p {
+  font-weight: bold;
+}
+
+section p::selection {
+  background-color: yellow;
+  color: red;
+}
+
+section p::first-letter {
+  color: #c71585;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+section p::first-line {
+  color: #2e8b57;
+}
+
+/* ! 1. Absatz */
+section p:first-of-type {
+  text-indent: 40px;
+  color: #483d8b;
+  font-weight: unset;
+}
+
+section p:first-of-type::first-line {
+  font-size: 20px;
+  font-weight: bold;
+  color: #483d8b;
+}
+
+section p:first-of-type::first-letter {
+  font-size: 20px;
+  font-weight: bold;
+  color: #483d8b;
+}
+
+/* ! 2. 4. und 6. Absatz kleiner */
+section p:nth-of-type(2),
+section p:nth-of-type(4),
+section p:nth-of-type(6) {
+  font-size: 20px;
+}
+/* ! 3. und 5. Absatz kleiner */
+section p:nth-of-type(3),
+section p:nth-of-type(5) {
+  font-size: 10px;
+}

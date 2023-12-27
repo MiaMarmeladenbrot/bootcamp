@@ -1,0 +1,48 @@
+div {
+  height: 150px;
+  width: 150px;
+  margin: 50px;
+  background-color: #546a7b;
+  border: 15px solid #ed6a54;
+  /* box-shadow: 10px 5px 1px #546a7b; */
+}
+
+section {
+  height: 100px;
+  width: 100px;
+  background-color: #9bc1bc;
+  border: 10px solid #f4f1bb;
+  /* # Warum zentriert sich das hier dann nicht automatisch auch auf der y-Achse? */
+  margin: auto;
+  margin-top: 15px;
+}
+
+ul {
+  list-style: none;
+}
+/* entfernt die default settings */
+
+ul li::before {
+  content: "\0023";
+  /* die beiden folgenden brauchen wir für PLatz zwischen Punkt und TExt: */
+  display: inline-block;
+  width: 1em;
+  /* mit dem folgenden ändern wir den Abstand zum linken Rand */
+  margin-left: -1em;
+}
+
+ul li:nth-of-type(1)::before {
+  color: red;
+}
+
+ul li:nth-of-type(2)::before {
+  color: blue;
+}
+
+ul li:nth-of-type(3)::before {
+  color: green;
+}
+
+ul li:nth-of-type(4)::before {
+  color: violet;
+}

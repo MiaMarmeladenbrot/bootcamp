@@ -1,0 +1,44 @@
+/* !  Das erste Bild soll einen doppelten Rahmen erhalten. */
+div {
+  border: 5px solid rgb(187, 187, 127);
+  padding: 5px;
+  margin: 20px;
+}
+
+header {
+  background: url(../img/344-1445x811.jpg) no-repeat;
+  background-size: cover;
+  border: 5px solid rgb(187, 187, 127);
+  padding: 100px;
+}
+
+/* ! Über das zweite Bild wird ein grayscale-filter gelegt. */
+main {
+  background: url(../img/654-800x600.jpg) no-repeat;
+  background-size: cover;
+  height: 300px;
+  filter: grayscale(20);
+  margin: 20px;
+}
+
+/* ! Bei dem dritten Bild ist der Rahmen erst eckig und wird dann rund. */
+/* footer {
+  background: url(../img/959-1445x811.jpg) no-repeat;
+  background-size: cover;
+  height: 300px;
+  border: 20px solid violet;
+  border-radius: 0px 10px 30px 40px;
+  margin: 20px;
+} */
+
+footer {
+  background: url(../img/959-1445x811.jpg) no-repeat;
+  background-size: cover;
+  height: 300px;
+  border: 20px solid violet;
+  margin: 20px;
+}
+
+footer:hover {
+  border-radius: 40px;
+}

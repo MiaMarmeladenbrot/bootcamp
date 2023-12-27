@@ -1,0 +1,82 @@
+/* ! Überschrift */
+h1::first-letter {
+  color: #00796b;
+  font-size: 3em;
+}
+
+h1:hover::first-letter {
+  color: #4fc3f7;
+}
+
+/* ! Allgemein für p */
+p {
+  margin: 0;
+  padding-left: 40px;
+}
+
+/* ! Text-Dekorationen */
+
+p:nth-of-type(1),
+p:nth-of-type(2) {
+  text-decoration: line-through;
+}
+
+p:nth-of-type(3),
+p:nth-of-type(4) {
+  background-color: lightblue;
+}
+
+p:nth-of-type(5),
+p:nth-of-type(6) {
+  text-decoration: underline;
+}
+
+/* ! Icon vor den Aufgaben */
+p:nth-of-type(1)::before {
+  content: url(../img/check.png);
+}
+
+p:nth-of-type(2)::before {
+  content: url(../img/check.png);
+}
+
+p:nth-of-type(3)::before {
+  content: url(../img/doing.png);
+}
+
+p:nth-of-type(4)::before {
+  content: url(../img/doing.png);
+}
+
+p:nth-of-type(5)::before {
+  content: url(../img/no.png);
+}
+
+p:nth-of-type(6)::before {
+  content: url(../img/no.png);
+}
+
+/* ! Icons nach den Aufgaben */
+p:nth-of-type(1)::after {
+  content: url(../img/gym.png);
+}
+
+p:nth-of-type(2)::after {
+  content: url(../img/bill.png);
+}
+
+p:nth-of-type(3)::after {
+  content: url(../img/dance.png);
+}
+
+p:nth-of-type(4)::after {
+  content: url(../img/eat.png);
+}
+
+p:nth-of-type(5)::after {
+  content: url(../img/book.png);
+}
+
+p:nth-of-type(6)::after {
+  content: url(../img/organize.png);
+}

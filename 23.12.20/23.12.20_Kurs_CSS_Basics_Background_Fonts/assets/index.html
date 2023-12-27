@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hallo, ich bin die meta description" />
+    <meta name="keywords" content="CSS Basics" />
+    <!-- - Keywords sind aber nicht mehr relevant für Google-->
+    <meta name="author" content="Mia" />
+    <title>CSS Basics</title>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- #mit dem folgenden Code wird eine Font extern in HTML eingebunden, ist rechtlich aber schwierig! -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section>
+        <h1>Nicht semantische Elemente sind:</h1>
+        <ol>
+          <li>div</li>
+          <li>span</li>
+          <!-- - span kann nur innerhalb von Textelementen verwendet werden; ist notwendig, um bestimmte Wörter innerhalb eines Elementes anders zu stylen-->
+        </ol>
+      </section>
+      <hr />
+      <section>
+        <h2>Blockelemente und Inline Elemente</h2>
+        <p>
+          <a
+            href="https://www.w3schools.com/html/html_blocks.asp"
+            target="_blank"
+            >Weiterführende Infos</a
+          >
+        </p>
+        <h4>Beispiele für Block Elemente</h4>
+        <!-- - Block Elemente nehmen immer 100% der verfügbaren Breite an -->
+        <ul>
+          <li>article</li>
+          <li>section</li>
+          <li>div</li>
+          <li>footer</li>
+          <li>header</li>
+          <li>li</li>
+          <li>h1-h6</li>
+          <li>ol und ul</li>
+          <li>p</li>
+        </ul>
+
+        <article>
+          <p>Hallo Welt!</p>
+        </article>
+
+        <h4>Beispiele für Inline Elemente</h4>
+        <!-- - Länge der Inline Elemente richtet sich nach der Länge des Inhalts -->
+        <ul>
+          <li>a</li>
+          <li>button</li>
+          <li>img</li>
+          <li>input</li>
+          <li>label</li>
+          <li>textarea</li>
+          <li>span</li>
+        </ul>
+
+        <article>
+          <a href="#">Ich bin ein Link</a>
+        </article>
+      </section>
+      <hr />
+      <section>
+        <h2>3 Möglichkeiten, CSS in HTML einzubinden</h2>
+
+        <h3>1. Externe Datei ✅</h3>
+        <!-- -so machen wir's-->
+        <p>
+          Über >link rel="stylesheet" href="./style.css" /< in der Head wird die
+          Verknüpfung zum css-Dokument angelegt
+        </p>
+
+        <h3>2. Intern</h3>
+        <p>
+          Innerhalb des Tags style in der Head kann via CSS gestylet werden.
+          Aber wegen der besseren Übersichtlichkeit ist es in der Regel besser,
+          CSS auszulagern in eine eigene Datei.
+        </p>
+
+        <h3>3. Inline Styling</h3>
+        <p>
+          Das Styling wird direkt in den Tag geschrieben, den ich stylen möchte,
+          zB: >h3 style="background-color: red;"< stylt ausschließlich diese
+          eine H3 rot.
+        </p>
+      </section>
+      <hr />
+      <section>
+        <h2>Selektorspezifität</h2>
+        <ul></ul>
+        <li>
+          <a href="https://www.w3schools.com/css/css_specificity.asp"
+            >Weiteres dazu</a
+          >
+        </li>
+        <li>
+          bei Style Konflikten in CSS gewinnt der Befehl, der die niedrigeren
+          Zahlen hat (0, 1, 3)
+        </li>
+        <li>
+          mit !important kann diese Hierarchie aufgehoben werden (aber nicht
+          best practice)
+        </li>
+      </section>
+
+      <section>
+        <h2>Fonts einbinden</h2>
+        <ul>
+          <li>Extern einbinden - das kostet Geld, rechtliche Probleme!</li>
+          <li>Intern einbinden (runtergeladen zB über Google Fonts)</li>
+        </ul>
+      </section>
+      <hr />
+    </main>
+
+    <footer>
+      <h2>Ich bin eine andere Font-Family</h2>
+      <h3>3. Überschrift</h3>
+      <article>
+        <!-- <h4>Bild einfügen</h4>
+        <p>
+          Wenn das Bild content-relevant ist, kann es in HTML eingebaut werden.
+          Wenn nicht unbedingt content-relevant, sondern eher dekorativ, dann
+          eher in CSS einbauen.
+        </p> -->
+      </article>
+    </footer>
+  </body>
+</html>

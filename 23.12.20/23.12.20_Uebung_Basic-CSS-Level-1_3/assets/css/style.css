@@ -1,0 +1,28 @@
+html {
+  background-color: lightgrey;
+}
+
+nav {
+  background-color: darkgrey;
+}
+
+nav p a {
+  color: red;
+  text-decoration: underline;
+}
+
+a {
+  color: orange;
+}
+
+span {
+  color: green;
+}
+
+img {
+  width: 600px;
+}
+p img {
+  width: 400px;
+  height: 400px;
+}

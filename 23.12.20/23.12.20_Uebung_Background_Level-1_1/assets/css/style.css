@@ -1,0 +1,11 @@
+header section {
+  background-color: linen;
+}
+
+header section h2 {
+  background-color: lightblue;
+}
+
+main section {
+  background-image: url(https://images.ctfassets.net/4ivszygz9914/3z9uq7pUB7fFtm0OQR15P9/5eb57b7ab90c9d581f351cabfa09a630/wolken-teaser.jpg);
+}

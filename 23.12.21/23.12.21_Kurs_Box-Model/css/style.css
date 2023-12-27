@@ -1,0 +1,74 @@
+/* - zur Wiederholung von Pseudo Selektoren:*/
+li:nth-of-type(1) h5 {
+  color: violet;
+}
+/* zuerst steuert man damit die ersten li-typen an und definiert dann mit h5, welches li wir brauchen */
+
+li:nth-of-type(2) h5 {
+  color: green;
+}
+
+li:nth-of-type(3) h5 {
+  color: orange;
+}
+
+/*! ab hier startet der eigentliche Tag und das eigentliche Dokument */
+/* *mit dem Stern werden alle Elemente der Seite angesprochen; steht am Anfang des Dokuments, höchstens font ist noch darüber */
+* {
+  box-sizing: content-box;
+  /* damit es keine unschönen, ungewollten Ränder gibt, margin und padding für die ganze Seite auf 0; evtl. Abstände werden dann beim jeweiligen Element definiert */
+  margin: 0;
+  padding: 0;
+}
+
+main section:nth-of-type(1) {
+  background: aqua;
+  width: 100px;
+  height: 100px;
+}
+
+main section div {
+  width: 150px;
+  border: solid black 10px;
+  box-sizing: border-box;
+  /* box-sizing: content-box; => das ist unser default-Wert, den packen wir oben in unser allgemeines Styling unter **/
+}
+
+footer div {
+  background-color: violet;
+  width: 250px;
+  height: 350px;
+  border: solid black 10px;
+}
+
+footer div:nth-of-type(1) {
+  margin: 20px 40px;
+  /* mit margin:auto kann man Elemente sehr einfach und schnell zentrieren */
+
+  /* 
+  verschiedene Schreibweisen: 
+  margin: 10px; => gilt für alle Seiten
+margin: 10px 10px; => oben/unten und links/rechts
+margin: 10px 10px 20px 20px; => das ist dann im Uhrzeigersinn von oben ausgehend;
+margin-top: 10px; => Oberseite
+margin-right: 10px; => rechte Seite
+margin-bottom: 20px; => Unterseite
+margin-left: 20px; => linke Seite
+ */
+}
+
+footer div:nth-of-type(2) {
+  padding: 20px 40px;
+}
+
+footer section p {
+  background-color: aquamarine;
+  width: 300px;
+  height: 200px;
+  margin: 20px;
+  display: inline-block;
+}
+
+ul {
+  margin-left: 20px;
+}

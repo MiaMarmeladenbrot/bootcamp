@@ -1,0 +1,13 @@
+section {
+  background-color: white;
+  border: 5px solid grey;
+  /* padding: 25px; */
+  margin: 20px;
+}
+
+article {
+  background-color: aqua;
+  border: 5px solid black;
+  padding: 20px;
+  margin: 20px;
+}

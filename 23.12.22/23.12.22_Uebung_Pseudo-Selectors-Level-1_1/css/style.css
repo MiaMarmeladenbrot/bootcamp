@@ -1,0 +1,14 @@
+article a:visited {
+  color: #fcb941;
+  font-size: 3em;
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: #7e3661;
+  color: white;
+}
+
+a:active {
+  background-color: green;
+}
