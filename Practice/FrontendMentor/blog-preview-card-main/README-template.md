@@ -1,5 +1,9 @@
 # Frontend Mentor - Blog preview card solution
 
+## Challenge
+
+https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS
+
 ## Screenshot
 
 ![](./assets/images/screenshot.png)
