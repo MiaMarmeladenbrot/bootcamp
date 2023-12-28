@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hintergrund-Header */
+header {
+  width: 100vw;
+  height: 80vh;
+  background-color: #333333;
+  margin-bottom: 50px;
+}
+
+header img {
+  padding: 20px;
+  margin-bottom: 126px;
+}
+
+/* Textcontainer im Header */
+header div {
+  width: 300px;
+  height: 227px;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    45deg,
+    #ff00ffdd 20%,
+    #2727f0 60%,
+    #48cefa 100%
+  );
+}
+
+header h1 {
+  font-family: Gilda Display;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  padding: 10px;
+  /* # Wie rutscht & noch mit in die 2. Zeile? */
+}
+
+header p {
+  font-family: Maven Pro;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  padding: 10px;
+}
+
+/* Navigationsleiste */
+nav a {
+  display: block;
+  font-family: Maven Pro;
+  text-align: right;
+  text-decoration: none;
+  color: #8c8c8c;
+  padding: 10px 20px;
+}
+
+/* ? ab hier beginnt main */
+/* PROJECTS Bild */
+.heading img {
+  opacity: 0.05;
+  margin-bottom: -20px;
+  padding-left: 20px;
+}
+
+/* Textblock */
+.heading h2 {
+  font-family: Times;
+  font-weight: 700;
+  font-size: 56px;
+  margin-bottom: 50px;
+  padding-left: 20px;
+}
+
+.heading p {
+  font-family: Maven Pro;
+  font-size: 16px;
+  line-height: 19px;
+  width: 690px;
+  padding-left: 20px;
+  margin-bottom: 150px;
+}
+
+/* einzelne Projekte */
+.projects {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.projects img {
+  margin-bottom: 30px;
+  width: 50vw;
+}
+
+.projects a {
+  font-family: Times;
+  font-size: 32px;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  line-height: 37px;
+  letter-spacing: 2px;
+  padding: 20px 0px 20px 0;
+}
+
+.projects p {
+  font-family: Times;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2px;
+  padding: 20px 10px 50px 0;
+}

@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: url(./img/neom-d6NJmJ60B8M-unsplash.jpg) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+  background-color: rgba(52, 50, 50, 0.319);
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  width: 20vw;
+  margin: 0 auto;
+  padding: 1.5%;
+  position: relative;
+  top: 8%;
+}
