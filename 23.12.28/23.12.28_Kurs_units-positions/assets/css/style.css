@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ersteinstellung, damit ich sicher bin, dass das Bild maximal so breit ist wie Display */
+img {
+  max-width: 100%;
+}
+
+/* # UNITS */
+
+/* ! REM */
+/* - 1rem = 16px  */
+/* - Barrierefreiheit: Schrift wird automatisch skaliert, sollte jemand mit Sehbehinderungseinstellungen auf die Seite gehen */
+/* - unabhängig vom Elternelement */
+html {
+  /* benötigt man, damit man mit rem nicht rechnen muss. So kann ich zb eine h1 nun einfach auf 1.5 rem stellen = 16px */
+  font-size: 62.5%;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+/* ! EM */
+/* - abhängig vom Elternelement, Größe muss in Relation zum Elternelement vergeben werden */
+/* - kann auch einen Mix nehmen aus REM und EM, sollte man aber nicht */
+/* - verhält sich in der Sache ähnlich wie REM, aber du musst immer das Elternelement berücksichtigen und einberechnen */
+/* - REM ist Nachfolger und der bezieht sich immer gleich auf das HTML-tag oben, weshalb man dort die rechnung rausnehmen kann */
+/* - Skalierung funktioniert hier nur bedingt gut, rem ist besser */
+h1 {
+  font-size: 1.6em;
+}
+
+/* ! vh und vw */
+/* - 100vh nimmt immer die komplette Höhe ein, egal welcher Display  */
+.red {
+  background-color: red;
+  height: 100vh;
+  width: 50vw;
+}
+
+.green {
+  background-color: green;
+  width: 50%;
+  /* besser aber immer 50vw nehmen, weil es nicht ganz exakt 50 der Displaybreite sind, da er den Scrollbalken mit rausrechnet */
+  height: 100%;
+  /* Prozent funktioniert nicht, da etwas anderes mächtiger ist */
+}
+
+/* Clamp, um verschiedene Schriftgrößen idealerweise festzulegen */
+h3 {
+  font-size: clamp(1rem, 1.8vw, 2rem);
+}
+
+/* # POSITION */
+/* static (default), relative, absolute, fixed */
+
+/* ! relative + absolute */
+.absolut {
+  margin: 10px;
+  padding: 10px;
+  background-color: grey;
+  /* relative definiert das Elternelement, auf das sich die späterere Kind-Positionierung beziehen soll; sonst orientiert sich das Kind am obersten Elternelement, dem body */
+  position: relative;
+}
+
+.absolut img {
+  height: 30px;
+  width: 30px;
+  /* die folgende Positionierung bezieht sich jetzt auf die relative-Positionierung des articles und nicht mehr auf das body-Element */
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+/* ! fixed; braucht kein parent-Element, ist immer fix an einer Position --> back to top button*/
+.fixed img {
+  background-color: white;
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.5;
+}
+
+.fixed img:hover {
+  opacity: 1;
+}
+
+/* ! sticky = Mischung aus absolute und fixed; klebt oben am Rand, braucht kein Elternelement*/
+header {
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  margin-top: 60px;
+}
+
+header nav {
+  background-color: rgb(183, 183, 229);
+}
+
+header a {
+  padding: 5px 10px;
+}
