@@ -1,0 +1,109 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../assets/font/Montserrat-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+/* ! HEADER */
+/* Hintergrundbild im Header */
+header {
+  background: url(./img/bike.png) center no-repeat;
+  background-size: cover;
+  height: 90vh;
+  position: relative;
+}
+
+/* Textblock im Bild */
+.textblock {
+  text-align: center;
+  position: absolute;
+  top: 40vh;
+  left: 10vw;
+}
+
+.textblock h2 {
+  padding: 4vh;
+}
+
+/* Navigationsleiste */
+.leiste {
+  background-color: rgba(0, 0, 0, 0.285);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 90vh;
+  /* # Navigation stickt nicht - warum? */
+  padding: 2vh;
+}
+
+h1 {
+  color: white;
+  font-size: 2.5rem;
+}
+
+nav {
+  margin-right: 10vw;
+}
+
+header div a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0 5vw;
+}
+
+/* ! MAIN Bereich */
+/* ! Locations Übersicht */
+
+main article h2 {
+  text-align: center;
+  padding-top: 15vh;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
+main article hr {
+  margin: 0 auto;
+  width: 100px;
+  border-top: 10px solid black;
+  margin-bottom: 3vh;
+}
+
+.locations {
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.locations a {
+  padding: 20px;
+}
+
+/* ! Tour Dates */
+main article h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+
+main article p {
+  color: #333333;
+  font-size: 16px;
+  padding: 20px 0 20px 315px;
+}
+
+main article span {
+  color: #ff0000;
+}
