@@ -39,7 +39,7 @@ header {
   justify-content: space-between;
   position: sticky;
   top: 90vh;
-  /* # Navigation stickt nicht - warum? */
+  /* # Navigation stickt nicht - warum? Mit 90vh setz ich es unten ans Bild, dann funktinoiert sticky aber nicht; mit 0 sitzt es oben an der Seite und stickt nur, bis ich den body erreiche.*/
   padding: 2vh;
 }
 

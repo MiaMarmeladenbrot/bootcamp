@@ -88,32 +88,62 @@ nav a {
   width: 120px;
 }
 
-/* Bild rechts */
+/* ! Bild rechts */
+/* alternative Fassung mit nur einem Bild folgt auskommentiert:
 .bild {
   position: absolute;
   top: 210px;
   right: 300px;
-}
+} */
 
-/* * erste Fassung folgt unten auskommentiert, in der habe ich alle Bilder einzeln platziert und dann festgestellt, dass ich das Hintergrundbild nicht einzeln aus Figma exportieren kann , deshalb habe ich dann doch das div als Ganzes exportiert und als Gesamtbild eingefügt - siehe oben*/
-/* .bild {
+.bild {
   position: relative;
 }
 
 .frau {
   position: absolute;
-  top: 400px;
-  right: 250px;
+  top: 310px;
+  right: 290px;
 }
 
 .wolke1 {
   position: absolute;
   top: 300px;
-  right: 240px;
+  right: 300px;
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: wolke1run;
+  -webkit-animation-duration: 5s;
+}
+
+@-webkit-keyframes wolke1run {
+  0% {
+    left: 75%;
+  }
+  50% {
+    left: 80%;
+  }
+  100% {
+    left: 75%;
+  }
 }
 
 .wolke2 {
   position: absolute;
   top: 300px;
   right: 600px;
-} */
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: wolke2run;
+  -webkit-animation-duration: 3s;
+}
+
+@-webkit-keyframes wolke2run {
+  0% {
+    left: 62%;
+  }
+  50% {
+    left: 68%;
+  }
+  100% {
+    left: 62%;
+  }
+}
