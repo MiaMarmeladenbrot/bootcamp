@@ -1,0 +1,103 @@
+/* - Aufgabe: https://supercode.notion.site/Flexbox-Level-3_1-7049ac6ee65e4494a85d8f4a7f475ae1 */
+
+@font-face {
+  font-family: Raleway;
+  src: url(../assets/font/Raleway-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Raleway;
+}
+
+/* ! allgemeine Zentrierungsklasse */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ! Navigationsleiste */
+.navleiste {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vh 10vw;
+  color: darkgrey;
+  background-color: white;
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  gap: 3vw;
+  margin-top: 60px;
+}
+
+nav a {
+  text-decoration: none;
+  color: darkgrey;
+}
+
+nav a:hover {
+  color: black;
+}
+
+/* ! Bild-Teil */
+.image {
+  background: url(https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+    no-repeat center;
+  background-size: cover;
+  height: 55vh;
+  color: white;
+  padding-top: 30vh;
+}
+
+.image h2 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+.image p {
+  margin-bottom: 5vh;
+}
+
+/* ! Buttons auf dem Bild */
+.buttons {
+  display: flex;
+  gap: 2vw;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  width: 140px;
+  padding: 15px 20px;
+}
+
+/* ! Read-more-Button */
+.buttons a:first-of-type {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(49, 49, 207);
+}
+.buttons a:first-of-type:hover {
+  background-color: rgb(3, 3, 120);
+}
+
+/* ! Download-Button */
+.buttons a:last-of-type {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+}
+
+.buttons a:last-of-type:hover {
+  background-color: white;
+  color: black;
+}

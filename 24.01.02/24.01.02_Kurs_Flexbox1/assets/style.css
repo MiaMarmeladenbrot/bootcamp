@@ -1,0 +1,104 @@
+img {
+  max-width: 100%;
+}
+
+/* ! Flex Basic */
+/* ! erstes Beispiel */
+.basic {
+  display: flex;
+  align-items: center;
+  /* Textkasten ist vertikal mittig zentriert zum Bild */
+  gap: 4vw;
+  /* gap macht den Abstand überall, idealerweise realtive Werte, wird meist nur benutzt, nicht die einzelnen Definitionen */
+  /* row-gap: 80px;
+  column-gap: 10px; */
+  /* mit den oberen beiden kann man Abstand von oben nach unten und Abstand von links nach rechts einzeln definieren */
+}
+
+.basic img {
+  width: 200px;
+  /* meistens ist es so, dass ich dem Bild eine feste Grö0e gebe und drumherum alles mit responsive mache, damit das BIld nicht zu klein wird/sich zu sehr anpasst */
+}
+
+.basic div {
+  background-color: aqua;
+}
+
+/* ! zweites Beispiel */
+
+.box {
+  background-color: grey;
+  height: 80vh;
+  /* # nicht das Kind-Element (in diesem Fall .box div), das angesprochen werden soll, bekommt die flex-Eigenschaft, sondern das Elternelement! */
+  /* So vergeben wir das flex-Element */
+  display: flex;
+  /* x-Achse/Horizontale definieren: center, flex-end, flex-start (default, muss nicht definiert werden) */
+  justify-content: flex-end;
+  /* y-Achse/Vertikale definieren: */
+  align-items: center;
+}
+
+.box div {
+  height: 40px;
+  width: 40px;
+  background-color: red;
+}
+
+/* ! Flex Direction */
+.direction {
+  background-color: aqua;
+  height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  flex-direction: column;
+  /* damit kann die Anordnung der Boxen angepasst werden; row (default), column, row-reverse, column-reverse */
+}
+
+.direction div {
+  background-color: blue;
+  color: white;
+  height: 100px;
+  width: 100px;
+  /* Flex im flex verschachteln, damit die Kinder der div-Elemente auch geflext werden, in diesem Fall mittig zentriert werden sollen; den folgenden Code könnten wir auch in eine eigene Klasse namens .center auslagern und diese Klasse dann allen Elementen geben, die zentriert werden sollen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ! Flex Wrap */
+/* ! space-between */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* space-between macht den Abstand zwischen den Elementen so groß wie möglich (wird am häufigsten benutzt*/
+  /* space-around macht den Abstand um jedes Element noch mal drumherum */
+  /* space-evenly macht die Abstände um jedes Element gleich */
+}
+
+header h1 {
+  background-color: lightsalmon;
+}
+header nav {
+  background-color: lightsalmon;
+}
+
+/* ! Flex Wrap */
+.wrap {
+  background-color: lightblue;
+  display: flex;
+  gap: 5px;
+
+  flex-wrap: wrap;
+  /* eigentlich würde ab 120px (width unten) ein Scrollbalken entstehen, mit flex wird dieses Standardverhalten aufgehoben; da werden die Boxen immer kleiner; wenn sie aber doch umbrechen sollen, muss ich flex nutzen */
+}
+
+.wrap div {
+  background-color: blue;
+  color: white;
+  width: 120px;
+}

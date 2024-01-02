@@ -1,0 +1,79 @@
+/* - Aufgabe: https://supercode.notion.site/Flexbox-Level-3_2-e12a32165b864293883b1d7fadeb873d */
+
+@font-face {
+  font-family: Lato;
+  src: url(../assets/font/Lato-Regular.ttf);
+}
+
+* {
+  font-family: Lato;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ! Navigationsleiste im header */
+header {
+  background-color: white;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  display: flex;
+  /* damit Logo und Schrift immer nebeneinander stehen */
+  align-items: center;
+  gap: 1.2rem;
+  padding-right: 30px;
+}
+
+/* Logo einbauen */
+header h1::before {
+  padding: 10px;
+  content: url(../assets/img/logo.png);
+}
+
+/* um die beiden letzten Menü-Punkte nach rechts zu rücken */
+nav {
+  width: 100vw;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* um die Menüpunkte zu stylen */
+header nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+header nav a:hover {
+  background-color: rgba(211, 211, 211, 0.654);
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+/* ! Produkte in main */
+main section {
+  background-color: #d9e8e5;
+}
+
+/* stylen der Überschrift "Rings" */
+main section h2 {
+  padding: 50px 0 10px 10vw;
+}
+
+/* Anordnung der Produkt-divs */
+.products {
+  margin-left: 13vw;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+/* stylen der Produkt-divs */
+.products div {
+  padding: 10px;
+}
