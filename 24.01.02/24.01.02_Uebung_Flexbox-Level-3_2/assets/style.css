@@ -29,6 +29,7 @@ header h1 {
 }
 
 /* Logo einbauen */
+/* - Marzio: funktioniert, aber das würde man eher als img ins html vor die h1 setzen, da es einen inhaltlichen Wert hat */
 header h1::before {
   padding: 10px;
   content: url(../assets/img/logo.png);
