@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* ! gesamtes Formular */
+/* gesamtes Formular mittig */
+section {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Styling des gesamten Formulars */
+form {
+  background-color: black;
+  width: 320px;
+  height: 400px;
+  padding: 20px 10px;
+}
+
+/* ! SignUp/Login Buttons */
+.links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.links a {
+  text-decoration: none;
+  padding: 10px 40px;
+  border: none;
+}
+
+.links a:nth-of-type(2) {
+  background-color: rgb(65, 145, 65);
+}
+
+.links a:nth-of-type(1):hover {
+  background-color: rgb(94, 216, 94);
+}
+
+/* ! mittlerer Teil des Formulars */
+/* Positionierung */
+.mitte {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Überschrift */
+.mitte h1 {
+  margin-bottom: 30px;
+}
+
+/* ! Textfelder */
+.mitte input {
+  background-color: black;
+  padding: 5px;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+/* Abstand letztes Textfeld nach unten */
+.mitte input:nth-of-type(2) {
+  margin-bottom: 30px;
+}
+
+/* Passwort vergessen Link */
+.mitte a {
+  font-size: 10px;
+  margin-left: 190px;
+  color: rgb(65, 145, 65);
+  margin-bottom: 20px;
+}
+
+/* ! Login-Button */
+input[type="submit"] {
+  background-color: rgb(65, 145, 65);
+  width: 280px;
+  padding: 20px;
+  border: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+input[type="submit"]:active {
+  transform: scale(0.98);
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms-Level-3_1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <form>
+        <div class="header">
+          <h1>Sign up now!</h1>
+          <p>Sign up and tell us what you think of the site!</p>
+        </div>
+        <ol>
+          <li>Name & Address</li>
+          <div class="felder">
+            <!-- Name -->
+            <label for="name">Your Name</label>
+            <input id="name" type="text" />
+            <!-- Adresse -->
+            <label for="address">Your Address</label>
+            <input id="address" type="text" />
+          </div>
+
+          <li>Email & Phone</li>
+          <div class="felder">
+            <!-- Emaio -->
+            <label for="mail">Your Email Address</label>
+            <input id="mail" type="email" />
+
+            <!-- Phone -->
+            <label for="tel">Phone Number</label>
+            <input id="tel" type="tel" />
+          </div>
+
+          <li>Passwords</li>
+          <div class="felder">
+            <!-- Passwort -->
+            <label for="password">Password</label>
+            <input id="password" type="password" required />
+            <!-- Confirm Passwort -->
+            <label for="password2">Confirm Password</label>
+            <input id="password2" type="password" required />
+          </div>
+        </ol>
+        <div class="form-end">
+          <!-- submit-Button -->
+          <input type="submit" />
+
+          <!-- agree-checkbox -->
+          <input id="agree" type="checkbox" required />
+          <label for="agree">You agree to the terms and condition</label>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

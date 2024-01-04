@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <h1>Forms</h1>
+    <p>Welche gibt es?</p>
+
+    <!-- form = wrapper für eine Ansammlung von Infofeldern = Formular -->
+    <!-- es folgen die gängigsten/bekanntesten Felder -->
+    <form>
+      <!-- * Text -->
+      <!-- Text und Feld via for/id verbinden -->
+      <label for="vorname">Text:</label>
+      <input id="vorname" type="text" />
+      <!-- label kann input wrappen, ist semantisch aber nicht richtig -->
+
+      <!-- * Number -->
+      <label for="number">Number</label>
+      <input id="number" type="number" />
+      <!-- "ist ganz nett", aber benutzt Marzio so nicht unbedingt -->
+
+      <!-- * Tel -->
+      <label for="tel">Tel</label>
+      <input id="tel" type="tel" />
+      <!-- benutzt Marzio kaum, nutzt eher textfeld und macht Logik dahinter mit Java -->
+
+      <!-- * Email -->
+      <!-- @ muss enthalten sein -->
+      <label for="mail">Email</label>
+      <input id="mail" type="email" />
+
+      <!-- * Radio -->
+      <div>
+        <!-- bei Radio benötigen wir auch das "value", um es später mit JS auslesen zu können -->
+        <!-- damit nur eins ausgewählt werden kann, name vergeben -->
+        <label for="">Was machst du am liebsten?</label>
+        <input id="html" value="html" name="fav-lang" type="radio" />
+        <label for="html">HTML</label>
+
+        <input id="css" value="css" name="fav-lang" type="radio" />
+        <label for="css">CSS</label>
+
+        <input id="js" value="js" name="fav-lang" type="radio" />
+        <label for="js">JS</label>
+      </div>
+
+      <!-- * Checkboxen -->
+      <!-- mehrere Optionen können ausgewählt werden -->
+      <label for="checkbox">Checkbox1</label>
+      <input id="checkbox" type="checkbox" />
+
+      <label for="checkbox2">Checkbox2</label>
+      <input id="checkbox2" type="checkbox" />
+
+      <!-- * Date -->
+      <!-- stellt schon einen Kalender bereit -->
+      <label for="date">Date</label>
+      <input id="date" type="date" />
+
+      <!-- * Passwort -->
+      <label for="password">Passwort</label>
+      <input id="password" type="password" />
+
+      <!-- * file -->
+      <!-- brauche dafür aber JS im Hintergrund -->
+      <label for="file">File hochladen</label>
+      <input id="range" type="file" />
+
+      <!-- * range -->
+      <!-- hier benötigen wir einen min- und max-Wert, der die Spanne angibt; step ist optional, je nachdem wie viel dazwischen liegen soll -->
+      <label for="range">Range</label>
+      <input type="range" id="range" min="0" max="100" step="5" />
+
+      <br />
+      <!-- * button -->
+      <!-- benutzt Marzio nie -->
+      <input type="button" value="Klick mich" />
+
+      <br />
+      <!-- * Farbe -->
+      <input type="color" />
+      <br />
+
+      <!-- * Textarea -->
+      <label for="textarea">Textarea</label>
+      <textarea id="textarea" cols="30" rows="10"></textarea>
+
+      <!-- * Select & Option -->
+      <!-- Hier kann ich auch nur eine Option wählen, wie radio; benötigen hier ein value -->
+      <label for="cars">Select:</label>
+      <select id="cars">
+        <option value="audi">Audi</option>
+        <option value="bmw">BMW</option>
+        <option value="vw">VW</option>
+      </select>
+
+      <br />
+      <!-- * submit -->
+      <!-- ohne value steht immer "Senden" -->
+      <!-- wenn ich darauf klicke, wird die Seite automatisch neu geladen; das kann ich nur in JS später ändern -->
+      <input type="submit" value="Abschicken" />
+    </form>
+
+    <!-- * Placeholder -->
+    <!-- für UX ist besser, ein Label zu vergeben und keinen Placeholder -->
+    <label for="placeholder">Placeholder</label>
+    <input
+      id="placeholder"
+      type="text"
+      placeholder="bitte hier eintragen ..."
+    />
+
+    <!-- * disabled -->
+    <!-- Textfeld wird gesperrt; benutzt man eigentlich nur in Kombi mit JS -->
+    <label for="disabled">Disabled</label>
+    <input id="disabled" type="text" disabled />
+
+    <!-- * required -->
+    <!-- Pflichtfeld; kann aber von schlauen Leuten ausgehebelt werden -->
+    <label for="req">Pflichtfeld *</label>
+    <input id="req" type="text" required />
+  </body>
+</html>
