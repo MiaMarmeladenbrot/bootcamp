@@ -1,0 +1,51 @@
+section {
+  position: relative;
+  background-color: lightgrey;
+  height: 200px;
+  width: 300px;
+}
+
+div {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
+
+.red {
+  background-color: red;
+  transition: all 2s normal;
+}
+
+.green {
+  background-color: green;
+  top: 60px;
+  transition: all 1s 1s normal;
+}
+
+section:hover .red {
+  transform: translateX(500%);
+}
+
+section:hover .green {
+  transform: translateX(500%);
+}
+
+/* ! Alternative Lösung mit kayframe */
+/* section:hover .red {
+  animation: hover 3s cubic-bezier(0, 0, 0, 0.9) infinite;
+  /*  cubic-bezier(0.8, 0, 0.2, 0.2) Es ist noch nicht ganz der richtige zeitliche Abstand */
+/* }
+
+section:hover .green {
+  animation: hover 3s linear infinite 1s;
+}
+
+@keyframes hover {
+  0%,
+  100% {
+    left: 0%;
+  }
+  50% {
+    left: 90%;
+  }
+} */

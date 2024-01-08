@@ -1,0 +1,16 @@
+section {
+  background-color: lightgray;
+  height: 100px;
+}
+
+div {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+
+  transition: all 2s ease-in-out;
+}
+
+div:hover {
+  width: 100%;
+}
