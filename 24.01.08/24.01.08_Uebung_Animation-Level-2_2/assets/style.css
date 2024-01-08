@@ -1,0 +1,38 @@
+section {
+  border: 1px black solid;
+  height: 200px;
+  width: 200px;
+}
+
+div {
+  border-radius: 50px;
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  animation: ball 4s linear infinite;
+}
+
+div:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ball {
+  0%,
+  100% {
+    background-color: orange;
+  }
+  25% {
+    background-color: blue;
+    transform: translateX(300%);
+  }
+
+  50% {
+    background-color: yellow;
+    transform: translate(300%, 300%);
+  }
+
+  75% {
+    background-color: green;
+    transform: translateY(300%);
+  }
+}
