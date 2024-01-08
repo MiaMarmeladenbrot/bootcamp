@@ -1,0 +1,14 @@
+div {
+  background-color: salmon;
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  margin: 20px 30px;
+
+  transition: all 0.9s 0.2s ease-in-out;
+}
+
+div:hover {
+  transform: rotate(90deg) scale(1.5);
+  transform-origin: bottom left;
+}
