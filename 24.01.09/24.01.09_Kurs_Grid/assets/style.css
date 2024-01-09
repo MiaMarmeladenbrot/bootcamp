@@ -1,0 +1,107 @@
+div:nth-child(odd) {
+  background-color: orange;
+}
+
+div:nth-child(even) {
+  background-color: blue;
+}
+
+/* # GRID */
+/* # Grid-Eltern */
+/* *Column = horizontal ⬆️ wichtiger */
+/* *Row = vertikal ⬇️ benutzt man kaum */
+/* *display: grid wird wie bei flex dem Elternelement gegeben */
+
+.grid-parent {
+  background-color: lightgrey;
+  min-height: 100vh;
+  display: grid;
+  /* *grid verschiebt die Kacheln jetzt so, dass sie sich auf die gesamte Höhe des parents verteilen */
+
+  /* ! columns */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr;*/
+  /* *das sind 4 columns in der gleichen Größe
+   *1fr = 1 fraction = 1 Bruchteil der gesamten Seite 
+   *alle Einheiten können verwendet werden, aber nur mit fraction responsive */
+
+  grid-template-columns: repeat(4, 1fr);
+  /* * Kurzschreibweise, wenn alle columns in der gleichen Einheit und Größe angegeben werden */
+
+  /* grid-template-columns: 1fr 1fr 1fr 200px
+    * Schreibweise, wenn unterschiedliche Einheiten verwendet werden sollen */
+
+  /* ! Rows */
+  /* grid-template-rows: repeat(5, 1fr); */
+  /* *rows werden automatisch generiert, werden deshalb selten vergeben; schränkt das Design ein und führt sonst zu viel Rechnerei, damit wirklich genug Felder da sind; sollten zu wenig rows für die divs da sein, wird das Layout zerschossen */
+
+  /* ! Gap */
+  /* row-gap: 5px;
+  column-gap: 5px; */
+  gap: 5px;
+}
+
+/* # Grid-Kinder */
+section .box1 {
+  background-color: palevioletred;
+
+  /* ! Spannweite von divs über mehrere Spalten */
+  /* grid-column-start: 1;
+  grid-column-end: 4; */
+  /* *man zählt dabei nicht die Boxen, sondern die Umrandungslinien der Boxen; d.h. wenn ich 3 Boxen umschlie0en will, muss ich 4 (Linien) schreiben */
+  /* * mit span kann ich das ausschalten, sodass sich die Anweisung über die Elemente erstreckt und sich nicht an den Startlinien orientiert: */
+  /* grid-column-start: 1;
+    grid-column-end: span 3; */
+  /* * Kurzschreibweise: */
+  /* grid-column: 1 / span 2; */
+
+  /* * mit -1 nimmt die Spalte immer die komplette Breite ein */
+  /* grid-column: 1 / -1; */
+
+  /* *funktinioert auch für rows: */
+  /* grid-row-start: 1;
+  grid-row-end: 3;   
+  grid-row: 1 / 3;
+  */
+
+  /* ! align und justify-self */
+  /* *Flex im Grid nutzt man häufig, um zB Inhalte zu zentrieren */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  /* *geht auch via Grid selbst, aber komplizierter bzw. nur wirklich nutzbar, wenn das div keinen Hintergrund braucht und es nicht mehrere Elemente innerhalb des divs gibt:
+  * default = stretch; und diese Eigenschaft geht verloren, wenn ich die beiden Properties auf center setze; dann verliert man in diesem Beispiel die Hintergrundfarbe, die sich dann am Content und nicht mehr am Rand der Box orientiert */
+  /* align-self: center;
+  justify-self: center; */
+
+  /* *Kurzschreibform: justify align */
+  /* place-self: center center; */
+}
+
+/* * besser funktioniert es eben mit flex, kann ich gleich für alle divs vergeben: */
+.grid-parent div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+}
+
+/* ! Grid-Areas als 2. Möglichkeit */
+/* * im Prinzip eine alternative Schreibweise zu grid-column-start etc. (siehe oben) */
+/* *benutzt man selten, da es viel Schreibarbeit ist */
+/* *Damit können wir die Felder benennen ( Achtung, die Anzahl an FEldern muss auch zur Verfügung stehen, also mit grid-template-columns vorher definiert worden sein) */
+.grid-parent {
+  grid-template-areas:
+    "header header header header"
+    "main main main side"
+    "footer footer footer footer";
+  /* *eine Zeile in "" pro Zeile mit jeweils den zur Verfügung stehenden Spalten 
+   * Namen sind frei vergebbar */
+}
+
+/* * dann kann ich die Kind-Elemente mithilfe der benannten Felder platzieren */
+section .box10 {
+  background-color: brown;
+  grid-area: main;
+}
