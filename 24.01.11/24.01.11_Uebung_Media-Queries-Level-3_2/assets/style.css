@@ -1,0 +1,272 @@
+/* Das Design beinhaltet ein Layout für vier Bildschirmgrößen: 
+- Bis 600 px: Small
+- 601 px - 900 px: Medium
+- 901 px - 1200 px: Large 
+- unx alles größer als 1201 px: Extra Large.
+ */
+
+/* # Ausgangslage ist bis 600px: Small */
+
+@font-face {
+  font-family: RockSalt;
+  src: url(../assets/font/RockSalt-Regular.ttf);
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url(../assets/font/Nunito-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ! allgemeines Styling für die rot hinterlegten Überschriften */
+h3 {
+  font-family: Nunito;
+  font-size: 1.6rem;
+  color: white;
+  background-color: #df8480;
+  text-align: center;
+
+  padding: 3rem;
+}
+
+/* ! Header */
+header {
+  background: url(../assets/img/Dalamtiner.png) no-repeat center bottom;
+  background-size: cover;
+  height: 100vh;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  font-family: RockSalt;
+  text-align: center;
+  padding: 1rem;
+}
+
+header div h2 {
+  font-family: Nunito;
+  font-size: 1.6rem;
+  color: #df8480;
+  text-align: right;
+  margin-right: 7rem;
+}
+
+.large-header img {
+  display: none;
+}
+
+/* ! How it works */
+/* * h3 bereits oben gestylt */
+.how-to {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.how-to article {
+  padding-top: 3vh;
+}
+
+.how-to div {
+  margin: 0 3rem;
+}
+
+.how-to h4 {
+  font-family: Nunito;
+  font-weight: bold;
+  font-size: 4.8rem;
+  color: #df8480;
+}
+
+.how-to p {
+  font-family: Nunito;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* ! What's on the menu? */
+/* * h3 bereits oben gestylt */
+
+/* ! Mops-Bild */
+.mops {
+  background: url(../assets/img/Mops.png) center no-repeat;
+  background-size: cover;
+  height: 16rem;
+}
+
+/* ! Futterbild mit 3 Attributen */
+.food {
+  background: url(../assets/img/food.png) center no-repeat;
+  background-size: contain;
+  height: 25rem;
+  margin: 4rem;
+}
+
+/* ! Futter Infotext */
+.food-text {
+  font-size: 1.6rem;
+  font-family: Nunito;
+  text-align: center;
+  margin: 2rem 3rem;
+}
+
+/* ! Footer Subscribe Feld */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+}
+
+footer p {
+  font-size: 1.6rem;
+  font-family: Nunito;
+  font-weight: bold;
+
+  margin: 0 2rem 2rem 2rem;
+}
+
+/* ! Email Feld */
+footer input[type="email"] {
+  border-radius: 2rem;
+  padding: 1rem;
+  width: 35rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+::placeholder {
+  color: #7b7b7b;
+  font-family: Nunito;
+  font-weight: bold;
+}
+
+/* ! Subscribe Button */
+footer input[type="submit"] {
+  border-radius: 2rem;
+  padding: 1rem;
+  width: 35rem;
+  text-align: center;
+  background-color: #df8480;
+  color: white;
+  font-family: Nunito;
+  font-weight: bold;
+  margin-bottom: 5rem;
+}
+
+/* ! Socials Icons */
+.socials div img {
+  padding: 0 4rem;
+  margin-bottom: 2rem;
+}
+
+/* .socials div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8rem;
+  margin-bottom: 3rem;
+} */
+
+/* # Media Queries */
+/* ! Medium: 601 px - 900 px */
+@media only screen and (min-width: 601px) {
+  /* ? How-to-Section */
+  .how-to div {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-left: 4rem;
+    text-align: left;
+  }
+
+  /* ? Menu-Section */
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .mops {
+    background-size: cover;
+    height: 25rem;
+    margin: 0;
+  }
+
+  .food {
+    background-size: contain;
+    height: 25rem;
+    margin: 0;
+  }
+
+  /* ? Socials-Section */
+  .socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 22rem;
+  }
+
+  .socials div img {
+    padding: 1rem;
+    margin: 0;
+  }
+}
+
+/* ! Large: 901 px - 1200 px */
+
+@media only screen and (min-width: 901px) {
+  header {
+    background-image: none;
+  }
+
+  .large-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-color: #df8480;
+  }
+
+  .large-header img {
+    display: block;
+  }
+
+  header h1 {
+    background-color: white;
+    font-size: 2.4rem;
+  }
+
+  header div h2 {
+    font-family: Nunito;
+    font-size: 3.6rem;
+    color: white;
+    margin: 0;
+  }
+
+  /* # Warum ragen Bild und H2 ab 1000px Breite über den Header rüber? Wie ändere ich das? */
+  /* # Stattdessen doch lieber einen kompletten Header für Small+Medium sowie für Large+XLarge? */
+
+  /* header div {
+    margin-right: 0;
+  } */
+
+  /* # weitermachen mit h2 in Large, dann die nachfolgenden Sections */
+}

@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* * Overflow gibt an, ob ein übergroßer Inhalt in einem Element beschnitten oder scrollbar sein soll */
+.overflow {
+  background-color: chocolate;
+
+  /* height: 350px;
+  overflow: hidden;
+  overflow: visible;
+  overflow: scroll; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.overflow div {
+  width: 45vw;
+}
+
+.overflow img {
+  width: 45vw;
+}
+
+header {
+  background-color: aqua;
+}
+
+/* versteckte Burger-Navigation fürs Handy */
+.burger {
+  background-color: black;
+  width: 25px;
+  height: 5px;
+  margin: 2px;
+  border-radius: 10px;
+}
+
+.burger-wrapper {
+  top: 30px;
+  right: 30px;
+  position: fixed;
+  display: none;
+}
+
+/* Container */
+.container {
+  background-color: bisque;
+  padding: 30px;
+  margin: 30px;
+  height: 1500px;
+  position: relative;
+}
+
+.container img {
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+.backtotop {
+  height: 20px;
+  width: 20px;
+  bottom: 20px;
+  right: 20px;
+  position: fixed;
+  cursor: pointer;
+}
+
+/* ! Media Queries */
+/* * kommen meist ans Ende der CSS-Datei, könnten aber auch in eine eigene CSS-Datei, ist aber eher unüblich */
+/* * grobe Richtwerte für die verschiedenen Displays: */
+/* * Handy - 567px */
+/* * Tablet - 768px */
+/* * Desktop - 992px */
+
+/* * Desktop -> Handy = max-width */
+/* --> das bedeutet, dass das Design greift, wenn die maximale Breite erreicht oder unterschritten ist */
+
+/* * Handy -> Desktop = min-width*/
+/* --> das bedeutet, dass das Design greift, wenn die minimale Breite erreicht oder überschritten ist */
+
+/* * verschiedene Medientypen:  */
+/* - alle Endgeräte */
+/* - Print (reine Druckversion) */
+/* - Screen (Bildschirm) */
+
+/* * logische Operatoren: */
+/* - and = kombiniert verschiedene Media Queries */
+/* - not = negiert */
+/* - only = benötigt einen Medientyp, ist zur Unterstützung für alte Browser */
+/* - Komma/or = entscheidet zwischen verschiedenen Media Queries */
+
+/* ! Tablet */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  .overflow {
+    background-color: blueviolet;
+    flex-direction: column;
+    padding: 30px 40px;
+  }
+
+  .overflow div {
+    width: auto;
+  }
+
+  .overflow img {
+    width: auto;
+  }
+
+  .burger-wrapper {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+/* ! Handy */
+/* * Alternative Schreibweise; von/bis */
+/* - aber wird kaum benutzt, weil man den Code zu stark einschränkt */
+@media (min-width: 320px) and (max-width: 567px) {
+  h1 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .overflow {
+    background-color: green;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav a {
+    padding: 10px;
+    color: black;
+  }
+
+  header {
+    background-color: rgb(177, 118, 177);
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: 2;
+    /* schiebt Elemente auf höhere oder niedrigere Ebenen, MIT VORSICHT NUTZEN! */
+  }
+
+  .burger-wrapper {
+    display: none;
+  }
+
+  .container {
+    background-color: cornflowerblue;
+  }
+}
+
+/* ! Querbildschirm Handy */
+/* * and (orientation: portrait / landscape) */
+@media (max-width: 500px) and (orientation: landscape) {
+  .overflow {
+    background-color: brown;
+  }
+}
