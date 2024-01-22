@@ -1,0 +1,257 @@
+@font-face {
+  font-family: Ubuntu;
+  src: url(../font/Ubuntu-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Ubuntu, Arial, sans-serif;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Text-Stylings */
+h2 {
+  font-size: 8rem;
+  font-weight: 400;
+  line-height: 9.2rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
+h3 {
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 5.2rem;
+  color: #957554;
+  margin-bottom: 3rem;
+}
+
+h4 {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 4.6rem;
+  color: #ffffff;
+}
+
+p {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+.button {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #dfaa5b;
+  border-radius: 1rem;
+  padding: 1.5rem 10rem;
+}
+.button:hover {
+  transition: 1s;
+  background-color: #957554;
+  color: #dfaa5b;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+}
+header h1 {
+  margin-bottom: 3rem;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 8rem;
+}
+header nav a {
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  color: rgb(149, 117, 84);
+}
+header nav a:hover {
+  transition: 1s;
+  color: #dfaa5b;
+}
+header div {
+  background: linear-gradient(to top, rgba(7, 7, 7, 0.22), rgba(7, 7, 7, 0.22)), url(../img/hero_image.png) center no-repeat;
+  background-size: cover;
+  height: 80vh;
+  padding-top: 30rem;
+}
+header div p {
+  margin-bottom: 8rem;
+}
+
+/* Section: Facilities */
+main {
+  text-align: center;
+}
+main .facilities {
+  margin-bottom: 8rem;
+}
+main .facilities img {
+  margin: 0 7rem;
+}
+
+/* Section: Rooms & Rates */
+.rooms {
+  margin-bottom: 8rem;
+}
+.rooms article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.rooms article div {
+  height: 500px;
+  width: 630px;
+  border-radius: 10px;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.rooms article div .button {
+  padding: 2rem 5rem;
+}
+.rooms article div:nth-of-type(1) {
+  background-image: url(../img/standard_twin_room.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.rooms article div:nth-of-type(2) {
+  background-image: url(../img/standard_room.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.rooms article div:nth-of-type(3) {
+  background-image: url(../img/standard_view_room.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.rooms article div:nth-of-type(4) {
+  background-image: url(../img/deluxe_room.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Section: Get a room */
+.get-a-room {
+  padding: 4rem;
+  margin-bottom: 8rem;
+}
+.get-a-room h3 {
+  margin-bottom: 8rem;
+}
+
+/* Footer */
+footer {
+  background-color: #111111;
+  padding: 4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+footer .contacts img {
+  margin-bottom: 3rem;
+}
+footer .contacts p {
+  margin: 1rem;
+}
+footer .links {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: left;
+  justify-content: center;
+  gap: 2rem;
+}
+footer .links a {
+  color: #ffffff;
+}
+footer .subscribe {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: center;
+  gap: 1rem;
+}
+footer .subscribe h4 {
+  font-size: 3rem;
+  line-height: 3.4rem;
+}
+footer .subscribe input[type=email],
+footer .subscribe input[type=submit] {
+  width: 37rem;
+  height: 7.5rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 2.4rem;
+}
+footer .subscribe ::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 2.4rem;
+}
+footer .subscribe ::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 2.4rem;
+}
+footer .subscribe input[type=submit] {
+  background-color: #dfaa5b;
+  color: #ffffff;
+}
+footer .subscribe input[type=submit]:hover {
+  transition: 1s;
+  background-color: #957554;
+  color: #dfaa5b;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

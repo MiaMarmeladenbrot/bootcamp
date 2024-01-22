@@ -1,0 +1,253 @@
+@use "mixin";
+@use "variables";
+
+@font-face {
+  font-family: Ubuntu;
+  src: url(../font/Ubuntu-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Ubuntu, Arial, sans-serif;
+}
+
+.wrapper {
+  max-width: 1400px;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Text-Stylings */
+h2 {
+  @include mixin.text(8rem, 400, 9.2rem, variables.$light-color);
+  margin-bottom: variables.$margin-bottom-small;
+}
+
+h3 {
+  @include mixin.text(4.5rem, 400, 5.2rem, variables.$dark-color);
+  margin-bottom: variables.$margin-bottom-small;
+}
+
+h4 {
+  @include mixin.text(4rem, 500, 4.6rem, variables.$light-color);
+}
+
+p {
+  @include mixin.text(2.4rem, 500, 2.6rem, variables.$light-color);
+  margin-bottom: variables.$margin-bottom-small;
+}
+
+a {
+  text-decoration: none;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+}
+
+.button {
+  @include mixin.text(2.4rem, 500, 2.6rem, variables.$light-color);
+  text-decoration: none;
+  background-color: variables.$light-bck-color;
+  border-radius: 1rem;
+  padding: 1.5rem 10rem;
+
+  &:hover {
+    transition: 1s;
+    background-color: variables.$dark-color;
+    color: variables.$light-bck-color;
+  }
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-top: variables.$margin-bottom-small;
+  margin-bottom: variables.$margin-bottom-big;
+
+  h1 {
+    margin-bottom: variables.$margin-bottom-small;
+  }
+
+  nav {
+    @include mixin.flex(flex, row, nowrap, center, center, 20px);
+    margin-bottom: variables.$margin-bottom-big;
+
+    a {
+      text-decoration: none;
+      @include mixin.text(2.4rem, 500, 2.6rem, rgba(149, 117, 84, 1));
+
+      &:hover {
+        transition: 1s;
+        color: variables.$light-bck-color;
+      }
+    }
+  }
+
+  div {
+    background: linear-gradient(
+        to top,
+        rgba(7, 7, 7, 0.22),
+        rgba(7, 7, 7, 0.22)
+      ),
+      url(../img/hero_image.png) center no-repeat;
+    background-size: cover;
+    height: 80vh;
+    padding-top: 30rem;
+
+    p {
+      margin-bottom: variables.$margin-bottom-big;
+    }
+  }
+}
+
+/* Section: Facilities */
+main {
+  text-align: center;
+
+  .facilities {
+    margin-bottom: variables.$margin-bottom-big;
+
+    img {
+      margin: 0 7rem;
+    }
+  }
+}
+
+/* Section: Rooms & Rates */
+.rooms {
+  margin-bottom: variables.$margin-bottom-big;
+
+  article {
+    @include mixin.flex(flex, row, wrap, center, center, 20px);
+
+    div {
+      height: 500px;
+      width: 630px;
+      border-radius: 10px;
+
+      padding: variables.$padding;
+
+      @include mixin.flex(flex, column, nowrap, center, flex-end, 20px);
+
+      .button {
+        padding: 2rem 5rem;
+      }
+    }
+
+    div:nth-of-type(1) {
+      @include mixin.bg-img(
+        url(../img/standard_twin_room.png),
+        no-repeat,
+        center,
+        cover
+      );
+    }
+
+    div:nth-of-type(2) {
+      @include mixin.bg-img(
+        url(../img/standard_room.png),
+        no-repeat,
+        center,
+        cover
+      );
+    }
+
+    div:nth-of-type(3) {
+      @include mixin.bg-img(
+        url(../img/standard_view_room.png),
+        no-repeat,
+        center,
+        cover
+      );
+    }
+
+    div:nth-of-type(4) {
+      @include mixin.bg-img(
+        url(../img/deluxe_room.png),
+        no-repeat,
+        center,
+        cover
+      );
+    }
+  }
+}
+
+/* Section: Get a room */
+.get-a-room {
+  padding: variables.$padding;
+  margin-bottom: variables.$margin-bottom-big;
+
+  h3 {
+    margin-bottom: variables.$margin-bottom-big;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: variables.$dark-bck-color;
+  padding: variables.$padding;
+  @include mixin.flex(flex, row, wrap, center, space-between, 5rem);
+
+  .contacts {
+    img {
+      margin-bottom: variables.$margin-bottom-small;
+    }
+
+    p {
+      margin: 1rem;
+    }
+  }
+
+  .links {
+    @include mixin.flex(flex, column, nowrap, left, center, 2rem);
+
+    a {
+      color: variables.$light-color;
+    }
+  }
+
+  .subscribe {
+    @include mixin.flex(flex, column, wrap, left, center, 1rem);
+
+    h4 {
+      font-size: 3rem;
+      line-height: 3.4rem;
+    }
+
+    input[type="email"],
+    input[type="submit"] {
+      width: 37rem;
+      height: 7.5rem;
+      padding: 2rem;
+      border-radius: 1rem;
+      border: none;
+      font-size: 2.4rem;
+    }
+
+    ::placeholder {
+      color: rgba(0, 0, 0, 0.5);
+      font-size: 2.4rem;
+    }
+
+    input[type="submit"] {
+      background-color: variables.$light-bck-color;
+      color: variables.$light-color;
+
+      &:hover {
+        transition: 1s;
+        background-color: variables.$dark-color;
+        color: variables.$light-bck-color;
+        cursor: pointer;
+      }
+    }
+  }
+}

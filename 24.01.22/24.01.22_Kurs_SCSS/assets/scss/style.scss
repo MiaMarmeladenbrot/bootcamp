@@ -1,0 +1,127 @@
+/* Verknüpfungen zu meinen ausgelagerten Variablen; steht immer ganz oben im Dokument */
+@use "mixins";
+@use "variables";
+
+/* Variablen sind festgelegte Werte, die übers ganze Dokument verwendet werden, ähnlich wie root vorher */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* SCSS orientiert sich an der Struktur des html und kopiert diese; man muss nicht immer was Neues öffnen, sondern kopiert die html-Struktur und geht direkt in die Ebene, die man stylen will */
+/* aber trotzdem unterteilen, falls man später was im HTMl ändern muss; idealerweise also nach den sections im HTML unterteilen und dann reinnavigieren */
+
+section {
+  header {
+    margin-bottom: 2.5rem;
+
+    div {
+      h1 {
+        @include mixins.text(center, variables.$text-color, 1.8rem, "Verdana");
+        //   text-align: center;
+        // color: variables.$text-color;
+        // font-size: 1.8rem;
+        // font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: variables.$spacing;
+        // statt 1rem hier, wurde 1rem in den Variablen festgelegt und hier dahin verknüpft
+        background-color: variables.$bck-color;
+        text-decoration: underline;
+      }
+      h2 {
+        @include mixins.text(center, black, 1.5rem, "Verdana");
+      }
+    }
+  }
+}
+
+nav {
+  background-color: variables.$bck-nav;
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      list-style-type: none;
+      /* das folgende ist auskommentiert, weil wir es darunter auf die globale Ebene gesetzt haben, damit wir später bei einer anderen Klasse wieder auf dieses Styling zugreifen können */
+      //   .link-basic {
+      //     padding: variables.$spacing;
+      //     /* Elternselektor erlaub tden Zugriff auf äußeren Selektor (für Pseudoklassen) */
+      //     &:hover {
+      //       transition: 1s;
+      //       color: variables.$hover-color;
+      //     }
+      //   }
+    }
+  }
+}
+
+/* siehe oben: auf globale Ebene gesetzt statt auf lokale, damit ich später im Footer wieder auf dieses Styling zugreifen kann */
+.link-basic {
+  padding: variables.$spacing;
+  /* Elternselektor erlaub tden Zugriff auf äußeren Selektor (für Pseudoklassen) */
+  &:hover {
+    transition: 1s;
+    color: variables.$hover-color;
+  }
+}
+
+.middle-sec {
+  @include mixins.flex(flex, column, nowrap, center, center);
+  .text-container {
+    h3 {
+      @include mixins.text(center, black, 1.1rem, "Verdana");
+    }
+
+    p {
+      @include mixins.text(center, black, 0.8rem, "Verdana");
+    }
+  }
+
+  .img-container {
+    @include mixins.flex(flex, row, wrap, center, center);
+    img {
+      height: 12rem;
+      width: 17rem;
+      padding: variables.$spacing;
+    }
+  }
+}
+
+.bottom-sec {
+  @include mixins.flex(flex, row, wrap, center, center);
+  margin: variables.$spacing;
+  .first-block,
+  .second-block,
+  .third-block,
+  .fourth-block {
+    padding: variables.$spacing;
+    margin-bottom: variables.$spacing;
+    border: 5px solid blue;
+  }
+}
+
+footer {
+  height: 300px;
+  margin-top: variables.$spacing;
+  background-color: variables.$bck-nav;
+  ul {
+    @include mixins.flex(flex, row, nowrap, center, center);
+    margin: variables.$spacing;
+    li {
+      list-style-type: none;
+      padding: variables.$spacing;
+      .footer-link {
+        /* mit @extend greife ich auf das Styling für eine andere Klasse zu, das ich bereits festgelegt habe; dafür muss das Styling, auf das ich zugreife, allerdings unbedingt auf globaler Ebene sein, nicht auf lokaler Ebene */
+        @extend .link-basic;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

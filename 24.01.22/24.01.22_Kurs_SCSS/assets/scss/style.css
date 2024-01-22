@@ -1,0 +1,127 @@
+@charset "UTF-8";
+/* Verknüpfungen zu meinen ausgelagerten Variablen; steht immer ganz oben im Dokument */
+/* Variablen sind festgelegte Werte, die übers ganze Dokument verwendet werden, ähnlich wie root vorher */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* SCSS orientiert sich an der Struktur des html und kopiert diese; man muss nicht immer was Neues öffnen, sondern kopiert die html-Struktur und geht direkt in die Ebene, die man stylen will */
+/* aber trotzdem unterteilen, falls man später was im HTMl ändern muss; idealerweise also nach den sections im HTML unterteilen und dann reinnavigieren */
+section header {
+  margin-bottom: 2.5rem;
+}
+section header div h1 {
+  text-align: center;
+  color: aqua;
+  font-size: 1.8rem;
+  font-family: "Verdana";
+  padding: 1rem;
+  background-color: blue;
+  text-decoration: underline;
+}
+section header div h2 {
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+  font-family: "Verdana";
+}
+
+nav {
+  background-color: cornflowerblue;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  list-style-type: none;
+  /* das folgende ist auskommentiert, weil wir es darunter auf die globale Ebene gesetzt haben, damit wir später bei einer anderen Klasse wieder auf dieses Styling zugreifen können */
+}
+
+/* siehe oben: auf globale Ebene gesetzt statt auf lokale, damit ich später im Footer wieder auf dieses Styling zugreifen kann */
+.link-basic, footer ul li .footer-link {
+  padding: 1rem;
+  /* Elternselektor erlaub tden Zugriff auf äußeren Selektor (für Pseudoklassen) */
+}
+.link-basic:hover, footer ul li .footer-link:hover {
+  transition: 1s;
+  color: orange;
+}
+
+.middle-sec {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.middle-sec .text-container h3 {
+  text-align: center;
+  color: black;
+  font-size: 1.1rem;
+  font-family: "Verdana";
+}
+.middle-sec .text-container p {
+  text-align: center;
+  color: black;
+  font-size: 0.8rem;
+  font-family: "Verdana";
+}
+.middle-sec .img-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.middle-sec .img-container img {
+  height: 12rem;
+  width: 17rem;
+  padding: 1rem;
+}
+
+.bottom-sec {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+.bottom-sec .first-block,
+.bottom-sec .second-block,
+.bottom-sec .third-block,
+.bottom-sec .fourth-block {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 5px solid blue;
+}
+
+footer {
+  height: 300px;
+  margin-top: 1rem;
+  background-color: cornflowerblue;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+footer ul li {
+  list-style-type: none;
+  padding: 1rem;
+}
+footer ul li .footer-link {
+  /* mit @extend greife ich auf das Styling für eine andere Klasse zu, das ich bereits festgelegt habe; dafür muss das Styling, auf das ich zugreife, allerdings unbedingt auf globaler Ebene sein, nicht auf lokaler Ebene */
+  text-transform: uppercase;
+}/*# sourceMappingURL=style.css.map */
