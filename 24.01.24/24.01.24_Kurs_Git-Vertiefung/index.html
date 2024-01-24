@@ -132,60 +132,63 @@
                   BurgerMenu öffnen und in diesem arbeiten
                 </li>
               </ul>
+
+              <!-- ! Terminal-Befehle für Branches -->
+              <section>
+                <h3>Terminal-Befehle für branches</h3>
+                <ul>
+                  <li>
+                    in VSC sehe ich in der blauen Leiste unten links, auf
+                    welchem branch ich mich befinde
+                  </li>
+                  <li>
+                    git branch ⇒ zeigt alle vorhandenen branches ist (* zeigt
+                    an, auf welchem branch man sich gerade befindet)
+                  </li>
+                  <li>
+                    git branch Name ⇒ öffnet einen neuen branch, man bleibt aber
+                    auf dem main-branch
+                  </li>
+                  <li>git checkout Name ⇒ wechselt auf einen anderen branch</li>
+                  <li>
+                    git checkout -b Name ⇒ legt einen neuen branch an und
+                    wechselt direkt dorthin
+                  </li>
+                  <li>
+                    git branch -d Name ⇒ löscht den branch wieder (sollte erst
+                    passieren, wenn der branch erfolgreich mit main gemergt
+                    wurde)
+                  </li>
+                </ul>
+              </section>
             </div>
             <img
               src="./assets/img/Bildschirmfoto 2024-01-24 um 09.57.57.png"
               alt=""
             />
           </article>
-        </section>
 
-        <!-- ! Terminal-Befehle für Branches -->
-        <section>
-          <h3>Terminal-Befehle für branches</h3>
-          <ul>
-            <li>
-              in VSC sehe ich in der blauen Leiste unten links, auf welchem
-              branch ich mich befinde
-            </li>
-            <li>
-              git branch ⇒ zeigt alle vorhandenen branches ist (* zeigt an, auf
-              welchem branch man sich gerade befindet)
-            </li>
-            <li>
-              git branch Name ⇒ öffnet einen neuen branch, man bleibt aber auf
-              dem main-branch
-            </li>
-            <li>git checkout Name ⇒ wechselt auf einen anderen branch</li>
-            <li>
-              git checkout -b Name ⇒ legt einen neuen branch an und wechselt
-              direkt dorthin
-            </li>
-            <li>
-              git branch -d Name ⇒ löscht den branch wieder (sollte erst
-              passieren, wenn der branch erfolgreich mit main gemergt wurde)
-            </li>
-          </ul>
-        </section>
-
-        <!-- ! Terminal-Befehle fürs Mergen -->
-        <section>
-          <h3>Terminal-Befehle fürs Mergen</h3>
-          <ul>
-            <li>
-              git checkout main ⇒ in den branch navigieren, in den alles gemergt
-              werden sollen, zB main
-            </li>
-            <li>
-              git merge Name ⇒ mergt den benannten branch in den branch, auf dem
-              ich mich befinde
-            </li>
-            <li>
-              git add . / git commit -m “merge branch” / git push ⇒ gemergten
-              branch pushen
-            </li>
-            <li>git branch -d Name ⇒ löscht den gemergten branch (optional)</li>
-          </ul>
+          <!-- ! Terminal-Befehle fürs Mergen -->
+          <section>
+            <h3>Terminal-Befehle fürs Mergen</h3>
+            <ul>
+              <li>
+                git checkout main ⇒ in den branch navigieren, in den alles
+                gemergt werden sollen, zB main
+              </li>
+              <li>
+                git merge Name ⇒ mergt den benannten branch in den branch, auf
+                dem ich mich befinde
+              </li>
+              <li>
+                git add . / git commit -m “merge branch” / git push ⇒ gemergten
+                branch pushen
+              </li>
+              <li>
+                git branch -d Name ⇒ löscht den gemergten branch (optional)
+              </li>
+            </ul>
+          </section>
         </section>
 
         <!-- ! Wiederherstellen -->
