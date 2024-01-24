@@ -18,7 +18,7 @@ html {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1400px;
   min-width: 1000px;
   width: 100vw;
   margin: 0 auto;
@@ -30,13 +30,13 @@ img {
 
 h1 {
   font-family: KalamBold;
-  font-size: 6rem;
+  font-size: clamp(4rem, 3.5vw, 6rem);
   color: #374151;
 }
 
 h2 {
   font-family: KalamBold;
-  font-size: 4.8rem;
+  font-size: clamp(3rem, 4vw, 4.8rem);
   margin-bottom: 2rem;
   color: #374151;
 }
@@ -44,6 +44,8 @@ h2 {
 h3 {
   font-family: KalamBold;
   font-size: 3.8rem;
+  font-size: clamp(2.2rem, 3vw, 3.8rem);
+
   margin-bottom: 2rem;
   color: #374151;
 }
@@ -51,7 +53,7 @@ h3 {
 p,
 li {
   font-family: KalamReg;
-  font-size: 2rem;
+  font-size: clamp(2rem, 2vw, 2rem);
   color: #374151;
 }
 
@@ -70,23 +72,23 @@ a:hover {
 }
 
 /* ! Header */
-/* header {
+header {
   background: url(../assets/img/header-bare.png) center no-repeat;
   background-size: contain;
 
-  min-height: 90vh;
+  height: 100vh;
 }
 
 header section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 20vh;
-  margin: 0 20rem;
+  padding-top: 15rem;
+  margin: 0 37rem;
 }
 
 header div {
-  width: 60%;
+  max-width: 60%;
 }
 
 header div h1 {
@@ -98,34 +100,7 @@ header div p {
 }
 
 header img {
-  width: 30%;
-} */
-
-header section {
-  background: url(../assets/img/header-bare.png) center no-repeat;
-  background-size: cover;
-  position: relative;
-  min-height: 100vh;
-}
-
-header div {
-  position: absolute;
-  top: 200px;
-  left: 250px;
-}
-
-header img {
-  position: absolute;
-  top: 200px;
-  right: 80px;
-}
-
-header div h1 {
-  max-width: 16ch;
-}
-
-header div p {
-  max-width: 50ch;
+  max-width: 30%;
 }
 
 /* ! Main */
