@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Cheatsheet</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <article class="wrapper">
+      <!-- <header>
+        <section>
+          <div>
+            <h1>GitHub Cheatsheet</h1>
+            <p>
+              DER Onlinedienst zur Softwareentwicklung und Versionsverwaltung
+              für Softwareprojekte auf Git-Basis.
+            </p>
+          </div>
+          <img src="./assets/img/arrow-down.png" alt="" />
+        </section>
+      </header> -->
+
+      <header>
+        <section>
+          <div>
+            <h1>GitHub Cheatsheet</h1>
+            <p>
+              DER Onlinedienst zur Softwareentwicklung und Versionsverwaltung
+              für Softwareprojekte auf Git-Basis.
+            </p>
+          </div>
+          <img src="./assets/img/arrow-down.png" alt="" />
+        </section>
+      </header>
+
+      <main>
+        <!-- ! Repository erstellen -->
+        <h2>Repository erstellen</h2>
+        <ol>
+          <li>in Github auf das Plus Icon klicken</li>
+          <li>Owner, Title und Description hinzufügen</li>
+          <li>private oder public einstellen</li>
+          <li>Create repository</li>
+          <li>
+            Code kopieren
+            <ul>
+              <li>
+                git init ⇒ initialisiert ein neues Git Repository im aktuellen
+                Verzeichnis
+              </li>
+              <li>
+                git add README.md ⇒ optional; fügt eine readme-Datei hinzu
+              </li>
+              <li>
+                git commit -m "first commit" ⇒ erstellt ein neuen Commit mit dem
+                Kommentar "first commit", der alle Änderungen im Ordner
+                speichert
+              </li>
+              <li>
+                git branch -M main ⇒ Benennt den aktuellen Branch in main um
+                (hieß früher Master)
+              </li>
+              <li>
+                git remote add origin
+                https://github.com/MarzioCostantini/testgit.git ⇒ fügt einen
+                neuen Remote Repository hinzu mit dem Namen "origin"
+              </li>
+              <li>
+                git push -u origin main ⇒ lädt alle lokalen Commits auf das
+                Remote-Repository namens "origin" hoch und legt main als
+                Standard Branch fest. Das "-u"-Argument gibt an, dass der lokale
+                Branch beim nächsten Mal, wenn "git push" ausgeführt wird,
+                automatisch mit dem Remote Repository synchronisiert wird.
+              </li>
+            </ul>
+          </li>
+          <li>Wichtig: erst neuen Ordner erstellen und in VS öffnen</li>
+          <li>
+            in der Leiste oben über Terminal und dort neues Terminal öffnen
+          </li>
+          <li>Code bei diesem Ordner ins VS Terminal einfügen</li>
+        </ol>
+
+        <!-- ! Allgemeine -->
+        <h2>Allgemeine Terminal-Befehle</h2>
+        <ul>
+          <li>
+            git add . ⇒ fügt eine Änderung aus dem Arbeitsverzeichnis zur
+            staging-area hinzu (Bereich, bevor es hochgeladen wird)
+          </li>
+          <li>
+            git add _FILENAME_ ⇒ fügt nur eine bestimmte Datei zur staging-area
+            hinzu
+          </li>
+          <li>
+            git commit -m "Text" ⇒ erstellt einen neuen commit mit einer
+            Nachricht, die kurz und auf Englisch erklärt, was geändert wurde
+          </li>
+          <li>git push ⇒ lädt die Dateien aus der staging-area hoch</li>
+          <li>
+            git log ⇒ zeigt Historie (sämtliche commits) meines aktuellen
+            Repositorys
+          </li>
+          <li>
+            git log —oneline ⇒ zeigt nur die gemachten Änderungen, nicht Autor
+            und Datum
+          </li>
+          <li>
+            git status ⇒ zeigt mir aktuelle Änderungen, die noch nicht
+            hochgeladen sind im Repository (mit q kann ich die Ansicht
+            verlassen)
+          </li>
+          <li>git pull ⇒ lädt die geänderten Dateien herunter</li>
+        </ul>
+
+        <!-- ! Branches & mergen -->
+        <section class="branches-mergen">
+          <h2>Branches & Mergen</h2>
+          <article>
+            <div>
+              <ul>
+                <li>
+                  main branch ist mein Hauptzweig, den ich auch veröffentliche
+                </li>
+                <li>
+                  daneben kann ich mehrere Nebenbranches aufmachen, auf denen
+                  ich zB Sachen ausprobiere, die nicht gleich veröffentlicht
+                  werden sollen oder zu Problemen führen können
+                </li>
+                <li>
+                  erst wenn ich den Nebenbranch wieder mit dem Hauptbranch
+                  verbinde, werden die Änderungen des Nebenbranches in main
+                  übernommen und angezeigt
+                </li>
+                <li>
+                  ich mache quasi eine Kopie des aktuellen Projekts, in der ich
+                  arbeite, und erst wenn die Kopie funktioniert, merge ich sie
+                  mit dem main branch
+                </li>
+                <li>
+                  so besteht keine Gefahr für das eigentliche Projekt, das
+                  bisher ja gut funktionierte - wenn ich zB ein kompliziertes
+                  Burgermenü ergänzen will, kann ich einen Nebenbranch namens
+                  BurgerMenu öffnen und in diesem arbeiten
+                </li>
+              </ul>
+            </div>
+            <img
+              src="./assets/img/Bildschirmfoto 2024-01-24 um 09.57.57.png"
+              alt=""
+            />
+          </article>
+        </section>
+
+        <!-- ! Terminal-Befehle für Branches -->
+        <section>
+          <h3>Terminal-Befehle für branches</h3>
+          <ul>
+            <li>
+              in VSC sehe ich in der blauen Leiste unten links, auf welchem
+              branch ich mich befinde
+            </li>
+            <li>
+              git branch ⇒ zeigt alle vorhandenen branches ist (* zeigt an, auf
+              welchem branch man sich gerade befindet)
+            </li>
+            <li>
+              git branch Name ⇒ öffnet einen neuen branch, man bleibt aber auf
+              dem main-branch
+            </li>
+            <li>git checkout Name ⇒ wechselt auf einen anderen branch</li>
+            <li>
+              git checkout -b Name ⇒ legt einen neuen branch an und wechselt
+              direkt dorthin
+            </li>
+            <li>
+              git branch -d Name ⇒ löscht den branch wieder (sollte erst
+              passieren, wenn der branch erfolgreich mit main gemergt wurde)
+            </li>
+          </ul>
+        </section>
+
+        <!-- ! Terminal-Befehle fürs Mergen -->
+        <section>
+          <h3>Terminal-Befehle fürs Mergen</h3>
+          <ul>
+            <li>
+              git checkout main ⇒ in den branch navigieren, in den alles gemergt
+              werden sollen, zB main
+            </li>
+            <li>
+              git merge Name ⇒ mergt den benannten branch in den branch, auf dem
+              ich mich befinde
+            </li>
+            <li>
+              git add . / git commit -m “merge branch” / git push ⇒ gemergten
+              branch pushen
+            </li>
+            <li>git branch -d Name ⇒ löscht den gemergten branch (optional)</li>
+          </ul>
+        </section>
+
+        <!-- ! Wiederherstellen -->
+        <section>
+          <h2>vorherigen Zustand wiederherstellen</h2>
+          <ul>
+            <li>
+              git log bzw. git log —oneline ⇒ zeigt Historie an, in der ich die
+              ID des Zustands herausfinden kann, den ich wiederherstellten will
+            </li>
+            <li>
+              git checkout ID . ⇒ geht zum Zustand dieser ID zurück und löscht
+              alles, was dazwischen passiert ist
+            </li>
+            <li>
+              git add . / git commit -m “XYZ gelöscht” / git push ⇒ Änderungen
+              pushen
+            </li>
+          </ul>
+        </section>
+
+        <!-- ! Links -->
+        <section>
+          <h2>Weiterführende Links</h2>
+          <ul>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1S25amSlfIf8ng60moHFhkpt2vr94nGjI/view"
+                >Einführungsvideo von SuperCode</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1Twk5nKvjNQXPw3whGflCMgocx8Qdmvsr/view"
+                >Vertiefungsvideo von SuperCode</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1hj29cXGy2bOYBmtnp5FyG7vPFZ5sbR_H/view"
+                >GitHub for Dummies</a
+              >
+            </li>
+          </ul>
+        </section>
+      </main>
+    </article>
+  </body>
+</html>
