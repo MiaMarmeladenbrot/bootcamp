@@ -1,0 +1,26 @@
+.super-big {
+  font-size: 50px;
+  color: red;
+  background-color: blue;
+}
+
+.super-crazy {
+  background-color: green;
+  color: white;
+  font-size: 40px;
+}
+
+img {
+  height: 30px;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.846);
+  color: white;
+}
+
+/* Symbol für Dark-Light-Modus am besten als svg einbinden und dann ist es auch veränderbar im dark-Modus: */
+.dark svg {
+  fill: white;
+}

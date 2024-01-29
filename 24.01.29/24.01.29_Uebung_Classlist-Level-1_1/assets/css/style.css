@@ -1,0 +1,11 @@
+.headline-style {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: green;
+  font-size: 40px;
+}
+
+.list-style {
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+  font-size: 20px;
+}

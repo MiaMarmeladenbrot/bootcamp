@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Kurs JS Values</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <img
+          src="./assets/img/pngtree-dark-mode-icon-light-png-clipart-png-image_6661697.jpg"
+          alt=""
+          onclick="darkLight()"
+        />
+      </header>
+
+      <main>
+        <form onsubmit="getInputValueMarzio(event)">
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+          <br />
+          <label for="age">Age:</label>
+          <input type="number" id="age" />
+          <br />
+          <label for="range">Range:</label>
+          <input type="range" id="range" min="0" max="100" />
+          <br />
+          <label for="happy">Bist du happy?</label>
+          <input type="checkbox" id="happy" />
+          <br />
+          <label for="bday">Birthday: </label>
+          <input type="date" id="bday" />
+          <br />
+          <input type="submit" />
+        </form>
+
+        <h2 class="output-form"></h2>
+      </main>
+
+      <footer>
+        <h2 class="add" onclick="addClass()">Add a Class</h2>
+        <h3 class="super-crazy" onclick="removeClass()">Remove a Class</h3>
+      </footer>
+      <script src="./assets/js/main.js"></script>
+    </div>
+  </body>
+</html>

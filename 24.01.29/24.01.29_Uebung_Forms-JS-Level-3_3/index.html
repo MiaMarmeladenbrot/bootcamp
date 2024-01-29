@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <form>
+        <label for="rot">Rot:</label>
+        <input
+          type="range"
+          id="rot"
+          name="rot"
+          min="1"
+          max="5"
+          value="rot"
+          step="1"
+          onchange="changeBackground()"
+        />
+        <br />
+
+        <label for="gruen">Grün:</label>
+        <input
+          type="range"
+          id="gruen"
+          name="gruen"
+          min="1"
+          max="5"
+          value="gruen"
+          step="1"
+          onchange="changeBackground()"
+        />
+        <br />
+
+        <label for="blau">Blau:</label>
+        <input
+          type="range"
+          id="blau"
+          name="blau"
+          min="1"
+          max="5"
+          value="blau"
+          step="1"
+          onchange="changeBackground()"
+        />
+      </form>
+      <script src="./assets/js/main.js"></script>
+    </div>
+  </body>
+</html>
