@@ -11,6 +11,7 @@
     <div class="wrapper">
       <form>
         <label for="rot">Rot:</label>
+        <!-- ! min und max von 0 bis 255, weil das die range der rgb-Werte ist; Start-Value ist dann bei allen input-Feldern 0, weil rgb= 0 = weiß; diese Values werden dann durch die Verschiebung der jeweiligen Range geändert und das ändert dann via function die bg-color -->
         <input
           onchange="changeBackground()"
           type="range"
