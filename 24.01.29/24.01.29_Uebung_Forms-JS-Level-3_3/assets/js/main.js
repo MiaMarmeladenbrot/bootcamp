@@ -5,11 +5,12 @@
 // - Definiere in der Funktion changeBackground() neue value für "rot", "grün" und "blau".
 
 function changeBackground() {
-  const bgRot = document.querySelector("#rot");
-  const bgGruen = document.querySelector("#gruen");
-  const bgBlau = document.querySelector("#blau");
+  const bgRot = document.querySelector("#rot").value;
+  const bgGruen = document.querySelector("#gruen").value;
+  const bgBlau = document.querySelector("#blau").value;
 
   const wrapper = document.querySelector(".wrapper");
 
-  wrapper.classList.toggle("rot");
+  wrapper.style.backgroundColor =
+    "rgb(" + bgRot + "," + bgGruen + "," + bgBlau + ")";
 }
