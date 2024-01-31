@@ -25,7 +25,6 @@ function greaterThan() {
   if (document.getElementById("input").value >= 18) {
     document.body.querySelector("form h4").innerHTML =
       "Du kannst Shisha rauchen.";
-    ("Du kannst Shisha rauchen.");
   } else {
     document.body.querySelector("form h4").innerHTML =
       "Du kannst noch nicht Shisha rauchen.";
