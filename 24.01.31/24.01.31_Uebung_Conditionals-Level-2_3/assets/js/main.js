@@ -12,12 +12,14 @@ difference(35);
 
 // * Funktion, um bei einer Zahl größer als 27 die Differenz mit 2 zu multiplizieren und in allen anderen Fällen (x < 27) aber weiterhin die Differenz zw. der Zahl und 27 anzuzeigen; mit änderbarem Parameter num1:
 function difference27(num1) {
+  // Variable, um Differenz zu bestimmen:
+  let differenz = num1 - 27;
   // if-else-Bedingung - nur wenn die Zahl > als 27 ist, soll die Differenz multipliziert werden:
   if (num1 > 27) {
-    console.log((num1 - 27) * 2);
+    console.log(differenz * 2);
   } else {
-    // Und da es hier nur noch um Zahlen < 27 gehen kann, habe ich die Zahlen umgedreht, damit wir am Ende keine Minuswerte rauskriegen:
-    console.log(27 - num1);
+    // Andernfalls soll weiterhin nur die Differenz berechnet werden:
+    console.log(differenz);
   }
 }
 
