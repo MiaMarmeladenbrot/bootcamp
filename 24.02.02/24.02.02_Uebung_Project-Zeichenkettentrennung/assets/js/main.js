@@ -36,30 +36,42 @@ function trennen() {
     // wenn alle Felder befüllt sind, soll die Fehlermeldung wieder verschwinden:
     error.innerHTML = "";
 
-    // wenn davor = true und cutText in inputText enthalten ist (>0), dann soll die Zeichenkette vor dem gewählten Zeichen getrennt werden und in zwei Feldern ausgegeben werden:
-    if (davor === true && inputText.indexOf(cutText) > 0) {
-      // wenn die beiden Bedingungen erfüllt sind, soll Fehlermeldung wieder verschwinden:
+    // wenn cutText in inputText enthalten ist, soll die Trennung stattfinden, sonst Fehlermeldung:
+    if (inputText.indexOf(cutText) > 0) {
+      // wenn das erfüllt ist, soll Fehlermeldung wieder verschwinden:
       error.innerHTML = "";
 
-      // Ausgabe des ersten string-Teils:
-      vordererTeil.innerHTML = inputText.slice(0, inputText.indexOf(cutText));
+      // wenn davor = true, dann soll die Zeichenkette vor dem gewählten Zeichen getrennt werden und in zwei Feldern ausgegeben werden:
+      if (davor === true) {
+        // wenn das erfüllt ist, soll Fehlermeldung wieder verschwinden:
+        error.innerHTML = "";
 
-      // Ausgabe des zweiten string-Teils:
-      hintererTeil.innerHTML = inputText.slice(inputText.indexOf(cutText));
+        // Ausgabe des ersten string-Teils:
+        vordererTeil.innerHTML = inputText.slice(0, inputText.indexOf(cutText));
 
-      // wenn danach = true und cutText in inputText enthalten ist (>0), dann soll die Zeichenkette nach dem gewählten Zeichen getrennt werden (+1) und in zwei Feldern ausgegeben werden:
-    } else if (danach === true && inputText.indexOf(cutText) > 0) {
-      // wenn die beiden Bedingungen erfüllt sind, soll Fehlermeldung wieder verschwinden:
-      error.innerHTML = "";
+        // Ausgabe des zweiten string-Teils:
+        hintererTeil.innerHTML = inputText.slice(inputText.indexOf(cutText));
 
-      // Ausgabe des ersten string-Teils:
-      vordererTeil.innerHTML = inputText.slice(
-        0,
-        inputText.indexOf(cutText) + 1
-      );
+        // wenn danach = true, dann soll die Zeichenkette nach dem gewählten Zeichen getrennt werden (+1) und in zwei Feldern ausgegeben werden:
+      } else if (danach === true) {
+        // wenn die beiden Bedingungen erfüllt sind, soll Fehlermeldung wieder verschwinden:
+        error.innerHTML = "";
 
-      // Ausgabe des zweiten string-Teils:
-      hintererTeil.innerHTML = inputText.slice(inputText.indexOf(cutText) + 1);
+        // Ausgabe des ersten string-Teils:
+        vordererTeil.innerHTML = inputText.slice(
+          0,
+          inputText.indexOf(cutText) + 1
+        );
+
+        // Ausgabe des zweiten string-Teils:
+        hintererTeil.innerHTML = inputText.slice(
+          inputText.indexOf(cutText) + 1
+        );
+      } else {
+        // wenn weder davor noch danach ausgewählt ist, Fehlermeldung:
+        error.innerHTML =
+          "Bitte wähle, wo deine Zeichenkette getrennt werden soll";
+      }
     } else {
       // wenn zweite if-Bedingung (Zeichen aus cutText nicht in inputText vorhanden) nicht erfüllt ist, soll Fehlermeldung kommen:
       error.innerHTML = "Zeichen nicht vorhanden";
