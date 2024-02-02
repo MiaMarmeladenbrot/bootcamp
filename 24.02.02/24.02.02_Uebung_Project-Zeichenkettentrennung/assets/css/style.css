@@ -1,0 +1,31 @@
+body {
+  background-color: rgb(164, 214, 189);
+}
+
+section {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section form input[type="text"] {
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.vorderer-teil,
+.hinterer-teil {
+  color: rgb(46, 46, 230);
+}
