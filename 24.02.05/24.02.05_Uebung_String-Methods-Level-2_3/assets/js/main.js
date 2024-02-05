@@ -16,7 +16,7 @@ function highlight() {
 
     // und wenn der User-Input im Article-Text enthalten ist:
     if (articleText.indexOf(searchInput) > 0) {
-      error.innerHtml = "";
+      error.innerHTML = "";
 
       // sollen sämtliche Fundstellen von searchInput im articleText die Klasse highlight erhalten - dazu wähle ich das HTML des article-Elements an und ersetze so im Article-Text alle Suchergebnisse mit dem von einem span-Element inkl neuer Klasse umgebenen Suchergebnis:
       document.querySelector("article").innerHTML = articleText.replaceAll(
