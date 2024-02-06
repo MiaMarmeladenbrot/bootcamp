@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="trennen(event)">
+      <input
+        type="text"
+        placeholder="zu trennende Zeichenkette"
+        class="zeichenkette"
+      />
+
+      <br />
+      <input
+        type="text"
+        placeholder="Zeichenkette für Trennung"
+        class="trennung"
+      />
+
+      <br />
+      <input
+        type="radio"
+        id="davor"
+        name="davor-danach"
+        value="davor"
+        checked
+      />
+      <label for="davor">davor trennen</label>
+
+      <br />
+      <input type="radio" id="danach" name="davor-danach" value="danach" />
+      <label for="danach">danach trennen</label>
+
+      <br />
+      <input type="submit" value="Trennen" />
+
+      <h2>Vorderer Teil</h2>
+      <p class="davor"></p>
+      <h2>Hinterer Teil</h2>
+      <p class="danach"></p>
+    </form>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
