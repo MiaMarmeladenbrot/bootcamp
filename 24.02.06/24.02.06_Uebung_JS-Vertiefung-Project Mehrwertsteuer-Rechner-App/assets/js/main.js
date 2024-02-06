@@ -3,24 +3,30 @@
 // - Mit dieser App kannst du Netto zu Brutto oder Brutto zu Netto berechnen.
 // - Achte darauf, wenn du auf einen der Radio-Buttons klickst (Netto zu Brutto || Brutto zu Netto), dass sich der Text in den Feldern anpasst. Schaue dir beide Vorschaubilder genau an, um die Änderungen zu erkennen.
 
-//*ToDo
+//*ToDos
 // 1. Formular erstellen ✅
-// 2. Funktion mit Formular verknüpfen ✅
-// 3. Formular stylen ✅
-// 4. values auslesen ✅
-// 4.1. wenn substract ausgewählt ist, Bruttobetrags-Input anzeigen --> neue Funktion mit radio-Button verknüpfen? ✅
-// 5. outputs festlegen (außerhalb der Funktion)✅
-// 6. if/else für die vier Fälle NzB+19, NzB+7, BzN+19, BzN+7✅
+// 2. Formular stylen ✅
+// 3. Funktion1 mit radio-Buttons verknüpfen ✅
+//    3.1 values auslesen ✅
+//    3.2 outputs festlegen ✅
+//    3.3 if/else für entweder add oder substract === true ✅
+// 4. Funktion2 mit Formular verknüpfen ✅
+//    4.1 values auslesen ✅
+//    4.2 outputs festlegen (außerhalb der Funktion)✅
+//    4.3 if/else für die vier Fälle NzB+19, NzB+7, BzN+19, BzN+7✅
 
-// ! Funktion, um bei Auswahl des ersten Radio-Buttons "Was soll berechnet werden?" das Eingabe-Textfeld zu ändern (verknüpft via onchange mit beiden radio-Buttons):
+// ! Funktion, um bei Auswahl des ersten Radio-Buttons "Was soll berechnet werden?" das Eingabe-Textfeld in Brutto bzw. Netto zu ändern (verknüpft via onchange mit beiden radio-Buttons):
 const changeToSubstract = () => {
+  // value für ausgewählten radio-Button:
   const addOrSubstract = document.querySelector(
     "input[name='was']:checked"
   ).value;
 
+  // Variable für div-Container, in den Brutto- bzw. Nettobetrag eingegeben werden soll:
   const betragInput = document.querySelector(".betrag-eingabe");
   // console.log(betragInput);
 
+  // Variable für h2 gannz unten, in der Netto- bzw. Bruttobetrag stehen soll:
   const bruttoNettoOutput = document.querySelector(".brutto-netto-output");
   // console.log(bruttoNettoOutput);
 
@@ -41,7 +47,9 @@ const changeToSubstract = () => {
 };
 
 // ! Output-Werte außerhalb der folgenden Funktion, falls man später noch mal damit arbeiten will:
+// output-span-Element, in dem der errechnete MWS-Betrag stehen soll:
 const outputMws = document.querySelector(".mws");
+// output-span-Element, in dem errechneter Brutto- bzw. Nettobetrag stehen soll:
 const outputBruttobetrag = document.querySelector(".bruttobetrag");
 // console.log(outputMws);
 // console.log(outputBruttobetrag);
@@ -51,12 +59,12 @@ const mwsRechner = (event) => {
   event.preventDefault();
 
   //* values auslesen:
-  // value auslesen für radio-Buttons, was berechnet werden soll:
+  // value auslesen für radio-Buttons, ob NzB oder BzN berechnet werden soll:
   const addOrSubstract = document.querySelector(
     "input[name='was']:checked"
   ).value;
 
-  // value auslesen für radio-Buttons, mit welchem Satz gerechnet werden soll:
+  // value auslesen für radio-Buttons, mit welchem MWS-Satz gerechnet werden soll:
   const nineteenOrSeven = document.querySelector(
     "input[name='satz']:checked"
   ).value;
@@ -64,7 +72,7 @@ const mwsRechner = (event) => {
   // value auslesen für Eingabe des Betrags:
   const numberInput = document.querySelector("input[name='betrag']").value;
 
-  // logs
+  // logs:
   // console.log({ addOrSubstract });
   // console.log({ nineteenOrSeven });
   // console.log({ numberInput });
@@ -92,6 +100,8 @@ const mwsRechner = (event) => {
   } else if (addOrSubstract === "substract" && nineteenOrSeven === "prozent7") {
     outputMws.innerHTML = Math.round((numberInput / 1.07) * 0.07);
     outputBruttobetrag.innerHTML = Math.round(numberInput / 1.07);
+
+    // wenn keins davon, Fehlermeldung:
   } else {
     console.log("error");
   }
