@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.wrapper {
+  width: 35vw;
+  margin: 0 auto;
+}
+
 h1 {
   text-align: center;
   margin-top: 20px;
@@ -55,7 +60,7 @@ input[type="submit"] {
   padding: 5px 10px;
 }
 
-section {
+.ergebnis {
   border-top: 2px solid black;
 }
 

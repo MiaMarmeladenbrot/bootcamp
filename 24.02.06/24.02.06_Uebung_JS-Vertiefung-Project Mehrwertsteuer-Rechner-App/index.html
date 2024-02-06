@@ -7,77 +7,79 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <h1>Mehrwertsteuer-Rechner</h1>
-    <article>
-      <form onsubmit="mwsRechner(event)">
-        <div>
-          <h2>Was soll berechnet werden?</h2>
-          <label for="add"
-            ><input
-              type="radio"
-              name="was"
-              id="add"
-              value="add"
-              checked
-              onchange="changeToSubstract()"
-            />
-            Mehrwertsteuer aufschlagen (Netto zu Brutto)</label
-          >
-          <label for="substract"
-            ><input
-              onchange="changeToSubstract()"
-              type="radio"
-              name="was"
-              id="substract"
-              value="substract"
-            />
-            Mehrwertsteuer abziehen (Brutto zu Netto)</label
-          >
-        </div>
+    <section class="wrapper">
+      <h1>Mehrwertsteuer-Rechner</h1>
+      <article>
+        <form onsubmit="mwsRechner(event)">
+          <div>
+            <h2>Was soll berechnet werden?</h2>
+            <label for="add"
+              ><input
+                type="radio"
+                name="was"
+                id="add"
+                value="add"
+                checked
+                onchange="changeToSubstract()"
+              />
+              Mehrwertsteuer aufschlagen (Netto zu Brutto)</label
+            >
+            <label for="substract"
+              ><input
+                onchange="changeToSubstract()"
+                type="radio"
+                name="was"
+                id="substract"
+                value="substract"
+              />
+              Mehrwertsteuer abziehen (Brutto zu Netto)</label
+            >
+          </div>
 
-        <div>
-          <h2>Mehrwertsteuersatz</h2>
-          <label for="prozent19"
-            ><input
-              type="radio"
-              name="satz"
-              id="prozent19"
-              value="prozent19"
-              checked
-            />
-            19%</label
-          >
-          <label for="prozent7">
-            <input type="radio" name="satz" id="prozent7" value="prozent7" />
-            7%</label
-          >
-        </div>
+          <div>
+            <h2>Mehrwertsteuersatz</h2>
+            <label for="prozent19"
+              ><input
+                type="radio"
+                name="satz"
+                id="prozent19"
+                value="prozent19"
+                checked
+              />
+              19%</label
+            >
+            <label for="prozent7">
+              <input type="radio" name="satz" id="prozent7" value="prozent7" />
+              7%</label
+            >
+          </div>
 
-        <div class="betrag-eingabe">
-          <label for="betrag19"
-            >Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<input
-              type="number"
-              id="betrag19"
-              value="1"
-              min="1"
-              name="betrag"
-          /></label>
-        </div>
-        <input type="submit" value="Berechnen" />
-      </form>
+          <div class="betrag-eingabe">
+            <label for="betrag19"
+              >Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<input
+                type="number"
+                id="betrag19"
+                value="1"
+                min="1"
+                name="betrag"
+            /></label>
+          </div>
+          <input type="submit" value="Berechnen" />
+        </form>
 
-      <section>
-        <h3>Ergebnis</h3>
-        <div>
-          <h2>Mehrwertsteuerbetrag</h2>
-          <p><span class="mws"></span> €</p>
-        </div>
-        <div>
-          <h2 class="brutto-netto-output">Bruttobetrag (Endpreis)</h2>
-          <p><span class="bruttobetrag"></span> €</p>
-        </div>
-      </section>
-    </article>
+        <section class="ergebnis">
+          <h3>Ergebnis</h3>
+          <div>
+            <h2>Mehrwertsteuerbetrag</h2>
+            <p><span class="mws"></span> €</p>
+          </div>
+          <div>
+            <h2 class="brutto-netto-output">Bruttobetrag (Endpreis)</h2>
+            <p><span class="bruttobetrag"></span> €</p>
+          </div>
+        </section>
+      </article>
+    </section>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
