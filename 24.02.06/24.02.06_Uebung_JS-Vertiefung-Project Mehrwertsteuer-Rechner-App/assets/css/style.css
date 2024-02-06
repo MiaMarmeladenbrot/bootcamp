@@ -64,11 +64,11 @@ input[type="submit"] {
   border-top: 2px solid black;
 }
 
-section h3 {
+.ergebnis h3 {
   margin: 10px 0;
   color: blue;
 }
 
-section div:first-of-type {
+.ergebnis div:first-of-type {
   margin-bottom: 10px;
 }
