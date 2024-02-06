@@ -57,7 +57,7 @@ console.log(Math.floor(num6)); //--> 16
 console.log(Math.random()); //--> 0.xxxxx
 
 // gibt uns eine zufällige Zahl zw. 0 & 3 raus:
-console.log(Math.random() * 3); //--> 1.xxx - 2.xxx
+console.log(Math.random() * 3); //--> 0.xxx - 2.xxx
 
 // gibt uns eine zufällige, gerundete Zahl zw. 0 & 3 raus:
 console.log(Math.round(Math.random() * 3)); //-> 0, 1, 2 oder 3

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-Vertiefung-Project Mehrwertsteuer-Rechner-App</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <h1>Mehrwertsteuer-Rechner</h1>
+    <article>
+      <form onsubmit="mwsRechner(event)">
+        <div>
+          <h2>Was soll berechnet werden?</h2>
+          <label for="add"
+            ><input
+              type="radio"
+              name="was"
+              id="add"
+              value="add"
+              checked
+              onchange="changeToSubstract()"
+            />
+            Mehrwertsteuer aufschlagen (Netto zu Brutto)</label
+          >
+          <label for="substract"
+            ><input
+              onchange="changeToSubstract()"
+              type="radio"
+              name="was"
+              id="substract"
+              value="substract"
+            />
+            Mehrwertsteuer abziehen (Brutto zu Netto)</label
+          >
+        </div>
+
+        <div>
+          <h2>Mehrwertsteuersatz</h2>
+          <label for="prozent19"
+            ><input
+              type="radio"
+              name="satz"
+              id="prozent19"
+              value="prozent19"
+              checked
+            />
+            19%</label
+          >
+          <label for="prozent7">
+            <input type="radio" name="satz" id="prozent7" value="prozent7" />
+            7%</label
+          >
+        </div>
+
+        <div class="betrag-eingabe">
+          <label for="betrag19"
+            >Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<input
+              type="number"
+              id="betrag19"
+              value="1"
+              min="1"
+              name="betrag"
+          /></label>
+
+          <!-- <label for="betrag7"
+            >Bruttoetrag (Preis inklusive Mehrwertsteuer) in Euro
+            <input type="number" id="betrag7" value="1" min="1"
+          /></label> -->
+        </div>
+        <input type="submit" value="Berechnen" />
+      </form>
+
+      <section>
+        <h3>Ergebnis</h3>
+        <div>
+          <h2>Mehrwertsteuerbetrag</h2>
+          <p class="mws">€</p>
+        </div>
+        <div>
+          <h2>Bruttobetrag (Endpreis)</h2>
+          <p class="bruttobetrag">€</p>
+        </div>
+      </section>
+    </article>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
