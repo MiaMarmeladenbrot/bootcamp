@@ -62,11 +62,6 @@
               min="1"
               name="betrag"
           /></label>
-
-          <!-- <label for="betrag7"
-            >Bruttoetrag (Preis inklusive Mehrwertsteuer) in Euro
-            <input type="number" id="betrag7" value="1" min="1"
-          /></label> -->
         </div>
         <input type="submit" value="Berechnen" />
       </form>
@@ -75,11 +70,11 @@
         <h3>Ergebnis</h3>
         <div>
           <h2>Mehrwertsteuerbetrag</h2>
-          <p class="mws">€</p>
+          <p><span class="mws"></span> €</p>
         </div>
         <div>
-          <h2>Bruttobetrag (Endpreis)</h2>
-          <p class="bruttobetrag">€</p>
+          <h2 class="brutto-netto-output">Bruttobetrag (Endpreis)</h2>
+          <p><span class="bruttobetrag"></span> €</p>
         </div>
       </section>
     </article>
