@@ -70,13 +70,16 @@ const mwsRechner = (event) => {
   ).value;
 
   // value auslesen für Eingabe des Betrags:
-  const numberInput = document.querySelector("input[name='betrag']").value;
+  const numberInput = Number(
+    document.querySelector("input[name='betrag']").value
+  );
 
   // logs:
   // console.log({ addOrSubstract });
   // console.log({ nineteenOrSeven });
   // console.log({ numberInput });
 
+  // # einfacher wäre es, wenn man den Prozent-radio-Buttons direkt einen value von 1.07 und 1.19 mitgibt und die ausliest und damit weiterarbeitet, das vereinfacht und verkürzt den Code - siehe Marzios Lösung
   //* Berechnung mit if/else-Bedingungen:
   // wenn NzB & 19% => Betrag * 0.19 & Betrag * 1,19:
   if (addOrSubstract === "add" && nineteenOrSeven === "prozent19") {
