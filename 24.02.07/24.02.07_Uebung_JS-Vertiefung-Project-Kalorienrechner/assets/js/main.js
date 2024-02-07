@@ -52,9 +52,14 @@ const calculate = (event) => {
     // inputGender > 0 &&
     // inputPhysicalActivity > 0
   ) {
+    // Fehlermeldung wieder löschen:
+    error.innerHTML = "";
+
     //* Berechnung:
     //* Grundumsatz, wenn weiblich ausgewählt wurde:
     if (inputGender === "female") {
+      error.innerHTML = "";
+
       const grundumsatzFemale = (
         655.1 +
         9.6 * inputWeight +
@@ -82,6 +87,8 @@ const calculate = (event) => {
 
       //* Grundumsatz, wenn männlich ausgewählt wurde:
     } else if (inputGender === "male") {
+      error.innerHTML = "";
+
       grundumsatzMale = (
         66.47 +
         13.7 * inputWeight +
@@ -106,6 +113,8 @@ const calculate = (event) => {
         4.1868 *
         inputPhysicalActivity
       ).toFixed(2);
+    } else {
+      error.innerHTML = "Fehler";
     }
   } else {
     error.innerHTML = "Bitte befülle alle Felder";
