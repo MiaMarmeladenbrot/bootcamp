@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+section {
+  width: 400px;
+  background-color: rgb(209, 200, 200);
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form select {
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(118, 116, 116);
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+  background-color: rgb(152, 15, 194);
+  color: white;
+}
+
+table {
+  width: 100%;
+  color: white;
+  border-radius: 5px;
+  background-color: rgb(101, 62, 113);
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 5px;
+}
+
+table tr:first-of-type {
+  background-color: rgb(152, 15, 194);
+  color: white;
+}
+
+table td:first-of-type {
+  width: 40%;
+}
+
+.error {
+  color: red;
+  margin: 10px 0;
+}

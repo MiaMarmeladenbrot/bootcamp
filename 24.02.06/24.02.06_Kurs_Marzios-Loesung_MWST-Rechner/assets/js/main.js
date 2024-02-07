@@ -35,11 +35,11 @@ const berechnen = (event) => {
   //   Logs von Values
   console.log({ bruttoNetto }, { siebenOderNeuzehnPro }, { inputVal });
 
-  //  Berachnung von 7% oder 19% Mwst
+  //  Netto: Berechnung von 7% oder 19% Mwst
   const mwst = Number((inputVal * siebenOderNeuzehnPro - inputVal).toFixed(2));
   console.log({ mwst });
 
-  //   Hier Berechnen wir die 7% oder 19% von betrag
+  //  Brutto: Berechnung von MWST und Restbetrag bei je 7% oder 19%
   const newMwst = Number((inputVal / siebenOderNeuzehnPro).toFixed(2));
   console.log({ newMwst });
 
