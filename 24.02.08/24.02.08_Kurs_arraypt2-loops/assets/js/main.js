@@ -88,7 +88,7 @@ highNumbers.sort((a, b) => {
 highNumbers.sort((a, b) => a - b);
 console.log(highNumbers); //--> 1, 2, 10, 32, 33, 100, 111, 222
 
-//* sort() groß -> klein bzw. Z -> A
+//* sort() groß -> klein
 highNumbers.sort((a, b) => b - a);
 console.log(highNumbers); //--> 222, 111, 100, 33, 32, 10,2, 1
 
@@ -98,6 +98,12 @@ console.log(highNumbers); //--> 222, 111, 100, 33, 32, 10,2, 1
 const reverseNum = [1, 2, 3, 4, 5];
 reverseNum.reverse();
 console.log(reverseNum); //--> 5, 4, 3, 2, 1
+
+//* sort + reverse
+// sortiert von Z-A
+let languages = ["German", "English", "French"];
+languages.sort().reverse();
+console.table(languages);
 
 //* filter
 // filtert die Werte nach bestimmten Kriterien und gibt neues array aus
