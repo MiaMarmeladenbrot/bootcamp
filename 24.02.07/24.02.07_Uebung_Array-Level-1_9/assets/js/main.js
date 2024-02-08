@@ -7,6 +7,7 @@
 // - Verwende die Shift-Methode, um 2 Werte von der Vorderseite deines Arrays zu entfernen.
 
 const numbers = [23, 54, 75];
+console.log(numbers);
 
 // - Verwende die Push-Methode, um 5 Werte in dein Array einzufügen.
 numbers.push(12, 50, 23, 40, 88);
