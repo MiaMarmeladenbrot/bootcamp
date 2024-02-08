@@ -94,7 +94,8 @@ console.log(highNumbers); //--> 222, 111, 100, 33, 32, 10,2, 1
 
 //* reverse
 // hat Marzio noch nie benutzt
-// dreht die Zahlen um
+// dreht die numbers bzw. strings um
+// nützlich um gemeinsam mit sort() Wörter von Z - A zu sortieren, siehe unten
 const reverseNum = [1, 2, 3, 4, 5];
 reverseNum.reverse();
 console.log(reverseNum); //--> 5, 4, 3, 2, 1
