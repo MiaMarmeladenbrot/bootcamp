@@ -9,8 +9,18 @@
 let fahrenheit = [0, 32, 45, 50, 75, 80, 99, 120];
 console.table(fahrenheit);
 
-const celsius = fahrenheit.map((grad) => ((grad - 32) / 1.8).toFixed(0));
+// ! Allgemeine Funktion:
+const calculate = (array) => {
+  return array.map((data) => Math.round((data - 32) / 1.8));
+};
+
+// ! Funktionsaufruf mit Werten von Fahrenheit:
+const celsius = calculate(fahrenheit);
 console.table(celsius);
 
-const celsius1 = fahrenheit.map((grad) => Math.round((grad - 32) / 1.8));
-console.table(celsius1);
+// Vorabüberlegungen ohne allgemeine Funktion:
+// const celsius = fahrenheit.map((grad) => ((grad - 32) / 1.8).toFixed(0));
+// console.table(celsius);
+
+// const celsius1 = fahrenheit.map((grad) => Math.round((grad - 32) / 1.8));
+// console.table(celsius1);
