@@ -1,0 +1,11 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40vh;
+}
+
+p {
+  color: rgb(9, 241, 9);
+}

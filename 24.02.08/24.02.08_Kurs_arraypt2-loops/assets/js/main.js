@@ -172,7 +172,7 @@ const nameFilterGroßKlein = filmTitel.filter((einzelneFilme) => {
 });
 console.table(nameFilterGroßKlein); //--> 16 Ergebnisse mit the und The
 
-// ! Schleifen / Loops
+// ! ====== Schleifen / Loops ======================
 // gibt mehrere Schleifentypen, heute geht es nur um Schleifen in Bezug auf array
 // machen eine Automatisierung eines array
 // können verschiedene Operationen in einer Schleife zusammenfassen
