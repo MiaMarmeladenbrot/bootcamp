@@ -52,7 +52,7 @@ const loopMe = (event) => {
         i++ // loop startet
       ) {
         loopArray.push("o"); // pusht die "o" in das leere array
-        console.log("gerade Zahl:", i);
+        console.log(`gerade Zahl ${userInput}, durchlaufener Loop: ${i}`);
       }
 
       //- wenn userInput ungerade ist, sollen kleines und großes o abwechselnd eingefügt werden:
@@ -65,12 +65,16 @@ const loopMe = (event) => {
         // ? wenn durchlaufener Loop gerade ist, soll ein kleines "o" eingefügt werden:
         if (j % 2 === 0) {
           loopArray.push("O");
-          console.log("ungerade Zahl, gerader Durchlauf:", j);
+          console.log(
+            `ungerade Zahl ${userInput}, durchlaufener Loop ist gerade: ${j}`
+          );
 
           // ? wenn durchlaufener Loop ungerade ist, soll ein großes "O" eingefügt werden:
         } else {
           loopArray.push("o");
-          console.log("ungerade Zahl, ungerader Durchlauf:", j);
+          console.log(
+            `ungerade Zahl ${userInput}, durchlaufener Loop ist ungerade: ${j}`
+          );
         }
       }
     }
