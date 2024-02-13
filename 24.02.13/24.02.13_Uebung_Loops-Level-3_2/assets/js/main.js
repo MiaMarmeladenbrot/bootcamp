@@ -13,7 +13,7 @@ for (
 ) {
   // dann: loop, um einzelne Werte/Indexe auf Teilbarkeit zu testen:
   for (
-    j = 2; // j bei 2 anfangen, damit "außer durch eins" gegeben ist
+    j = 2; // j steht für den Nenner, durch den geteilt wird; bei 2 anfangen, damit "außer durch eins" gegeben ist
     j < numArr[i]; // j muss kleiner als index-Wert im array sein, damit "außer durch sich selbst" gegeben ist und der Loop stoppt, bevor er index-Wert erreicht
     j++ // damit alle Werte ab j=2 nacheinander durchlaufen werden, bis eine Stelle vor dem jeweiligen index-Wert erreicht ist
   ) {
