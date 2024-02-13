@@ -47,9 +47,9 @@ const loopMe = (event) => {
     //- wenn userInput gerade ist, sollen nur kleine o eingefügt werden:
     if (userInput % 2 === 0) {
       for (
-        let i = 1; // Durchlauf des Loops von 1 bis userInput
-        i <= userInput; // immer nur so viele o hinzufügen, wie userInput da ist
-        i++ // loop startet
+        let i = 1; // Durchlauf des Loops ab 1
+        i <= userInput; // immer nur so viele o hinzufügen, wie userInput da ist (von 1 bis userInput)
+        i++ // 1++, loop
       ) {
         loopArray.push("o"); // pusht die "o" in das leere array
         console.log(`gerade Zahl ${userInput}, durchlaufener Loop: ${i}`);
@@ -58,9 +58,9 @@ const loopMe = (event) => {
       //- wenn userInput ungerade ist, sollen kleines und großes o abwechselnd eingefügt werden:
     } else if (userInput % 2 !== 0) {
       for (
-        let j = 1; // Durchlauf des Loops von 1 bis userInput
+        let j = 1; // Durchlauf des Loops ab 1
         j <= userInput; // immer nur so viele o/O hinzufügen, wie userInput da ist (von 1 bis userInput)
-        j++ // loop startet
+        j++ // 1++, loop
       ) {
         // ? wenn durchlaufener Loop gerade ist, soll ein kleines "o" eingefügt werden:
         if (j % 2 === 0) {
