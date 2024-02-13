@@ -47,31 +47,34 @@ const loopMe = (event) => {
     //- wenn userInput gerade ist, sollen nur kleine o eingefügt werden:
     if (userInput % 2 === 0) {
       for (
-        let i = 1; // ab 1, da 0 Fehlermeldung ausgeben soll (siehe oberes if)
+        let i = 1; // Durchlauf des Loops von 1 bis userInput
         i <= userInput; // immer nur so viele o hinzufügen, wie userInput da ist
         i++ // loop startet
       ) {
         loopArray.push("o"); // pusht die "o" in das leere array
+        console.log("gerade Zahl:", i);
       }
 
       //- wenn userInput ungerade ist, sollen kleines und großes o abwechselnd eingefügt werden:
     } else if (userInput % 2 !== 0) {
       for (
-        let j = 0; // Positionszählung startet immer bei 0
-        j < userInput; // wenn wir bei 0 starten, muss < sein und nicht <=
-        j++ // wird geloopt
+        let j = 1; // Durchlauf des Loops von 1 bis userInput
+        j <= userInput; // immer nur so viele o/O hinzufügen, wie userInput da ist (von 1 bis userInput)
+        j++ // loop startet
       ) {
-        // ? wenn Position geraden index hat, soll ein kleines "o" eingefügt werden:
+        // ? wenn durchlaufener Loop gerade ist, soll ein kleines "o" eingefügt werden:
         if (j % 2 === 0) {
-          loopArray.push("o");
-
-          // ? wenn Position ungeraden index hat, soll ein großes "O" eingefügt werden:
-        } else {
           loopArray.push("O");
+          console.log("ungerade Zahl, gerader Durchlauf:", j);
+
+          // ? wenn durchlaufener Loop ungerade ist, soll ein großes "O" eingefügt werden:
+        } else {
+          loopArray.push("o");
+          console.log("ungerade Zahl, ungerader Durchlauf:", j);
         }
       }
     }
-    // Output im HTML innerhalb der ersten if-else-Bedingung, damit Fehlermeldung von oben nicht überschrieben wird:
+    // Output im HTML innerhalb der ersten else-Bedingung, damit Fehlermeldung aus erster if-Bedingung nicht überschrieben wird:
     loopOutput.innerHTML = `L${loopArray.join("")}p`;
   }
 };
