@@ -235,7 +235,7 @@ console.log(data[1].download_url);
 btn.addEventListener("click", () => {
   // console.log("click läuft");
 
-  //* via Math.random zufälligen Index aus dem array auswählen:
+  //* via Math.random eine Zahl zw. 0 und maximaler Länge des array setzen:
   const randomNumber = Math.floor(Math.random() * data.length);
   // console.log(randomNumber);
 
