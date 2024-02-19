@@ -11,7 +11,9 @@
 const output = document.querySelector(".output");
 // console.log(output);
 let today = new Date();
-output.innerHTML = `${today.getDate()}/${today.getMonth()}/${today.getFullYear()}`;
+output.innerHTML = `${today.getDate()}/${
+  today.getMonth() + 1 //damit 2 und nicht 1 angezeigt wird
+}/${today.getFullYear()}`;
 
 // als Funktion:
 // // const todaysDate = () => {
