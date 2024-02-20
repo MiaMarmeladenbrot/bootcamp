@@ -1,0 +1,14 @@
+body {
+  height: 5000px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+div {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  margin-top: 2000px;
+}

@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(248, 184, 132);
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  background-color: rgb(222, 166, 166);
+  color: white;
+  width: 50px;
+  padding: 5px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+button {
+  background-color: rgb(222, 166, 166);
+  color: white;
+  width: 50px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
