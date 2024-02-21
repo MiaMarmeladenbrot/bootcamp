@@ -46,33 +46,18 @@ fetch("https://picsum.photos/v2/list")
       seeMoreBtn.setAttribute("href", singleImg.url);
       imgOutput.appendChild(seeMoreBtn);
 
-      // - alles ins HTML section .output schreiben:
+      // - Alternative: button mit click-Event-Listener:
+      // let seeMoreBtn = document.createElement("button");
+      // seeMoreBtn.textContent = "See more";
+      // imgOutput.appendChild(seeMoreBtn);
+
+      // seeMoreBtn.addEventListener("click", () => {
+      //   window.open(`${singleImg.url}`);
+      // });
+
+      // * alles ins HTML section .output schreiben:
       document.querySelector(".output").appendChild(imgOutput);
     });
   })
-
+  // * Fehlermeldung:
   .catch((err) => console.log(err));
-
-// ! =================================
-// * Lösungsidee mit download-url:
-// download-URL: https://picsum.photos/id/7/4728/3168
-//   fetch(`https://picsum.photos/id/${singleImg.id}/${singleImg.width}/${singleImg.height}`)
-// --> falscher Link!
-
-// * Lösungsidee mit Button & EventListener:
-// Button ins HTML:
-//   let seeMoreBtn = document.createElement("button");
-//   seeMoreBtn.textContent = "See more";
-//   imgOutput.appendChild(seeMoreBtn);
-
-// EventListener auf den Button legen:
-// seeMoreBtn.addEventListener("click", () => {
-//     // testen, ob unsplash-url angesprochen wird:
-//     // console.log(singleImg.url);
-
-//     fetch(singleImg.url)
-//       .then((res) => res.json())
-//       .then((url) => console.log(url))
-//       .catch((err) => console.log("Fehler beim single Fetch", err));
-//   });
-// --> geht nicht, weil CORS, mehr dazu: https://sentry.io/answers/why-does-my-javascript-code-receive-a-no-access-control-allow-origin-header-error-while-postman-does-not/
