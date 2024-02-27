@@ -17,7 +17,9 @@ const Introduction = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum incidunt
         odit deserunt quam nobis laborum nostrum voluptas dolorum ipsa debitis?
       </p>
-      <a href="#">resume</a>
+      <a className="button" href="#">
+        resume
+      </a>
     </section>
   );
 };
