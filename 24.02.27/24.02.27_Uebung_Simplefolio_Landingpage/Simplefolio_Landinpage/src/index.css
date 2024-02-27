@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../public/font/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url(../public/font/Roboto-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: RobotoBold, Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-family: RobotoBold, Arial, Helvetica, sans-serif;
+  color: #bbbbdc;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: RobotoBold, Arial, Helvetica, sans-serif;
+}
+
+h4 {
+  font-family: RobotoBold, Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+  color: #90a0d9;
+}

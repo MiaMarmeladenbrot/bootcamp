@@ -1,0 +1,35 @@
+.introduction {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.introduction h1 {
+  color: #afafd0;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.introduction h1 span {
+  color: #90a0d9;
+}
+
+.introduction h2 {
+  color: #bbbbdc;
+  margin-bottom: 20px;
+}
+
+.introduction p {
+  color: #afafd0;
+  width: 80ch;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.introduction a {
+  color: #8694cb;
+  text-decoration: none;
+  border: 1px solid #8694cb;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,36 @@
+.projects {
+  text-align: center;
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+.projects h2 {
+  text-transform: uppercase;
+}
+
+.projects article {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.projects article div {
+  max-width: 400px;
+  background-color: #2a304c;
+  padding: 20px;
+}
+
+.projects h3 {
+  color: #bbbbdc;
+  margin-bottom: 10px;
+}
+
+.projects p {
+  color: #8c9cd4;
+  margin-bottom: 10px;
+}
+
+.projects h4 {
+  color: #bbbbdc;
+  margin-bottom: 10px;
+}

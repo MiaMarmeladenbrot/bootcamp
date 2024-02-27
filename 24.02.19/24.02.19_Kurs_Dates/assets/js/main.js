@@ -54,7 +54,7 @@ let date6 = new Date().toLocaleDateString();
 console.log(date6);
 
 // * toLocaleString()
-// gibt Datum und Uhrzeit in einer lokaler Darstellung zurück
+// gibt Datum und Uhrzeit in einer lokaler  Darstellung zurück
 // orientiert sich an Zeitzone, die im Computer eingestellt ist
 // wandelt in string um
 let date7 = new Date().toLocaleString();

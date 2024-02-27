@@ -1,0 +1,5 @@
+/* CSS-Datei muss erst ins jsx ganz oben importiert werden */
+
+.home h1 {
+  background-color: red;
+}

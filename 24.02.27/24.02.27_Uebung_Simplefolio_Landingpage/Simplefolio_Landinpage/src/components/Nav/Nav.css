@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #b6b6d5;
+
+  padding: 20px;
+}
+
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #b6b6d5;
+}

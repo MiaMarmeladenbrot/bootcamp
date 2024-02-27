@@ -1,0 +1,20 @@
+.skills {
+  padding-bottom: 40px;
+}
+
+.skills h2 {
+  text-transform: uppercase;
+}
+
+.skills div {
+  display: flex;
+  justify-content: center;
+}
+
+.skills p {
+  color: #8c9cd4;
+  background-color: #2a304c;
+  padding: 10px 15px;
+  display: inline-block;
+  margin: 10px 30px;
+}
