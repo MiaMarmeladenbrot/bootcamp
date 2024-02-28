@@ -5,11 +5,7 @@ const Stars = (props) => {
   let rateItem = Math.floor(props.rate);
 
   for (let i = 0; i < rateItem; i++) {
-    if (i < rateItem) {
-      rating.push("⭐️");
-    } else {
-      rating.push("⭐️");
-    }
+    rating.push("⭐️");
   }
   return <p>{rating}</p>;
 };
