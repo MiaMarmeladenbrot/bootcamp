@@ -2008,19 +2008,14 @@ const Movies = () => {
 
   return (
     // * Variante mit Komponente:
-    <section>
-      <div className="grid-movies">
-        {movies.map((singleItem, index) => (
-          <div>
-            <MoviesItem item={singleItem} key={index} />
-          </div>
-        ))}
-      </div>
+    <section className="grid-movies">
+      {movies.map((singleItem, index) => (
+        <MoviesItem item={singleItem} key={index} />
+      ))}
     </section>
 
     // * Variante ohne Komponente:
-    // <section>
-    //   <div className="grid-movies">
+    // <section className="grid-movies">
     //     {movies.map((item, index) => (
     //       <div key={index}>
     //         <h2>{item.title}</h2>
@@ -2031,7 +2026,6 @@ const Movies = () => {
     //         <p>{item.rate}</p>
     //       </div>
     //     ))}
-    //   </div>
     // </section>
   );
 };

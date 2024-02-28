@@ -1,7 +1,8 @@
+import Stars from "../Stars/Stars";
 import "./MoviesItem.css";
 
 const MoviesItem = (props) => {
-  console.log(props.item);
+  // console.log(props.item.rate);
   return (
     <div>
       <h2>{props.item.title}</h2>
@@ -9,7 +10,8 @@ const MoviesItem = (props) => {
       <h3>{props.item.director}</h3>
       <p>{props.item.duration}</p>
       <p>{props.item.genre.join(", ")}</p>
-      <p>{props.item.rate}</p>
+      {/* <p>{props.item.rate}</p> */}
+      <Stars rate={props.item.rate} />
     </div>
   );
 };
