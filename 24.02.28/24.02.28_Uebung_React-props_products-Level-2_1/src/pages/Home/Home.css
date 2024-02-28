@@ -1,0 +1,10 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.product-grid div {
+  text-align: center;
+}

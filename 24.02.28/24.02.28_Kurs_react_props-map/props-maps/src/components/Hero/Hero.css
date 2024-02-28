@@ -1,0 +1,20 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+  background-color: aquamarine;
+  padding: 20px;
+}
+
+.hero div {
+  width: 50vw;
+}
+
+.hero img {
+  width: 50vw;
+}
+
+.reverse-box {
+  flex-direction: row-reverse;
+}

@@ -1,0 +1,13 @@
+.grid-movies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.grid-movies div {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: #2d2d2d;
+  color: white;
+  padding: 10px;
+}
