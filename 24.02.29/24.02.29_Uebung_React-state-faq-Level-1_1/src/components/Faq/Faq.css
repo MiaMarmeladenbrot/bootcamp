@@ -1,0 +1,36 @@
+.faq {
+  text-align: center;
+  padding: 20px;
+}
+
+.faq h1 {
+  margin-bottom: 20px;
+}
+
+.faq div {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(88, 86, 86);
+  color: white;
+  padding: 0 10px;
+  border-bottom: 2px solid white;
+}
+
+.faq div p {
+  padding: 15px;
+}
+
+.faq div button {
+  margin: 10px;
+  padding: 0 5px;
+}
+
+.faq article div:nth-of-type(2) {
+  color: lightgray;
+
+  display: none;
+}
+
+.faq article div:nth-of-type(2).show {
+  display: flex;
+}

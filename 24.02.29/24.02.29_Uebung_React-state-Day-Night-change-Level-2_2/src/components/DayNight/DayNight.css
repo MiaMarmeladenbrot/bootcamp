@@ -1,0 +1,24 @@
+.day-night article {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-night button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.day-night h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.night {
+  background-color: black;
+  color: white;
+}
