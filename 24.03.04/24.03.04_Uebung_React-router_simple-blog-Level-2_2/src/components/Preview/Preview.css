@@ -1,0 +1,16 @@
+.preview {
+  height: 40vh;
+}
+
+.preview img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.preview h3 {
+  margin-bottom: 32px;
+}

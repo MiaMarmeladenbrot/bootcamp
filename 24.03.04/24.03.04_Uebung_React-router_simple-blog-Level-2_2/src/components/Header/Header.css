@@ -1,0 +1,10 @@
+header {
+  background: url(../../../public/img/header-img.jpg) no-repeat center;
+  background-size: cover;
+
+  min-height: 50vh;
+
+  margin-top: -80px;
+
+  margin-bottom: 100px;
+}

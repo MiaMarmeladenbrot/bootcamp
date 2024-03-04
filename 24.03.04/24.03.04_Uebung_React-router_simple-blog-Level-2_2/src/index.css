@@ -1,0 +1,66 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../public/font/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: RobotoBold;
+  src: url(../public/font/Roboto-Bold.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2 {
+  font-family: RobotoBold;
+}
+
+.button {
+  font-family: RobotoBold;
+  color: #219653;
+  text-decoration: none;
+
+  border: 3px solid #6fcf97;
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+/* ! Styling für die einzelnen Blog-Detail-Seiten */
+.details {
+  margin-left: 160px;
+}
+
+.details img {
+  border-radius: 10px 0 0 10px;
+  width: 2000px;
+  max-height: 600px;
+  object-fit: cover;
+
+  margin-bottom: 48px;
+}
+
+.details div {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 160px;
+  margin-bottom: 48px;
+}
+
+.details p {
+  margin-bottom: 24px;
+}
+
+.details p:last-of-type {
+  font-family: RobotoBold;
+}

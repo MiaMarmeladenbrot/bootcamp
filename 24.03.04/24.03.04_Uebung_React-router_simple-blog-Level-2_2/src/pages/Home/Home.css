@@ -1,0 +1,15 @@
+/* .home {
+  background: url(../../../public/img/header-img.jpg) no-repeat center;
+  background-size: cover;
+} */
+
+.home h2 {
+  font-size: 32px;
+  width: 15ch;
+  margin-left: 10vw;
+  margin-bottom: 32px;
+}
+
+.home a {
+  margin-left: 10vw;
+}

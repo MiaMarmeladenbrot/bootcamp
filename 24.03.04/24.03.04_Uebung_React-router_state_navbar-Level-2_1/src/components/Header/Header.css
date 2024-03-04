@@ -1,0 +1,19 @@
+nav {
+  text-align: right;
+  background-color: #fde4c4;
+  padding: 30px;
+}
+
+nav a {
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #8cf2f3;
+  border-radius: 20px;
+}
+
+.active {
+  color: white;
+  background-color: #3aadad;
+}
