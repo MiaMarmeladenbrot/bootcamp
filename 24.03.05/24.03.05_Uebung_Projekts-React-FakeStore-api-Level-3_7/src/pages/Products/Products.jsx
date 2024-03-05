@@ -19,7 +19,7 @@ const Products = () => {
 
   // useEffect starten, in dem der Fetch stattfindet und in dem die gefetchten Daten im state allData gespeichert werden:
   useEffect(() => {
-    console.log(allData);
+    // console.log(allData);
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((data) => setAllData(data))

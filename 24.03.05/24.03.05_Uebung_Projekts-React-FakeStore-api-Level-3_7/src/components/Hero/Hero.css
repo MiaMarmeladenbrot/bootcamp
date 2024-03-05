@@ -15,9 +15,10 @@
   background-color: rgba(148, 145, 145, 0.829);
   border-radius: 20px;
   padding: 20px;
-  width: 23ch;
+  max-width: 23ch;
   text-align: center;
 
+  margin: 0 2rem;
   margin-bottom: 4rem;
 }
 

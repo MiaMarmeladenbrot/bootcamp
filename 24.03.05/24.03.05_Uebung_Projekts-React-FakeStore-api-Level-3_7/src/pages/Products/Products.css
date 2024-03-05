@@ -16,18 +16,28 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
 
+  align-items: flex-start;
+
   padding: 2rem;
 }
 
 .products-container div {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; */
+
   border-radius: 20px;
   overflow: hidden;
   background-color: white;
   padding: 1rem;
+
+  height: auto;
 }
 
 .products-container img {
   max-width: 60%;
+  /* height: 300px; */
   margin-bottom: 2rem;
 }
 

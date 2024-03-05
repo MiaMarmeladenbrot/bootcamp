@@ -34,7 +34,7 @@ const DetailPage = () => {
     setFindData(findItem);
   }, [fetchData]);
 
-  console.log(findData);
+  // console.log(findData);
 
   return (
     <section className="detailpage">
