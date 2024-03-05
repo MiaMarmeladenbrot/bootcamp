@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.active {
+  font-weight: 900;
+}

@@ -1,0 +1,36 @@
+.detailpage {
+  padding-top: 4rem;
+}
+
+.detailpage div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding: 5vw;
+}
+
+.detailpage img {
+  width: 30%;
+}
+
+.detailpage article {
+  max-width: 100ch;
+}
+
+.detailpage h2 {
+  margin-bottom: 2rem;
+}
+
+.detailpage p,
+.detailpage h4 {
+  margin-bottom: 1rem;
+}
+
+/* # Media Queries */
+@media only screen and (max-width: 567px) {
+  .detailpage div {
+    flex-direction: column;
+    text-align: center;
+  }
+}

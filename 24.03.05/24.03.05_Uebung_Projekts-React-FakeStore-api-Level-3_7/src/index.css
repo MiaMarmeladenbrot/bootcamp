@@ -1,0 +1,66 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../public/font/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: RobotoBold;
+  src: url(../public/font/Roboto-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: clamp(3rem, 4vw, 4.8rem);
+}
+
+h3 {
+  font-size: clamp(2.8rem, 3.3vw, 4rem);
+}
+
+h4 {
+  font-size: clamp(2.5rem, 3.2vw, 3.8rem);
+}
+
+h5 {
+  font-size: clamp(2.5rem, 3vw, 3.2rem);
+}
+
+h6 {
+  font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+}
+
+p,
+a {
+  font-size: clamp(2rem, 2vw, 2rem);
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  background-color: rgba(165, 108, 108, 0.838);
+  color: white;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+
+  display: inline-block;
+  margin-bottom: 20px;
+}
