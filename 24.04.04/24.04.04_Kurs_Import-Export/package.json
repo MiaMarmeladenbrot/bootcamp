@@ -1,0 +1,19 @@
+{
+  "type": "module",
+  "name": "24.04.04",
+  "version": "0.0.1",
+  "description": "Backend Course Day 1 - Nodejs intro import export",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "import",
+    "export",
+    "npm",
+    "package"
+  ],
+  "author": "Mia",
+  "license": "ISC"
+}

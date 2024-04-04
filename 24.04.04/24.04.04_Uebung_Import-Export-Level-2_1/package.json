@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "name": "24.04.04_uebung_import-export-level-2_1",
+  "version": "1.0.0",
+  "description": "populations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mia",
+  "license": "ISC"
+}
