@@ -1,0 +1,17 @@
+.product {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.product img {
+  max-width: 100px;
+}
+
+.product div {
+  background-color: rgb(231, 231, 231);
+}

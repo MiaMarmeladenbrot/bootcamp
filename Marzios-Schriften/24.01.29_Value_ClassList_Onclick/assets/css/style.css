@@ -1,0 +1,29 @@
+.super-big {
+  font-size: 50px;
+  color: red;
+  background-color: blue;
+}
+
+.super-crazy {
+  background-color: green;
+  color: white;
+  font-size: 40px;
+}
+
+header img {
+  height: 30px;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.786);
+  color: white;
+}
+
+.dark img {
+  background-color: red;
+}
+
+.dark a {
+  text-decoration: line-through;
+}

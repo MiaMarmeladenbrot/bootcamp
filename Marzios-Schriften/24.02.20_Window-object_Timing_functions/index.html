@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <button class="scroll">scroll to</button>
+    <button class="reload">Reload</button>
+    <button class="weiterleiten">Weiterleiten</button>
+    <button class="back">Back</button>
+    <button class="interval">Clear Interval</button>
+    <a href="./about.html">About</a>
+
+    <hr />
+
+    <input
+      class="input-value"
+      type="number"
+      placeholder="zahl eingeben für coutdown"
+    />
+    <button class="goBtn">Go</button>
+    <p class="output"></p>
+
+    <!-- scroll to via HTML -> wichtig geht nur mit id nicht class -->
+    <a href="#red">scorll to red div</a>
+
+    <!-- Element wo es hinscrollen soll -->
+    <div id="red">Red div</div>
+    <script src="./assets/js/main.js" type="text/javascript"></script>
+  </body>
+</html>

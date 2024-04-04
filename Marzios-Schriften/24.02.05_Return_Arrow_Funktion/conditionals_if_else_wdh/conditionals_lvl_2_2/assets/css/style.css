@@ -1,0 +1,27 @@
+body {
+    text-align: center;
+}
+
+form {
+    margin-top: 40vh;
+}
+
+form label {
+    display: block;
+}
+
+form input[type="range"] {
+    width: 30%;
+}
+
+.bgColorRed {
+    background-color: red;
+}
+
+.bgColorGreen {
+    background-color: green;
+}
+
+.bgColorOrange {
+    background-color: orange;
+}

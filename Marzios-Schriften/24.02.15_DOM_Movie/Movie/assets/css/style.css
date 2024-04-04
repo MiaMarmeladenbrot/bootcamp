@@ -1,0 +1,10 @@
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5vw;
+}
+
+.movie-list div {
+  background-color: lightgray;
+  padding: 10px;
+}

@@ -1,0 +1,121 @@
+/* # UNITS */
+* {
+  margin: 0;
+  padding: 0;
+  /* ? mach ich um zu checken ob ein Element breiter ist als der display  */
+  /* border: 1px solid black; */
+}
+
+/* ? Mache ich immer so stelle ichs ciher das das bild immer max so breit ist wie chrome */
+img {
+  max-width: 100%;
+}
+
+html {
+  /* Benötigt man damit man mit REM nicht rechnen muss. So kann ich zb eine h1 nun einfach auf 1.6rem stellen = 16px */
+  font-size: 62.5%;
+}
+
+/* ! REM */
+/* ! 1rem = 16px  */
+/* - rem ist nicht abhängig vom eleternelement */
+/* - REM ist in moderner und wir öfters benutzt als em */
+
+h2 {
+  font-size: 1.6rem;
+}
+
+/* ! EM */
+/* - em ist abhänig vom Elternelement */
+/* - rem und em mixen geht macht aber keinen sinn */
+
+/*! vh und vw */
+/* ! 100vh, vw nimmt immer die komplette höhe einer wie der von display ist */
+.red {
+  background-color: red;
+  height: 100vh;
+  width: 50vw;
+}
+
+.green {
+  background-color: green;
+  /* % geht nur auf die width und nicht auf die height */
+  width: 50%;
+  height: 100%;
+}
+
+/* ! Clamp ist vom Responsiven das beste. */
+h3 {
+  /* ? erste wert: kleinste größe */
+  /* ? mittlerer wert: Optimale größe (mit vw arbeiten) */
+  /* ? dirtter wert: maximal größter wert */
+  font-size: clamp(1.2rem, 1.8vw, 2.2rem);
+}
+
+/* # ===== Position ===== */
+/* ! Static ist default */
+
+/* ! RELATIVE  */
+.absolut {
+  margin: 30px;
+  padding: 10px;
+  background-color: gray;
+  /* ? Ich muss immer den elternelment von absolut positionierten element position: relative; geben, ansonsten richtet sich das absolute an das body und nicht an das elternelement */
+  position: relative;
+}
+
+/* Position Relativ & Absolute = ❤️‍🔥 */
+
+/* ! ABSOLUTE */
+.absolut img {
+  height: 15px;
+  width: 15px;
+  /* ? Das gebe ich das kind element */
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  /* bottom */
+  /* left */
+  background-color: white;
+  padding: 3px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px black;
+}
+
+/* ! FIXED */
+
+.fixed img {
+  background-color: white;
+  border: 1px solid black;
+  height: 30px;
+  width: 30px;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.fixed img:hover {
+  opacity: 1;
+}
+
+/* ! STICKY */
+
+header a {
+  padding: 5px 10px;
+}
+header nav {
+  background: rgb(165, 165, 255);
+}
+
+header {
+  position: sticky;
+  top: 0px;
+}
+
+nav {
+  margin-top: 30px;
+}

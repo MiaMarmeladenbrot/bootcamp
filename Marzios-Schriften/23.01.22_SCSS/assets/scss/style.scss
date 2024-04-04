@@ -1,0 +1,172 @@
+@use 'mixin';
+@use 'variables';
+/* @use IMMER ganz oben importieren
+@import -> alte Art und Weise zu Importen, wird aber abgestellt! 
+-> bei @use Verwendung muss man vor Variablen/Mixins den Datei Namen mit . davor schreiben um Zugriff auf Inhalte zu haben
+*/
+
+
+/* Schreibweisen - CSS, SASS, SCSS*/
+
+/* /* CSS */
+/* section header h2{
+    background-color: aqua;
+}
+
+ */
+/* SASS - stärker reduziert, ohne {} 
+section
+    header
+        h2
+            background-color: aqua
+*/
+
+
+
+/* $text-color:aqua; 
+$bck-color: blue;  */
+
+/* SCSS */
+section{
+    header{
+        h2{
+            background-color: variables.$text-color;
+        }
+    }
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+
+section{
+    margin:auto;
+    header{
+        margin-bottom:2.5rem;
+        div{
+            h1{
+                @include mixin.text(center,variables.$text-color, 1.8rem, 'Verdana');
+/*                 text-align: center;
+                color: variables.$text-color;
+                font-size: 1.8rem;
+                font-family: Verdana, Geneva, Tahoma, sans-serif; */
+/*                 padding: 1rem; */
+                padding: variables.$spacing;
+                background-color: variables.$bck-color;
+                text-decoration: underline;
+            }
+            h2{
+                @include mixin.text(center, black, 1.5rem, 'Verdana');
+            }
+        }
+        nav{
+            background-color: variables.$bck-nav;
+            ul{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                li{
+                    list-style-type: none;
+
+                    /* loakes Styling ! */
+                    .link-basic{
+                        text-decoration: none;
+                        padding: variables.$spacing;
+                        /* & Elternselektor erlaubt den Zugriff auf äußeren Selektor (für Pseudoklassen) */
+                        &:hover{
+                            transition: 1s;
+                            color: variables.$hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Styling auf globale Ebene geholt - wichtig um drauf zugereifen zu können */
+.link-basic{
+    text-decoration: none;
+    padding: variables.$spacing;
+    /* & Elternselektor erlaubt den Zugriff auf äußeren Selektor (für Pseudoklassen) */
+    &:hover{
+        transition: 1s;
+        color: variables.$hover-color;
+    }
+}
+/* 
+-> DEF: & Elternselektor bei SCSS -> erlaubt Zugriff auf äußeren Selektor, gut für Pseudoklassen 
+*/
+/*
+-> DEF: bei @include Styling wieder verwenden
+*/
+
+
+
+.middle-sec{
+    @include mixin.flex(flex, column, nowrap, center, center);
+/*     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center; */
+    .text-container{
+        h3{
+            @include mixin.text(center,black, 1.1rem, 'Verdana');
+        }
+        p{
+            @include mixin.text(center,black, 0.8rem, 'Verdana');
+        }
+    }
+    .img-container{
+        @include mixin.flex(flex, row, wrap, center, center);
+        img{
+            height: 12rem;
+            width: 17rem;
+            padding: variables.$spacing;
+        }
+    }
+}
+
+
+
+
+.bottom-sec{
+    @include mixin.flex(flex, row, wrap, center, center);
+    margin: variables.$spacing;
+        .first-block, .second-block, .third-block, .fourth-block{
+            padding: variables.$spacing;
+            margin-bottom: variables.$spacing;
+            border: 5px solid blue;
+        }
+}
+
+footer{
+    height: 200px;
+    margin-top: variables.$spacing;
+    background-color: variables.$bck-nav;
+    ul{
+        @include mixin.flex(flex, row, nowrap, center, center);
+        margin: variables.$spacing;
+        li{
+            list-style-type: none;
+            padding: variables.$spacing;
+            .footer-link{
+                @extend .link-basic;
+                text-transform: uppercase; 
+            }
+        }
+    }
+}
+
+/* 
+-> DEF: mit @extend-Regel einer Klasse alle Stile von einer anderen Klasse übergeben, sowie ihre eigenen spezifischen Stile festlegen */

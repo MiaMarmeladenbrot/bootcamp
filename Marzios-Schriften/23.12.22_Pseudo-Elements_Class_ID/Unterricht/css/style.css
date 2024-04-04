@@ -1,0 +1,113 @@
+/* ? Basic Styles kommen immer ganzu hoch */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* ? mit dem first-letter kann man den ersten buchstaben stylen */
+section p::first-letter {
+  font-size: 40px;
+  background-color: red;
+  text-transform: uppercase;
+}
+
+/* ? mit first-line wird immer die erste Zeile gestylet */
+section p::first-line {
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+}
+
+/* ? wir können das auch kombinieren */
+section p:last-of-type::first-line {
+  background-color: brown;
+}
+
+/*? Damit kann ich in einer Liste syomble vore ändern*/
+li::marker {
+  content: "🩷 - ";
+}
+
+/* ? So lösche ich die Listen zeichen */
+/* article li {
+  list-style: none;
+} */
+
+/* ? Damit kann ich das "markieren" stylen */
+*::selection {
+  background-color: yellow;
+  color: red;
+}
+
+/* ?  After: können wir so benutzen: WICHTIG! das after wird nicht im HTML Auftauchen*/
+article h4:nth-of-type(1):after {
+  content: " ❤️‍🩹 - Ich bin After";
+  font-size: 20px;
+  color: blue;
+}
+
+article h4:nth-of-type(2):before {
+  content: "Ich bin Before 💝 ";
+  font-size: 25px;
+  color: rgb(255, 21, 0);
+}
+
+/* ? Der Zustand wenn man mit der maus über das Element geht */
+article h4:nth-of-type(1):hover {
+  /* background-color: red; */
+  text-shadow: 0 0 10px black;
+  font-size: 20px;
+}
+
+/* ? Der Zustand wenn man auf der Element klickt */
+article h4:nth-of-type(1):active {
+  background-color: green;
+}
+
+.btn {
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 20px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: rgb(93, 93, 93);
+}
+
+.btn:active {
+  background-color: rgb(56, 56, 56);
+}
+
+/* ! Class & ID */
+
+/* ? Bitte nicht jedes HTML elm. eine class geben */
+/* ? Class trennen wir immer mit einen - bei mehreren wörtern */
+/* ? Class werden immer klein geschrieben */
+/* ? Class fangen nie mit zahlen an */
+/* ? Sollten nicht zu lange sein */
+/* ? Klassen  nahmen anhand vom content wählen */
+
+.ich-bin-ein-class article h4 {
+  background-color: aqua;
+}
+
+.hallo article h4 {
+  text-decoration: line-through;
+}
+
+/* ! Class VS ID */
+/* ? Class  werden mit . am anfang angesprichen */
+/* ? id´s  werden mit # am anfang angesprichen */
+
+/* * ID´s sind von der macht her starker als Klassen */
+.class-bsp {
+  background-color: blue;
+}
+
+#id-bsp {
+  background-color: red;
+}

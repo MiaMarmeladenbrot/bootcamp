@@ -1,0 +1,230 @@
+/* # ===== Transform und Trnsition */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div {
+  background-color: red;
+  border-radius: 10px;
+  color: white;
+  height: 120px;
+  width: 120px;
+  margin-bottom: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* ! Transition */
+  /* Mehrere Optionen mit einen Kommer trennen "transition: background-color 1s, border-radius 5s" */
+  /*
+   ? all = Animiert alles
+   ? background-color = nur hintergrund
+   ? color = nur Color
+   ? etc.
+  */
+
+  /* * Wochtig - Ich muss es dem hauptelement geben und nicht dem Hover */
+  /* erster wert - was soll animiert werden? */
+  /* zweiter wert - wielange soll das dauern */
+  /* Dritter wert - wielange soll es verzögert sein */
+  /* Vierter wert - wie soll die animation ablaufen */
+  /* https://cubic-bezier.com/ */
+  /* Mindesteingabe ist die Zeit */
+  transition: 0.5s;
+
+  transition: all 0.5s 0s ease-in-out;
+}
+
+/* #  === Transform === */
+
+div:hover {
+  /* ! Translate */
+  /* ? Verschiebt das Element nach Rechts / Links (- werte gehen auch)*/
+  transform: translateX(-50px);
+
+  /* ? Verschiebt das Element nach unten / oben */
+  transform: translateY(50px);
+
+  /* ?  Verschiebt das Element in X und Y achse. ( erst werd ist x )*/
+  transform: translate(-50px, 50px);
+
+  /* ! Rotate */
+  /* ? animiert seitelicht rotation */
+  transform: rotateY(180deg);
+
+  /* ? animiert oben unten roatation*/
+  transform: rotateX(180deg);
+
+  /* ? animiert die rotation um die eigene achse */
+  transform: rotate(180deg);
+
+  /* ! Scale */
+  /* ?  Animiert die höhe und breite (2 heißt es wird 2x so groß)*/
+  transform: scale(1.1);
+
+  /* ? Animiert die breite */
+  transform: scaleX(2);
+
+  /* ? Animiert die höhe*/
+  transform: scaleY(2);
+
+  /* ! Skew */
+  /* ? animiert die höhe und die breite(ecken) */
+  transform: skew(-10deg, -10deg);
+
+  /* ! Mehrer als Shorthand */
+  /* Ohne ,*/
+  transform: translate(50px, 50px) rotate(90deg) scale(2);
+
+  /* ! Transform Origin */
+  transform: rotate(50deg);
+  /* ? transform- origin verlageert den Ursprung der Transform default ist center */
+  /* transform-origin: top left; */
+}
+
+/* # ======= Animation ======= */
+
+section p {
+  font-size: 50px;
+
+  /* * Mit Animation rufe ich den name der Animation auf  */
+  /* * rotateHerz = name der Animation  */
+  /* * 2s = wielang die animation dauern soll */
+  /* * ease-in-out = verlauf der animation  */
+  /* * infinite = wieoft soll die animation abgespielt werden */
+  /* * normal = Animationsrichtung */
+  /* ? ------> alternate: geht wieder zurück wie die animation gekommen ist   */
+  /* ? ------> forwards: die Animation bleibt am Endpunkt stehtn wo das Keyframe aufhört (geht nur bei 1x abspielen) */
+  /* * 2s = was für eine verzögerung soll es geben? (in sekunden) */
+
+  animation: rotateHerz 2s ease-in-out infinite normal 2s;
+}
+
+@keyframes rotateHerz {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ? mit dem % Timeline kann ich angeben wan was passieren soll. Das kann ich auch in 1% schritten machen  */
+
+@keyframes scaleBIGMarzio {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+h1 {
+  animation: scaleBIGMarzio 2s linear infinite;
+}
+
+.animation {
+  background-color: gray;
+  height: 500px;
+  width: 500px;
+}
+
+.animation article {
+  height: 50%;
+  width: 50%;
+  background-color: red;
+  animation: move 5s linear infinite normal;
+  border-radius: 50%;
+}
+
+@keyframes move {
+  0%,
+  100% {
+    background-color: green;
+  }
+  25% {
+    transform: translateY(100%);
+    background-color: red;
+  }
+  50% {
+    transform: translate(100%, 100%);
+    background-color: rgb(25, 0, 255);
+  }
+  75% {
+    transform: translateX(100%);
+    background-color: white;
+  }
+}
+
+.loading {
+  background-color: blue;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.loading div {
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+@keyframes loader {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-30px);
+    background-color: orange;
+  }
+}
+
+.loading div:nth-of-type(1) {
+  animation: loader 2s infinite ease-in-out;
+}
+.loading div:nth-of-type(2) {
+  animation: loader 2s infinite ease-in-out 0.2s;
+}
+.loading div:nth-of-type(3) {
+  animation: loader 2s infinite ease-in-out 0.4s;
+}
+.loading div:nth-of-type(4) {
+  animation: loader 2s infinite ease-in-out 0.6s;
+}
+
+/* .christian {
+  background-color: orange;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.christian div {
+  background-color: green;
+  height: 50px;
+  width: 50px;
+
+  transform: translateY(-50px);
+} */
+
+.box {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+}
+
+.blog .img:hover ~ .box {
+  background-color: green;
+}

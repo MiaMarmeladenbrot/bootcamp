@@ -1,0 +1,83 @@
+/* Font inports immer ganz oben in css */
+@font-face {
+  font-family: MarziosSuperFont;
+  src: url("../assets/font/Rubik-Regular.ttf");
+}
+
+/* So geben ich jetzt allen Fonts meine schriftart */
+html {
+  font-family: MarziosSuperFont, Arial, Helvetica, sans-serif;
+}
+
+body {
+  /* DER WIRD NIEMALS GESTYLED!!!!!!!!! */
+}
+
+/*  ! Kommentare machen mit => CMD + Shift + 7 */
+
+/* article p {
+  background-color: red;
+}
+
+article a {
+  background-color: green;
+} */
+
+/* ? Nimmt das letzte Element von der gruppe ul li  */
+section ul li:last-child {
+  background-color: pink;
+}
+
+/* ? Nimmt das Letzt Elment von Jeweiling Typen om Dioesen fall h2 */
+h2:last-of-type {
+  background-color: Pink;
+  color: white;
+}
+
+/* ? Nimmt das erste Element von der Jeweilige typen */
+h2:first-of-type {
+  background-color: hotpink;
+}
+
+/* ? Nimmt das element was in der klammer steht (2) - Nur Zahlen eintragen */
+section ul li:nth-of-type(2) {
+  background-color: hotpink;
+  color: white;
+}
+
+section {
+  /* background-color: red; */
+  /* width: 150px; */
+  /* Mit festen höhen aufpassen!!! */
+  /* height: 400px; */
+}
+
+footer article {
+  height: 200px;
+
+  /* Das ist eine Shordhand porperty */
+  background: url("../assets/img/puppy.jpg") center no-repeat;
+
+  /* Mach das seleb wie in zeile 44 */
+  background-image: url("../assets/img/puppy.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* Benötigen wir um das ganze bild anzuzeigen */
+  background-size: contain;
+}
+
+/* ! Font einbinden */
+
+footer h2 {
+  font-family: Rubik Doodle Shadow;
+  font-size: 30px;
+  text-decoration: underline;
+  /* 1: x achse */
+  /* 2: y achse */
+  /* 3: verlauf */
+  /* 4: Farbe des Schattens */
+  text-shadow: 2px 2px 5px rgb(255, 0, 0);
+  letter-spacing: 10px;
+  word-spacing: 20px;
+}

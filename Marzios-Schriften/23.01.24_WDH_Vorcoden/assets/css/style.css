@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 5vw, 8.5rem);
+}
+
+h2 {
+  font-size: clamp(3rem, 4vw, 4.8rem);
+}
+
+h3 {
+  font-size: clamp(2.5rem, 3.8vw, 4.6rem);
+}
+h4 {
+  font-size: clamp(2.8rem, 3.2vw, 3.8rem);
+}
+h5 {
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+}
+h6 {
+  font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+}
+p,
+label {
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+}
+a,
+li {
+  font-size: clamp(1.6rem, 2vw, 1.8rem);
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: rgb(239, 179, 0);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+:root {
+  --abstand-l-r: 0 6vw;
+}
+
+/* ! Header */
+
+header {
+  background: url("../img/Decore.png") no-repeat right top;
+  background-size: contain;
+
+  position: relative;
+  /* padding: 40px 6vw; */
+  padding: var(--abstand-l-r);
+  padding-top: 40px;
+  margin-bottom: 4.5rem;
+}
+
+.lila {
+  height: 500px;
+  width: 500px;
+  background-color: rgb(128, 0, 128);
+  border-radius: 100%;
+  position: absolute;
+  left: -500px;
+  box-shadow: 0 0 100px purple;
+  opacity: 0.6;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7rem;
+  gap: 2vw;
+}
+
+nav a {
+  padding: 1vw;
+}
+
+header h5 {
+  color: rgb(245, 78, 78);
+}
+
+header section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .girl {
+  width: 50%;
+}
+
+.play {
+  display: flex;
+  align-items: center;
+}
+
+.play p {
+  margin-left: -10px;
+  margin-bottom: 25px;
+}
+
+.btn-area {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  justify-content: flex-start;
+}
+
+header .btn {
+  margin-top: -25px;
+}
+
+.content {
+  margin-bottom: 35px;
+}
+
+header h5 {
+  margin-bottom: 23px;
+}
+
+header h1 {
+  margin-bottom: 30px;
+}
+
+/* !Main */
+
+main,
+footer {
+  margin: var(--abstand-l-r);
+}
+
+/* ! Best Service */
+
+.best-service {
+  text-align: center;
+  margin-bottom: 100px;
+  background: url("../img/plus.png") no-repeat top right;
+  /* background-size: 15%; */
+}
+
+.best-service h6 {
+  margin-bottom: 10px;
+}
+
+.best-service h3 {
+  margin-bottom: 60px;
+}
+
+.best-service article {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2vw;
+}
+
+.best-service img {
+  margin-bottom: 40px;
+}
+
+.best-service div {
+  padding: 2vw;
+  border-radius: 30px;
+}
+
+.shadow {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.164);
+}
+
+.shadow img {
+  margin-top: -20px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* ! Top Destination */
+
+.top-dest {
+  margin-bottom: 100px;
+}
+
+.top-dest h6,
+.top-dest h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.top-dest article {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+}
+
+.card {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.208);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card img {
+  height: 25vw;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.loca {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.location {
+  margin: 20px;
+}
+
+span {
+  transform: rotate(-45deg);
+  display: inline-block;
+}
+
+/* ! Next Trip */
+
+.next-trip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2vw;
+  margin-bottom: 100px;
+}
+
+.next-trip h6 {
+  margin-bottom: 10px;
+}
+.next-trip h3 {
+  margin-bottom: 30px;
+  /* Schaut wie oft die 0 in dem Text passt und bricht dann immer dort um. (muss man testen) */
+  max-width: 18ch;
+}
+
+.red-dress {
+  width: 50%;
+}
+
+.text-content {
+  display: flex;
+
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* ! What People Say */
+
+.say {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2vw;
+  margin-bottom: 100px;
+}
+
+.say article {
+  width: 50%;
+}
+
+.say h6 {
+  margin-bottom: 20px;
+}
+
+.say h3 {
+  max-width: 16ch;
+}
+
+.say img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+}
+
+.testi {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.173);
+  padding: 30px;
+  border-radius: 30px;
+  margin-top: 30px;
+  position: relative;
+}
+
+/* ! Footer */
+
+footer {
+  margin-bottom: 100px;
+  /* background-color: blue; */
+  /* * Eine Section KEINE (!!!) feste höhe geben. der Contant bestimmt die höhe von der section. WENN eine feste höhe von nöten ist min-height benutzen(WICHTIG) */
+  /* min-height: 30vh; */
+}
+
+footer p {
+  text-align: center;
+}
+
+footer article {
+  display: flex;
+  gap: 7vw;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+footer a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+footer h6 {
+  margin-bottom: 15px;
+}
+
+/* ! Media Queries */
+/* ? Handy 576px */
+/* ? Tablet 768px */
+
+@media only screen and (max-width: 768px) {
+  .best-service article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .next-trip {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .red-dress {
+    width: 100%;
+  }
+
+  .say {
+    flex-direction: column;
+  }
+
+  .say article {
+    width: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  header .girl {
+    display: none;
+  }
+
+  .best-service article,
+  .top-dest article {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card img {
+    height: 300px;
+  }
+
+  footer article {
+    flex-direction: column;
+    align-items: center;
+  }
+}

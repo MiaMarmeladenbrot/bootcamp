@@ -1,0 +1,12 @@
+img {
+  max-width: 100%;
+}
+
+.dark {
+  background-color: grey;
+  color: white;
+}
+
+.dark a {
+  color: rgb(205, 202, 202);
+}

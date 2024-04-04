@@ -1,0 +1,105 @@
+div:nth-child(odd) {
+  background-color: orange;
+}
+
+div:nth-child(even) {
+  background-color: blue;
+}
+
+/* Column sind Horizontal (link nach rechts) */
+/* Row sind vertikal (oben nach unten)*/
+
+/* # ===== VERSION 1 ===== */
+
+/* ! Eltern Element ansprechen */
+
+.grid-parent {
+  background-color: rgb(236, 236, 236);
+  min-height: 100vh;
+  display: grid;
+
+  /* ! Bau erstmal die Basis der Columns auf. */
+
+  /* 1fr = 1 fraction (Bruchteil vom verfügbaren Rest) */
+  /* 2fr = sind doppelt so groß wie 1fr */
+
+  /* ! Coloums */
+  /* ? grid-template-columns: 1fr 1fr 1fr 1fr; */
+  /* Macht das selbe wie in Zeile 24 in Blau */
+  grid-template-columns: repeat(4, 1fr);
+
+  /* Ich kann auch mixen mit px und fr */
+  /* ? grid-template-columns: 1fr 1fr 50px 2fr; */
+
+  /* !Row */
+  /* benutze ich i d r nicht so oft, da die rows automatisch zusätzlich erzugt werden wenn grid merkt es benötigt mehr rows */
+  /* grid-template-rows: repeat(3, 1fr); */
+
+  /* ! Gap */
+  /* oben unten */
+  row-gap: 5px;
+  /* links recht */
+  column-gap: 5px;
+  /* überall */
+  gap: 5px;
+}
+
+/* ! Kind Element ansprechen */
+section .box1 {
+  background-color: palevioletred;
+
+  /* Mit Column start sage ich wo das Element starten soll und mit end wo es enden soll (man muss immer  +1 sagen wo es enden soll) */
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+
+  /* Kurzschreibform */
+  /* grid-column: 1 / span 2; */
+
+  /* span benutzen - mit span sagen wir er soll ich über 4 elemente4 strecken. ( es wird also nichtmehr der rand gezählt)*/
+
+  /* mit -1 nimmt er immer die ganze breite ein  */
+  /* grid-column: 1 / -1; */
+
+  /* * Flex in Grid sieht man recht oft */
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+
+  /* ! Align- und Justify-self */
+
+  /* Default ist hier Strech angegeben. */
+  align-self: stretch;
+  justify-self: stretch;
+
+  /* align-self: center; */
+  /* justify-self: flex-end; */
+
+  /* Kurszschreibform */
+  /* erste wert justify, zweiter align */
+  /* place-self: center center; */
+}
+
+.grid-parent div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* # ===== VERSION 2 ===== */
+
+/* ! Grid Areas */
+/* Mit grid-template-areas können wir die felder beschrift (Achtung es sollten die Felde auch zur verfügung stehen) */
+
+.grid-parent {
+  grid-template-areas:
+    "header header header header"
+    "main main hallo hallo"
+    "footer footer footer footer";
+}
+
+/* Um grid-area zu verweden muss ich im ElternElment " grid-template-areas:" vergeben. Hier sage ich dann , wo das Kindelement hin soll : "rid-area: hallo;" */
+section .box10 {
+  background-color: brown;
+  grid-area: hallo;
+}

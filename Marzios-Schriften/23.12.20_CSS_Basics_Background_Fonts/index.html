@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Basic</title>
+    <meta name="description" content="Hallo ich bin die meta description" />
+    <meta name="keywords" content="CSS Basic, Background, fonts einbinden" />
+    <meta name="author" content="Marzio Costantini" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <style>
+      body {
+        /* background-color: green; */
+      }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <!-- Hat Zahlen -->
+      <ol>
+        <li>hund</li>
+        <li>katze</li>
+        <li>maus</li>
+      </ol>
+
+      <!-- Hat Punkte -->
+      <ul>
+        <li>hund</li>
+        <li>katze</li>
+        <li>maus</li>
+      </ul>
+    </header>
+    <main>
+      <section>
+        <h1>Nicht semantische Elemente sind:</h1>
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus ipsa
+          illum sed. Suscipit, at a? Eligendi dicta quaerat consequatur fugiat
+          possimus quo <span>Hallo Leute</span> beatae adipisci, tempora saepe
+          doloremque, maiores debitis sunt.
+        </p>
+
+        <h6>Hallo ich bin der <span> Marzio </span></h6>
+
+        <!-- Span nicht alleine benutzen. Er sollte in einen h1-h6, p etc. benutzt werden. -->
+        <span>Ich bin ein span Tag</span>
+        <ol>
+          <li>div</li>
+          <li>span</li>
+        </ol>
+      </section>
+
+      <section>
+        <div>
+          <h2>Block Elemente und Inline Elemente</h2>
+        </div>
+
+        <h4>Beispiele für Block Elemente</h4>
+        <ul>
+          <li>article</li>
+          <li>section</li>
+          <li>div</li>
+          <li>footer</li>
+          <li>header</li>
+          <li>li</li>
+          <li>h1-h6</li>
+          <li>ol & ul</li>
+          <li>li</li>
+          <li>p</li>
+        </ul>
+
+        <article>
+          <p>ich</p>
+          <p>ich bin ein Block Element 2</p>
+        </article>
+
+        <h4>Beispiele für Inline Elemente</h4>
+        <ul>
+          <li>a</li>
+          <li>button</li>
+          <li>img</li>
+          <li>input</li>
+          <li>label</li>
+          <li>textarea</li>
+          <li>span</li>
+        </ul>
+
+        <article>
+          <a href="#">Ich bin ein Inline Element</a>
+          <a href="#">noch ein a tag</a>
+          <a href="#">noch ein a tag</a>
+          <button>Button</button>
+          <button>Button</button>
+          <button>Button</button>
+        </article>
+      </section>
+      <hr />
+      <section>
+        <h2>Drei möglichkeiten CSS im HTML Einzubinden.</h2>
+
+        <h3>1. Extern ❤️</h3>
+        <p>Im dem "head" kommt der link mit den pfad zur CSS Datei rein</p>
+        <!-- <link rel="stylesheet" href="./style.css" /> -->
+
+        <h3>2. Intern</h3>
+        <p>im "head" schreiben wir eine "style " tag rein</p>
+        <!-- <style>
+            body {
+              background-color: green;
+            }
+          </style> -->
+
+        <h3 style="background-color: red; color: orange">3. Inline</h3>
+        <p>
+          Hier schreiben wir das CSS Attribut dirtekt in die Zeile wo wir es
+          gerne haben wollen. Nach einen CSS Befehl kommt das ; zum trennen
+        </p>
+      </section>
+
+      <section>
+        <h2>Fonts einbinden</h2>
+        <ol>
+          <li>Extern</li>
+          <li>Intern (runtergeladen / local)</li>
+        </ol>
+      </section>
+    </main>
+
+    <footer>
+      <h2>Ich bin Eine andere Font Family</h2>
+      <article></article>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!-- ! doctype ab hier fängt das html für den Browser an  -->
+<!DOCTYPE html>
+
+<!-- ! Hier sagen wir das wir eien Deutsch sprachige seite haben -->
+<html lang="de">
+  <!-- ! Alle Meta infromationen, wie Titel der Seite, Beschreibung der Seite  -->
+  <head>
+    <!-- ! Hier steht das wir UTF-8 als format benutzen-->
+    <meta charset="UTF-8" />
+
+    <!-- ! Die Seite soll immer die ganze breit einnehmne -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ! Title der seite -->
+    <title>Hallo Kurs</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- So schreibe ich eine Kommentar => CMD + Shift + 7 -->
+
+      <a href="#">Home</a>
+
+      <!-- Das sind Dynamische Pfade -->
+      <!-- Ich muss ers zur datei rein navigieren -->
+      <a href="./about/about.html">About</a>
+      <a href="./kontakt.html">Kontakt</a>
+
+      <!-- Das ist ein Absoluter Pfad -->
+      <!-- target="_blank" macht die seite in einem neuen Tab auf -->
+      <a href="https://www.super-code.de/" target="_blank">SuperCode Page</a>
+    </header>
+
+    <!-- ! In den Main Tag kommt dfer HauptContent. -->
+    <main>
+      <section>
+        <!-- <h1>Ich bin eine h1</h1> -->
+
+        <article>
+          <!-- !  H1 - H6 Je nidriger die zahl desto wichtiger ist der überschrift ( h1 nur 1x je Seite benutzen) -->
+          <h1>h1</h1>
+          <h2>h2</h2>
+          <h3>h3</h3>
+          <h4>h4</h4>
+          <h5>h5</h5>
+          <h6>h6</h6>
+        </article>
+      </section>
+
+      <section>
+        <p>ich bin normaler text</p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi
+          corporis eum quis illum blanditiis tenetur earum tempore, veritatis
+          repellat. Atque praesentium, placeat consectetur quos perspiciatis ea
+          excepturi dignissimos illo eos?
+        </p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem, ipsum.</p>
+      </section>
+
+      <section>
+        <!--! So benutzen wir fotos/Bilder -->
+        <!-- Das ist ein Statischer Pfad -->
+        <img
+          src="https://fastly.picsum.photos/id/692/200/200.jpg?hmac=PBAPILlS_qaKe0OMYjT0eXnftJjTGdwOgqCQMUVDGbg"
+          alt="baby hund"
+        />
+
+        <!-- Das ist eien Dynamischer Pfad -->
+        <!-- <img src="./assets/img/dogo.jpg" alt="Bild von baby hund" /> -->
+      </section>
+
+      <section>
+        <!-- ! Listen -->
+        <!-- ol => ordet list -> hier bekommen wir 1. 2. 3. -->
+        <!-- ul => unordet list -> hier bekommen wir nur Punkt vor der Liste-->
+        <!-- li  => list Item -> wir benötigen bei jeder liste ein <li> tag -->
+
+        <!-- * Das ist eien OL -->
+        <ol>
+          <li>eins</li>
+          <li>zwei</li>
+          <li>drei</li>
+          <li>hund</li>
+        </ol>
+
+        <!-- * Das ist eien UL -->
+        <ul>
+          <li>eins</li>
+          <li>zwei</li>
+          <li>drei</li>
+          <li>vier</li>
+        </ul>
+
+        <!-- * Man kann auch eine Kombination aus beiden machen -->
+
+        <ul>
+          <li>ein li im ul</li>
+          <li>ein li im ul</li>
+          <li>ein li im ul</li>
+          <ul>
+            <li>Nochmal ein im Ul was im UL ist</li>
+            <li>Nochmal ein im Ul was im UL ist</li>
+            <ol>
+              <li>Sport machen</li>
+              <li>Einkaufen gehen</li>
+              <li>Wäsche machen:</li>
+              <ol>
+                <li>Tshirt</li>
+                <li>hosen</li>
+                <li>socken</li>
+                <li>
+                  <a href="./kontakt.html" target="_blank">Gehe zu Kontakt</a>
+                </li>
+              </ol>
+            </ol>
+          </ul>
+          <li>ich bin der letzte li Tag</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <h4>Apple Footer</h4>
+      <ul>
+        <li>
+          <a href="#">Iphone</a>
+        </li>
+        <li>
+          <a href="#">Macbook</a>
+        </li>
+        <li>
+          <a href="#">IMAC</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <h1>Forms</h1>
+
+    <p>Welche gibt es?</p>
+
+    <!-- From benutze ich an einer ansammlung von Input Felder (benutze ich am 2 inputs) -->
+    <form>
+      <!-- * Text -->
+      <!-- das for und die id sollen den selben namen tragen. Damit wir sie "Verheiraten" So kann ich auch auf das label klicken und es wird das input ausgewählt.-->
+      <label for="vorname">Text: </label>
+      <input id="vorname" type="text" />
+
+      <!-- * Number -->
+      <label for="number">Number</label>
+      <input id="number" type="number" />
+
+      <!-- * Tel -->
+      <label for="tel">Tel</label>
+      <input type="tel" id="tel" />
+
+      <!-- * Email -->
+      <label for="email">Email</label>
+      <input type="email" id="email" />
+
+      <!-- * Radios -->
+      <div>
+        <!-- bei Radio benötigen wir auch das "value" -->
+        <!-- name benötigen wir hier um jeweils nur ein radio auswählen zu können -->
+        <!-- benutzen wir wenn user nur eine option hat -->
+        <label for=""> Was machst du am liebst?</label>
+        <input type="radio" name="fav-lang" id="html" value="html" />
+        <label for="html">HTML</label>
+        <input type="radio" name="fav-lang" id="css" value="css" />
+        <label for="css">CSS</label>
+        <input type="radio" name="fav-lang" id="js" value="js" />
+        <label for="js">JS</label>
+      </div>
+
+      <br />
+      <!-- Benutzen wir wenn der user mehrer optionen anklicken kann.  -->
+      <!-- * Check -->
+      <label for="checkbox">Checkbox 1</label>
+      <input id="checkbox" type="checkbox" />
+      <label for="checkbox2">Checkbox 2</label>
+      <input id="checkbox2" type="checkbox" />
+
+      <!-- * Date -->
+      <label for="date">Date</label>
+      <input id="date" type="date" />
+
+      <!-- * Password -->
+      <label for="password">password</label>
+      <input type="password" id="password" />
+
+      <!-- * file -->
+      <label for="file">File</label>
+      <input type="file" id="file" />
+
+      <!-- * range -->
+      <!-- hier benötigen wir ein min und max wert der die range angebit -->
+      <!-- step ist optional, jenachdem wieviel dazwischen liegen soll -->
+      <label for="range">Range</label>
+      <input type="range" id="range" min="0" max="100" step="5" />
+
+      <br />
+      <!-- * button -->
+      <input type="button" value="Hallooo" />
+
+      <!-- * Textarea -->
+      <label for="textarea">Textarea</label>
+      <textarea id="textarea" cols="20" rows="10"></textarea>
+
+      <!-- * Select & Option -->
+      <!-- Hier kann ich auch nur eins auswählen -->
+      <!-- Same Same wie Radio -->
+      <!-- Hier benötigen wie wieder ein Value -->
+      <label for="cars">Select:</label>
+      <select id="cars">
+        <option value="bmw">BWM</option>
+        <option value="audi">AUDI</option>
+        <option value="vw">VW</option>
+      </select>
+      <select id="cars">
+        <option value="bmw">BWM</option>
+        <option value="audi">AUDI</option>
+        <option value="vw">VW</option>
+      </select>
+
+      <br />
+
+      <!-- * Submit -->
+      <input type="submit" value="-> senden" />
+    </form>
+
+    <!-- * Placeholder -->
+    <label for="placeholder">Placeholder</label>
+    <input id="placeholder" type="text" placeholder="bitte hier eintragen..." />
+
+    <!-- * Disabeld -->
+    <label for="disabled">Disabled</label>
+    <input id="disabled" type="text" disabled />
+
+    <!-- * Required = Pflichtfeld -->
+    <!-- Vorsicht. mann kann das required auch in den devtools löschen -->
+    <form>
+      <label for="req">Pflichfeld *</label>
+      <input id="req" type="text" required />
+      <input type="submit" value="Gooo" />
+    </form>
+  </body>
+</html>

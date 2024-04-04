@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <section>
+        <header></header>
+        <main>
+            <article>
+                <h2>Wiederholung:</h2>
+                <h3>Block Elemente:</h3>
+                <ul>
+                    <li>p</li>
+                    <li>ol,ul</li>
+                    <li>div</li>
+                    <li>h1-h6</li>
+                    <li>article</li>
+                </ul>
+
+                <h3>Inline Elemente:</h3>
+                <ul>
+                    <li>a</li>
+                    <li>button</li>
+                    <li>span</li>
+                </ul>
+
+                <h3>CSS einbinden:</h3>
+                <ul>
+                    <li>Extern: ich komme in den head</li>
+                    <li><p style="color: red;">Ich bin inline gestyled</p></li>
+                </ul>
+
+                <h3>Pseudo Selektoren:</h3>
+                <ul>
+                    <li><h5>lila</h5></li>
+                    <li><h5>grün</h5></li>
+                    <li><h5>orange</h5></li>
+                </ul>
+            </article>
+            <hr>
+
+            <!-- Box Model -->
+            <article>
+                <h3>BOX Model</h3>
+                <p>beschreibt wie sich Block Elemente verhalten</p>
+                <p>Der Platzbedarf errechnet sich aus:</p>
+                <ol>
+                    <li>width/height (Content-Box)</li>
+                    <li>padding (Padding-Box)</li>
+                    <li>border (Border-Box)</li>
+                    <li>margin (Margin-Box)</li>
+                </ol>
+            </article>
+
+            <h4>Box-sizing property</h4>
+            <p>hilft uns Box Model zu manipulieren</p>
+            <p>box-sizing:content-box => default Wert, Boxen werden auf addiert</p>
+            <p>box-sizing:border-box => Breite wird automatiasch mit Border verrechnet</p>
+
+            <section>
+                <div>Ich bin das Div</div>
+            </section>
+        </main>
+
+        <footer>
+            <h3>Margin und Padding</h3>
+            <div>
+                <h1>Margin</h1>
+                <p>ist der Außenabstand</p>
+            </div>
+            <div>
+                <h1>Padding</h1>
+                <p>ist der Innenabstand</p>
+            </div>
+
+            <article>
+                <h2>Display property:inline, block, inline-block</h2>
+                <p>inline: Elemente können Höhe und Breite annehmen</p>
+                <p>block: nehmen 100% der Breite  ein</p>
+                <p>inline-block: kombiniert das Beste von beidem, man hat nicht immer 100% Breite & man kann trotzdem Höhe/Breite vergeben</p>
+
+                <section>
+                    <p>Ich bin p tag Nr.1</p>
+                    <p>Ich bin p tag Nr.2</p>
+                    <p>Ich bin p tag Nr.3</p>
+                    <p>Ich bin p tag Nr.4</p>
+                </section>
+            </article>
+        </footer>
+    </section>
+</body>
+</html>

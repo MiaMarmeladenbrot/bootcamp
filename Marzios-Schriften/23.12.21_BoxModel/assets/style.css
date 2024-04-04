@@ -1,0 +1,90 @@
+/* ! GENERAL Styles - immer an den Anfang der CSS Datei */
+
+/* Der * selector selektiert jedes Elemet auf der html Seite. Standardmäßig kommen diese drei befehle rein.
+*/
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+li:first-of-type h5{
+    color: blueviolet;
+}
+
+li:nth-of-type(2) h5{
+    color:green
+}
+li:last-of-type h5{
+    color:orange
+}
+
+
+
+
+/* ! PROPERTY box-sizing */
+
+main section:nth-of-type(1){
+    background-color: aqua;
+    width: 100px;
+    height: 200px;
+}
+
+main section div{
+    width: 100px;
+    border: solid black 10px;
+    box-sizing: border-box; 
+    /* box-sizing: content-box; */
+}
+
+
+
+footer div{
+    background-color: blueviolet;
+    width: 200px;
+    height: 200px;
+    border: solid black 10px;
+}
+
+/* ! MARGIN */
+/* Margin steuert Abstand zwischen einzelnen Elementen */
+
+footer div:nth-of-type(1){
+    margin: 20px 40px;
+/*  margin: auto; => zentriert Elemente horizontal */
+
+
+/* ! SCHREIBWEISEN */
+/* 
+    verschiedene Schreibweisen, gilt auch für Padding:
+
+    margin: 10px;
+
+    margin: 10px 20px;
+    10px - oben & unten
+    20px - rechts & links
+
+    margin: 10px 10px 20px 20px; 
+
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px; 
+    */
+}
+
+/* ! PADDING */
+/* Padding steuert Abstand Inhalt und Border */
+footer div:nth-of-type(2){
+    padding: 20px 40px;
+}
+
+
+/* ! PROPERTY display */
+footer section p{
+    background-color: aquamarine;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    display: inline-block;
+}

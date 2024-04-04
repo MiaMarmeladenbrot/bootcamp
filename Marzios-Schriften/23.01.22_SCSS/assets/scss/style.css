@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* @use IMMER ganz oben importieren
+@import -> alte Art und Weise zu Importen, wird aber abgestellt! 
+-> bei @use Verwendung muss man vor Variablen/Mixins den Datei Namen mit . davor schreiben um Zugriff auf Inhalte zu haben
+*/
+/* Schreibweisen - CSS, SASS, SCSS*/
+/* /* CSS */
+/* section header h2{
+    background-color: aqua;
+}
+
+ */
+/* SASS - stärker reduziert, ohne {} 
+section
+    header
+        h2
+            background-color: aqua
+*/
+/* $text-color:aqua; 
+$bck-color: blue;  */
+/* SCSS */
+section header h2 {
+  background-color: aqua;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  margin: auto;
+}
+section header {
+  margin-bottom: 2.5rem;
+}
+section header div h1 {
+  text-align: center;
+  color: aqua;
+  font-size: 1.8rem;
+  font-family: "Verdana";
+  /*                 text-align: center;
+                  color: variables.$text-color;
+                  font-size: 1.8rem;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  /*                 padding: 1rem; */
+  padding: 1rem;
+  background-color: blue;
+  text-decoration: underline;
+}
+section header div h2 {
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+  font-family: "Verdana";
+}
+section header nav {
+  background-color: cornflowerblue;
+}
+section header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section header nav ul li {
+  list-style-type: none;
+  /* loakes Styling ! */
+}
+section header nav ul li .link-basic, section header nav footer ul li .footer-link, footer section header nav ul li .footer-link {
+  text-decoration: none;
+  padding: 1rem;
+  /* & Elternselektor erlaubt den Zugriff auf äußeren Selektor (für Pseudoklassen) */
+}
+section header nav ul li .link-basic:hover, section header nav footer ul li .footer-link:hover, footer section header nav ul li .footer-link:hover {
+  transition: 1s;
+  color: orange;
+}
+
+/* Styling auf globale Ebene geholt - wichtig um drauf zugereifen zu können */
+.link-basic, footer ul li .footer-link {
+  text-decoration: none;
+  padding: 1rem;
+  /* & Elternselektor erlaubt den Zugriff auf äußeren Selektor (für Pseudoklassen) */
+}
+.link-basic:hover, footer ul li .footer-link:hover {
+  transition: 1s;
+  color: orange;
+}
+
+/* 
+-> DEF: & Elternselektor bei SCSS -> erlaubt Zugriff auf äußeren Selektor, gut für Pseudoklassen 
+*/
+/*
+-> DEF: bei @include Styling wieder verwenden
+*/
+.middle-sec {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  /*     display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center; */
+}
+.middle-sec .text-container h3 {
+  text-align: center;
+  color: black;
+  font-size: 1.1rem;
+  font-family: "Verdana";
+}
+.middle-sec .text-container p {
+  text-align: center;
+  color: black;
+  font-size: 0.8rem;
+  font-family: "Verdana";
+}
+.middle-sec .img-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.middle-sec .img-container img {
+  height: 12rem;
+  width: 17rem;
+  padding: 1rem;
+}
+
+.bottom-sec {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+.bottom-sec .first-block, .bottom-sec .second-block, .bottom-sec .third-block, .bottom-sec .fourth-block {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 5px solid blue;
+}
+
+footer {
+  height: 200px;
+  margin-top: 1rem;
+  background-color: cornflowerblue;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+footer ul li {
+  list-style-type: none;
+  padding: 1rem;
+}
+footer ul li .footer-link {
+  text-transform: uppercase;
+}
+
+/* 
+-> DEF: mit @extend-Regel einer Klasse alle Stile von einer anderen Klasse übergeben, sowie ihre eigenen spezifischen Stile festlegen */
+
+/*# sourceMappingURL=style.css.map */

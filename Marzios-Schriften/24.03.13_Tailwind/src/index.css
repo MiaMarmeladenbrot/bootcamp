@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* // So können wir eine eigen font mit einbinden 1 */
+
+@font-face {
+  font-family: "test";
+  src: url("/example.ttf");
+}
+
+html {
+  font-family: "test";
+}

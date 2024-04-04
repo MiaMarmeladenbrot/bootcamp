@@ -1,0 +1,186 @@
+/* ! ===  Basic === */
+
+@font-face {
+  font-family: sf-RG;
+  src: url("../font/SFUIDisplay-Regular.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-family: sf-RG, Arial, Helvetica, sans-serif;
+}
+
+/* ! ROOT */
+
+:root {
+  --gray: #3f3f3f;
+  --black: #1d1d1f;
+  --blue: #2077c9;
+  --light-gray: #ceced0;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
+
+a {
+  font-size: 14px;
+}
+
+.btn {
+  background-color: var(--black);
+  color: var(--light-gray);
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.link {
+  color: var(--blue);
+  margin: 10px;
+}
+
+.link::after {
+  content: " >";
+}
+
+/* ! === HEADER === */
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray);
+  padding: 10px 2vw;
+  gap: 4vw;
+}
+
+nav a {
+  color: var(--light-gray);
+  font-size: 10px;
+}
+
+header nav svg {
+  min-height: 15px;
+  min-width: 15px;
+  height: 15px;
+  width: 15px;
+  fill: var(--light-gray);
+}
+
+header article {
+  background: url("../img/2024.jpg") no-repeat center bottom;
+  height: 85vh;
+  background-size: cover;
+
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 10px;
+}
+
+header article img {
+  width: 100px;
+}
+
+/* ! ==== MAIN ===== */
+
+.black-bg-img {
+  background-size: cover;
+  height: 90vh;
+  padding: 30px;
+  color: var(--light-gray);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Series 9 Watch */
+.watch {
+  background: url("../img/uhr.jpg") no-repeat center;
+  margin-bottom: 10px;
+}
+
+.watch img {
+  width: 110px;
+}
+
+/* Iphone 15 */
+.iphone15 {
+  background: url("../img/iphone15.jpg") no-repeat center;
+}
+
+/* ! Vier Boxen */
+
+.box {
+  height: 350px;
+  width: 50vw;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+
+  margin: 0.3vw;
+
+  /* BG IMG */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.vier-boxen article {
+  display: flex;
+  align-items: center;
+}
+
+.iphone-box {
+  background-image: url("../img/camera.jpg");
+}
+
+.macbook {
+  background-image: url("../img/macbookpro.jpg");
+}
+.ipad {
+  background-image: url("../img/ipad.jpg");
+}
+.uhr {
+  background-image: url("../img/ultra.jpg");
+}
