@@ -17,6 +17,7 @@ const server = http.createServer((request, response) => {
   //   response.end();
 
   //* HTML-Pages als response ausgeben ohne externes Promise:
+  //   hier fängt Routing an: url/route matchen mit der richtigen Aufgabe
   if (
     (request.method === "GET" && request.url === "/") ||
     request.url === "/home"

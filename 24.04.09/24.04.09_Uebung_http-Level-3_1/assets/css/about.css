@@ -1,0 +1,20 @@
+main {
+  padding-inline: 100px;
+}
+
+.description {
+  /* background: url(/images/logo.png) no-repeat; */
+  /* background: url(/images/logo.svg) no-repeat;
+  background-size: 50%;
+  background-position: left bottom; */
+  /* background: url(/assets/images/logo.svg); */
+}
+
+.description section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,25 @@
+body {
+  background-color: rgb(244, 243, 243);
+  text-align: center;
+}
+
+h1,
+a {
+  font-family: Arial;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: darkgray;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+}
