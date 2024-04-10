@@ -1,0 +1,42 @@
+/*! Gelber Wrapper */
+.home-wrapper {
+  background-image: linear-gradient(to top, #f3c552, #f3c552a7);
+  min-height: 100vh;
+  padding: 5rem 10rem;
+}
+
+/* ! Weiße Karte */
+.home-card {
+  background-color: white;
+  border-radius: 1.25rem;
+}
+
+/* ! Text Area */
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 2rem;
+  padding-bottom: 4rem;
+}
+
+main article {
+  margin-inline: 4rem;
+}
+
+main article h2 {
+  max-width: 10ch;
+  color: #313235;
+  margin-bottom: 2rem;
+}
+
+main article h3 {
+  max-width: 30ch;
+  color: #3e3f43;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+main article span {
+  font-weight: 700;
+}

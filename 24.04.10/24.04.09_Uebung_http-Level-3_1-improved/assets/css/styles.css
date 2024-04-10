@@ -1,0 +1,222 @@
+@font-face {
+  font-family: Nunito;
+  src: url(../font/Nunito-VariableFont_wght.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-family: Nunito, Arial, Helvetica, sans-serif; */
+  font-family: Nunito;
+  font-size: 14px;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main {
+  padding-inline: 100px;
+}
+
+h2 {
+  font-size: 4.5rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+a {
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.btn {
+  border: 1px solid #3e3f43;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+}
+
+.yellow-btn {
+  background-color: #daa520;
+  color: white;
+  border-radius: 0.25rem;
+  padding: 0.875rem 1.5rem;
+}
+
+/*! Navigation */
+header {
+  /* position: fixed; */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* padding: 2rem; */
+  padding-inline: 100px;
+  padding-block: 32px;
+  margin-bottom: 2rem;
+}
+
+header div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+}
+
+nav a {
+  padding-inline: 1rem;
+  color: #222222c9;
+}
+
+nav a:hover {
+  color: darkgray;
+}
+
+.btn:hover {
+  border: 1px solid darkgray;
+}
+
+.active {
+  color: #daa520;
+  font-weight: 700;
+}
+
+.btn.active {
+  border: 1px solid #daa520;
+}
+
+/*! Heading für alle Seiten außer Home */
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 3rem;
+}
+
+.heading div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heading h3 {
+  color: #3e3f43;
+}
+
+.heading h2 {
+  color: #22222223;
+  text-transform: uppercase;
+}
+
+.heading article {
+  border: 1px solid black;
+  width: 40%;
+}
+
+/* ! Footer  */
+footer {
+  padding-inline: 100px;
+  padding-block: 32px;
+  margin-bottom: 2rem;
+}
+
+/* ! Footer Subscribe */
+.subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 100px;
+}
+
+.subscribe p {
+  max-width: 40ch;
+}
+
+.subscribe span {
+  font-weight: 700;
+}
+
+fieldset {
+  border-radius: 4px;
+  border: 1px solid #daa520;
+}
+
+.subscribe input[type="mail"] {
+  border-radius: 4px 0 0 4px;
+  border: none;
+  margin-right: -5px;
+  padding: 8px 16px;
+  width: 40ch;
+}
+
+::placeholder {
+  font-size: 1.25rem;
+  color: #afafaf;
+}
+
+.subscribe input[type="submit"] {
+  background-color: #daa520;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 1.25rem;
+}
+
+/* ! Footer Contacts & Links */
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: flex-end; */
+  border-top: 1px solid #c4c4c4;
+  padding-block: 30px;
+
+  /* background: url(/images/workplace.png) right bottom no-repeat; */
+  /* background-size: contain; */
+}
+
+.contacts article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contacts div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contacts h4 {
+  font-size: 1.125rem;
+  color: #333333;
+}
+
+.contacts p,
+.contacts a {
+  font-size: 0.875rem;
+  color: #8d8d8d;
+}
+
+/* .contacts img {
+  width: 500px;
+} */
