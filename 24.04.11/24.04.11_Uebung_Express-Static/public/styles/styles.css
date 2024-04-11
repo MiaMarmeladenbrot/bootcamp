@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+header {
+  margin-block: 50px;
+}
+
+nav a {
+  padding-inline: 20px;
+  text-decoration: none;
+  color: darkgrey;
+}
+
+nav a:hover {
+  color: grey;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
