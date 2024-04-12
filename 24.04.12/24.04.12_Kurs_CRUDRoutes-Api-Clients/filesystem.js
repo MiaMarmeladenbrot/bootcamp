@@ -27,7 +27,7 @@ export function readTransactions() {
 export function writeJsonFile(path, jsObj) {
   return new Promise((resolve, reject) => {
     // js-Objekt in String umwandeln
-    const jsonString = JSON.stringify(jsObj);
+    const jsonString = JSON.stringify(jsObj, null, 2);
 
     fs.writeFile(path, jsonString, (err) => {
       if (err) return reject(err); // Fehlermeldung
