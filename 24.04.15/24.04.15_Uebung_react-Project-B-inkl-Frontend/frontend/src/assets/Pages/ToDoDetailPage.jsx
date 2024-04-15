@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import BackButton from "../Components/BackButton";
+import "./ToDoDetailPage.css";
 
 const ToDoDetailPage = () => {
   // Id auslesen
@@ -21,8 +23,13 @@ const ToDoDetailPage = () => {
   }, []);
 
   return (
-    <section>
-      <h2>{todo?.content}</h2>
+    <section className="detailpage">
+      <div>
+        <BackButton />
+        <h2>{todo?.content}</h2>
+      </div>
+
+      <p>Due Date: {new Date(todo?.dueDate).toLocaleDateString()}</p>
       <p>in charge: {todo?.todoist}</p>
       <p>Todo created: {new Date(todo?.timestamp).toLocaleDateString()}</p>
     </section>

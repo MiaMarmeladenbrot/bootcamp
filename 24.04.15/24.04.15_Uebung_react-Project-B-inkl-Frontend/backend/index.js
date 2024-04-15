@@ -11,6 +11,7 @@
 //     "timestamp": 1712924278109,
 //     "content": "Pflanze einen Baum",
 //     "todoist": "Felix",
+//     "dueDate": 1712924278109,
 //   }
 
 import cors from "cors";
@@ -60,6 +61,7 @@ app.post("/api/v1/todos", (req, res) => {
     timestamp: Date.now(),
     content: req.body.content,
     todoist: req.body.todoist,
+    dueDate: req.body.dueDate,
   };
 
   readTodos()

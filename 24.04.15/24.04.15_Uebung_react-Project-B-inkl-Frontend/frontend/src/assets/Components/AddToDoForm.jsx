@@ -8,11 +8,15 @@ const AddToDoForm = ({ todos, setToDos }) => {
   // state for person in charge from input 2
   const [todoist, setTodoist] = useState("");
 
+  // state für Due Date from input 3
+  const [dueDate, setDueDate] = useState("");
+
   // Func on click to save new todo in backend json file
   const addToDo = (event) => {
     event.preventDefault();
 
     // Fehlermeldung, falls Felder nicht befüllt wurden
+    // # noch datum dazu
     if (content.length === 0 || todoist.length === 0) {
       window.alert("Please give a description and a person in charge");
       return;
@@ -22,6 +26,7 @@ const AddToDoForm = ({ todos, setToDos }) => {
     const newToDo = {
       content,
       todoist,
+      dueDate,
     };
 
     // Endpoint: POST /api/v1/todos
@@ -35,6 +40,7 @@ const AddToDoForm = ({ todos, setToDos }) => {
         setToDos(data);
         setContent(""); // Felder wieder leeren
         setTodoist("");
+        setDueDate("");
       })
       .catch((err) => console.log(err));
   };
@@ -53,8 +59,12 @@ const AddToDoForm = ({ todos, setToDos }) => {
         onChange={(e) => setTodoist(e.target.value)}
         value={todoist}
       />
-      {/* //# statt TimeStamp Due Date hinzufügen, dann auch im Server ändern */}
-      {/* <input type="date" placeholder="Due Date" /> */}
+      <input
+        type="date"
+        placeholder="Due Date"
+        onChange={(e) => setDueDate(e.target.value)}
+        value={dueDate}
+      />
       <button onClick={addToDo}>Save</button>
     </form>
   );

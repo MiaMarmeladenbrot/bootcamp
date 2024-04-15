@@ -33,9 +33,9 @@
   cursor: pointer;
 }
 .todo-list-item button:first-of-type {
-  right: 30px;
+  right: 40px;
   margin-right: 10px;
 }
 .todo-list-item button:last-of-type {
-  right: 5px;
+  right: 20px;
 }

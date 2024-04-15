@@ -1,0 +1,13 @@
+.detailpage div {
+  display: flex;
+  align-items: flex-start;
+}
+
+.detailpage p {
+  margin-bottom: 10px;
+}
+
+.detailpage svg {
+  margin-left: -50px;
+  cursor: pointer;
+}

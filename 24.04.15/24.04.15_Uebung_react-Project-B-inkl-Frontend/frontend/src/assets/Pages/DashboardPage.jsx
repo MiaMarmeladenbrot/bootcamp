@@ -16,9 +16,10 @@ const DashboardPage = () => {
       })
       .catch((err) => console.log(err));
   }, []);
+
   return (
     <>
-      <h1>Your ToDos</h1>
+      <h1>My To-Dos</h1>
       <AddToDoForm todos={todos} setToDos={setToDos} />
       <ToDoList todos={todos} setToDos={setToDos} />
     </>

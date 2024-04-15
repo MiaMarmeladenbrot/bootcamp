@@ -8,6 +8,9 @@ const EditToDoForm = ({ singleToDo, setToDos, setShowEditForm }) => {
   // state für person in charge des jeweiligen Todos
   const [todoist, setTodoist] = useState(singleToDo.todoist);
 
+  // state für Due Date
+  const [dueDate, setDueDate] = useState();
+
   // Func on click to edit and save new todo in backend json file
   const editToDo = (event) => {
     event.preventDefault();
@@ -22,6 +25,7 @@ const EditToDoForm = ({ singleToDo, setToDos, setShowEditForm }) => {
     const updateToDoInfo = {
       content,
       todoist,
+      dueDate,
     };
 
     // Bearbeiten eines ToDos
@@ -42,6 +46,13 @@ const EditToDoForm = ({ singleToDo, setToDos, setShowEditForm }) => {
   return (
     <form>
       <input
+        type="date"
+        placeholder="Due Date"
+        onChange={(e) => setDueDate(e.target.value)}
+        value={dueDate}
+      />
+
+      <input
         type="text"
         placeholder="What needs doing?"
         onChange={(e) => setContent(e.target.value)}
@@ -53,8 +64,6 @@ const EditToDoForm = ({ singleToDo, setToDos, setShowEditForm }) => {
         onChange={(e) => setTodoist(e.target.value)}
         value={todoist}
       />
-      {/* //# statt TimeStamp Due Date hinzufügen, dann auch im Server ändern */}
-      {/* <input type="date" placeholder="Due Date" /> */}
       <button onClick={editToDo}>Save</button>
     </form>
   );

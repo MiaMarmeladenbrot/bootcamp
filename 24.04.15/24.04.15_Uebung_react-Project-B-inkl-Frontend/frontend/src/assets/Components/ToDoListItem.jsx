@@ -24,7 +24,7 @@ const ToDoListItem = ({ singleToDo, setToDos }) => {
       <section className="todo-list-item">
         <Link to={`/todos/${singleToDo?.id}`}>
           <div>
-            <p>{new Date(singleToDo?.timestamp).toLocaleDateString()}</p>
+            <p>{new Date(singleToDo?.dueDate).toLocaleDateString()}</p>
             <p>{singleToDo?.content}</p>
           </div>
           <p>{singleToDo?.todoist}</p>
