@@ -1,0 +1,72 @@
+.income-transaction-amount {
+  color: green;
+}
+
+.expense-transaction-amount {
+  color: red;
+}
+
+.datestring {
+  color: grey;
+}
+
+.transaction-info-box {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.transaction-info-box b {
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.transaction-list-item {
+  position: relative;
+  padding-right: 100px;
+  margin-bottom: 20px;
+}
+
+.transaction-list-item button:first-of-type {
+  position: absolute;
+  top: -5px;
+  right: 0;
+}
+
+.transaction-list-item button:last-of-type {
+  position: absolute;
+  top: -5px;
+  right: 40px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.transaction-form {
+  margin-bottom: 20px;
+  display: flex;
+  border: 1px solid black;
+}
+
+.transaction-form input {
+  width: 100%;
+  font-size: larger;
+  border: none;
+}
+
+.transaction-form button {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}

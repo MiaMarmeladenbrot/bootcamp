@@ -1,0 +1,30 @@
+[
+  {
+    "id": 5,
+    "timestamp": 1712908918571,
+    "type": "income",
+    "description": "Nachhilfe",
+    "amount": 35
+  },
+  {
+    "id": 1713175150829,
+    "timestamp": 1713175150829,
+    "type": "expense",
+    "description": "Einkauf",
+    "amount": 55
+  },
+  {
+    "id": 1713175364659,
+    "timestamp": 1713175364659,
+    "type": "expense",
+    "description": "Bücherei",
+    "amount": 20
+  },
+  {
+    "id": 1713175516225,
+    "timestamp": 1713175516225,
+    "type": "expense",
+    "description": "Geschenk für Ilvie",
+    "amount": 16
+  }
+]
