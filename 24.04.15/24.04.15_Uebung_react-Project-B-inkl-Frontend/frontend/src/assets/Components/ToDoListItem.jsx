@@ -20,8 +20,10 @@ const ToDoListItem = ({ singleToDo, setToDos }) => {
 
   return (
     <>
-      {/* // # ganz vorn Abhak-Möglichkeit, von toDo auf done oder so */}
       <section className="todo-list-item">
+        {/* // # noch todo: ganz vorn Abhak-Möglichkeit für erledigte ToDos */}
+        {/* <input type="checkbox" /> */}
+
         <Link to={`/todos/${singleToDo?.id}`}>
           <div>
             <p>{new Date(singleToDo?.dueDate).toLocaleDateString()}</p>

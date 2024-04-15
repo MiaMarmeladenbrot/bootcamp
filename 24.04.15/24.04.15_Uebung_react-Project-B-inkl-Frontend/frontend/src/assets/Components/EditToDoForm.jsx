@@ -17,7 +17,7 @@ const EditToDoForm = ({ singleToDo, setToDos, setShowEditForm }) => {
 
     // Fehlermeldung, falls Felder nicht befüllt wurden
     if (content.length === 0 || todoist.length === 0) {
-      window.alert("Please give a description and a person in charge");
+      window.alert("Please give a due date, a description, a person in charge");
       return;
     }
 

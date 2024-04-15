@@ -16,9 +16,8 @@ const AddToDoForm = ({ todos, setToDos }) => {
     event.preventDefault();
 
     // Fehlermeldung, falls Felder nicht befüllt wurden
-    // # noch datum dazu
-    if (content.length === 0 || todoist.length === 0) {
-      window.alert("Please give a description and a person in charge");
+    if (content.length === 0 || todoist.length === 0 || dueDate.length === 0) {
+      window.alert("Please give a due date, a description, a person in charge");
       return;
     }
 
