@@ -1,0 +1,17 @@
+.hero {
+  background: url(/img/unsplash4.jpg) center no-repeat;
+  background-size: cover;
+
+  min-height: 70lvh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 50px;
+}
+
+.hero h2 {
+  color: white;
+  font-size: 3rem;
+}

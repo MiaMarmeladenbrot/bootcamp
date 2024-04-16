@@ -1,0 +1,26 @@
+header {
+  padding: 20px;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  background-color: white;
+  color: #2e738d;
+  border-radius: 15px;
+  padding: 10px 15px;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #2e738d;
+  color: white;
+}
