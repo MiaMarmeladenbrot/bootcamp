@@ -1,0 +1,85 @@
+[
+  {
+    "id": 1,
+    "contact": {
+      "name": "Dr. Baum",
+      "email": "dr.baum@gmail.com",
+      "phone": "0157839202029"
+    },
+    "age": 12,
+    "geo": {
+      "long": 48.129312312,
+      "lat": -3.2123243
+    },
+    "area": "North of Big Forest",
+    "type": "Nadelbaum",
+    "radius": 34,
+    "height": 603,
+    "imageUrl": "tree1.jpeg"
+  },
+  {
+    "id": 1713345077682,
+    "contact": {},
+    "age": 12,
+    "geo": {},
+    "area": "North of Big Forest",
+    "type": "Laubbaum",
+    "radius": 50,
+    "height": 200,
+    "imageUrl": "tree1.jpeg"
+  },
+  {
+    "id": 1713345152246,
+    "contact": {
+      "name": "Dr. Nadelbaum",
+      "email": "dr.baum@gmail.com",
+      "phone": "0157839202029"
+    },
+    "age": 12,
+    "geo": {
+      "long": 48.129312312,
+      "lat": -3.2123243
+    },
+    "area": "North of Big Forest",
+    "type": "Laubbaum",
+    "radius": 50,
+    "height": 200,
+    "imageUrl": "tree1.jpeg"
+  },
+  {
+    "id": 1713353188008,
+    "contact": {
+      "name": "Dr. Nadelbaum",
+      "email": "dr.baum@gmail.com",
+      "phone": "0157839202029"
+    },
+    "age": 12,
+    "geo": {
+      "long": 48.129312312,
+      "lat": -3.2123243
+    },
+    "area": "North of Big Forest",
+    "type": "Laubbaum",
+    "radius": 50,
+    "height": 200,
+    "imageUrl": "tree1.jpeg"
+  },
+  {
+    "id": 1713353194771,
+    "contact": {
+      "name": "Mr. Nadelbaum",
+      "email": "dr.baum@gmail.com",
+      "phone": "0157839202029"
+    },
+    "age": 12,
+    "geo": {
+      "long": 48.129312312,
+      "lat": -3.2123243
+    },
+    "area": "North of Big Forest",
+    "type": "Laubbaum",
+    "radius": 50,
+    "height": 200,
+    "imageUrl": "tree1.jpeg"
+  }
+]
