@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 import { BlogPostsContext } from "../context/Context";
 
 const RenderBlogPosts = () => {
-  // state for fetched data
-  // const [blogPosts, setBlogPosts] = useState();
-  // # --> globalen Kontext erstellen
-
+  // global context for all blogposts
   const { blogPosts, setBlogPosts } = useContext(BlogPostsContext);
 
   // get all blog posts for rendering
@@ -17,16 +14,6 @@ const RenderBlogPosts = () => {
       .then((data) => setBlogPosts(data))
       .catch((err) => console.log(err));
   }, []);
-
-  console.log(blogPosts);
-  // {
-  //     "id": 1,
-  //     "title": "How to blabla",
-  //     "date": 1712908901255,
-  //     "author": "Me",
-  //     "text": "Lorem ipsum",
-  //     "image": "409a81980aecacde908d91f1b9fa74f0"
-  //  }
 
   return (
     <section className="render-blogposts">

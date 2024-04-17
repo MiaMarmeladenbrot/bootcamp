@@ -8,7 +8,7 @@ const PostNewBlogForm = () => {
 
   // state for uploading image
   const [attachment, setAttachment] = useState();
-  console.log(attachment);
+
   // state for title
   const [title, setTitle] = useState("");
 
@@ -44,13 +44,13 @@ const PostNewBlogForm = () => {
         };
         return newBlogPost;
       })
-      .then((newBlogPost) => {
+      .then((newBlogPost) =>
         fetch("http://localhost:4004/blog/v1/posts", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(newBlogPost),
-        });
-      })
+        })
+      )
       .then((res) => res.json())
       .then((data) => setBlogPosts(data))
       .catch((err) => console.log(err));
