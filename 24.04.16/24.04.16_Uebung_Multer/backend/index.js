@@ -85,8 +85,10 @@ app.get("/blog/v1/posts/:id", (req, res) => {
 // POST new file
 // with multer for uploading data
 const upload = multer({ dest: "./uploads" });
+// middleware, die Daten aus Formular empfängt und deren Fieldname "attachment" ist
+// darüber kann ich dann den filename auslesen
 app.post("/blog/v1/files/upload", upload.single("attachment"), (req, res) => {
-  res.json({ fileName: req.file.image });
+  res.json({ fileName: req.file.filename });
 });
 
 // POST new post

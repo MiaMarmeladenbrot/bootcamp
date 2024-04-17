@@ -4,11 +4,11 @@ import { BlogPostsContext } from "../context/Context";
 
 const PostNewBlogForm = () => {
   // global Context for blog posts
-  const { blogPosts, setBlogPosts } = useContext(BlogPostsContext);
+  const { setBlogPosts } = useContext(BlogPostsContext);
 
   // state for uploading image
   const [attachment, setAttachment] = useState();
-
+  console.log(attachment);
   // state for title
   const [title, setTitle] = useState("");
 
@@ -40,7 +40,7 @@ const PostNewBlogForm = () => {
           title,
           author,
           text,
-          image: attachment.name,
+          image: data.fileName,
         };
         return newBlogPost;
       })
@@ -52,13 +52,12 @@ const PostNewBlogForm = () => {
         });
       })
       .then((res) => res.json())
-      .then((data) => {
-        setBlogPosts(data);
-        setTitle("");
-        setAuthor("");
-        setText("");
-      })
+      .then((data) => setBlogPosts(data))
       .catch((err) => console.log(err));
+
+    setTitle("");
+    setAuthor("");
+    setText("");
   };
 
   return (
