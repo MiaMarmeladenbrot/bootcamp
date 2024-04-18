@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./AddNewEntry.css";
 
-const AddNewEntry = ({ entries, setEntries }) => {
+const AddNewEntry = ({ setEntries }) => {
   // state for name input
   const [name, setName] = useState("");
   // state for surname input
@@ -12,45 +12,17 @@ const AddNewEntry = ({ entries, setEntries }) => {
   const [message, setMessage] = useState("");
   // state for uploading profile img
   const [profileImg, setProfileImg] = useState();
-  // state for validation error
-  const [valError, setValError] = useState([]);
-
-  // * Version ohne Image Upload - funktioniert!
-  // const addNewEntry = (e) => {
-  //   e.preventDefault();
-
-  //   // variable for entry-input-values
-  //   const newEntry = {
-  //     name,
-  //     surname,
-  //     email,
-  //     message,
-  //   };
-
-  //   // POST one
-  //   fetch("http://localhost:4004/api/v1/entries", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(newEntry),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setEntries(data);
-  //       setName("");
-  //       setSurname("");
-  //       setEmail("");
-  //       setMessage("");
-  //     })
-  //     .catch((err) => console.log(err));
-  // };
-
-  // * Version mit Image Upload
+  // state for validation error or empty input
+  const [error, setError] = useState([]);
 
   const addNewEntry = (e) => {
     e.preventDefault();
 
-    // error handling
-    if (!name || !surname || !email || !message || !profileImg) return;
+    // error handling: empty inputs
+    if (!name || !surname || !email || !message || !profileImg) {
+      return setError("Please fill all inputs");
+      // return window.alert("Please fill all inputs");
+    }
 
     // Image-Datei zu Formular hinzufügen
     const formData = new FormData();
@@ -84,8 +56,11 @@ const AddNewEntry = ({ entries, setEntries }) => {
       )
       .then((res) => res.json())
       .then((data) => {
-        // error handling
-        if (typeof data === "object") return;
+        // error handling: non valid data
+        if (data.message === "Please use valid data") {
+          console.log(data);
+          return setError(data);
+        }
         setEntries(data);
       })
       .catch((err) => console.log(err));
@@ -94,6 +69,7 @@ const AddNewEntry = ({ entries, setEntries }) => {
     setSurname("");
     setEmail("");
     setMessage("");
+    setError([]);
   };
 
   return (
@@ -127,6 +103,19 @@ const AddNewEntry = ({ entries, setEntries }) => {
       />
 
       <button onClick={addNewEntry}>Send</button>
+
+      {/* error message for empty inputs */}
+      {error?.length > 0 ? <p>{error}</p> : ""}
+
+      {/* error message for invalid data */}
+      {/* {error.errors?.length > 0 ? <p>{error.message}</p> : ""} */}
+      {error.errors?.length > 0
+        ? error.errors?.map((err, index) => (
+            <p key={index}>
+              Error: {err.msg} for {err.path}
+            </p>
+          ))
+        : ""}
     </form>
   );
 };

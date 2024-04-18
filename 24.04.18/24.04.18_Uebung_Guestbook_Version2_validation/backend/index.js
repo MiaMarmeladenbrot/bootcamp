@@ -55,9 +55,13 @@ app.post(
     // validation logic
     const validationErrors = validationResult(req);
     if (!validationErrors.isEmpty()) {
+      console.log(validationErrors);
       return res
         .status(400) // bad request
-        .json({ message: "Data not valid", errors: validationErrors.array() });
+        .json({
+          message: "Please use valid data",
+          errors: validationErrors.array(),
+        });
     }
 
     // new entry logic

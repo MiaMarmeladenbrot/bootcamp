@@ -24,4 +24,10 @@ form button {
   background-color: white;
   background-color: lightblue;
   cursor: pointer;
+
+  margin-bottom: 1rem;
+}
+
+form p {
+  color: red;
 }
