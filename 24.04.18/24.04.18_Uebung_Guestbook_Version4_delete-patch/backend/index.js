@@ -84,6 +84,24 @@ app.post(
   }
 );
 
+//# PATCH one
+
+// DELETE one
+app.delete("/api/v1/entries/:id", (req, res) => {
+  const entryId = Number(req.params.id);
+
+  readEntries()
+    .then((entries) => entries.filter((entry) => Number(entry.id) !== entryId))
+    .then((updatedEntries) => writeEntries(updatedEntries))
+    .then((updatedEntries) => res.status(200).json(updatedEntries))
+    .catch((err) =>
+      res.status(500).json({
+        err,
+        message: "Internal server error, could not delete entry",
+      })
+    );
+});
+
 // port & port listener
 const PORT = 4004;
 app.listen(PORT, () => console.log("Server ready at port", PORT));

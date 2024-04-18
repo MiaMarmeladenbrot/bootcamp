@@ -19,6 +19,8 @@ Gästebucheintrags-Formular:
 - POST /api/v1/entries/
 - GET /api/v1/entries/
 - POST /api/v1/files/upload
+- PATCH /api/v1/emtries/:id
+- DELETE /api/v1/emtries/:id
 
 ## 4. Frontend
 

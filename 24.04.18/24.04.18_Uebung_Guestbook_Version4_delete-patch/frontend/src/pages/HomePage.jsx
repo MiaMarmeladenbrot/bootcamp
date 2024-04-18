@@ -19,7 +19,13 @@ const HomePage = () => {
     <main>
       <h1>Guestbook</h1>
       <AddNewEntry entries={entries} setEntries={setEntries} />
-      <RenderEntries entries={entries} />
+      {entries?.map((singleEntry, index) => (
+        <RenderEntries
+          key={index}
+          singleEntry={singleEntry}
+          setEntries={setEntries}
+        />
+      ))}
     </main>
   );
 };

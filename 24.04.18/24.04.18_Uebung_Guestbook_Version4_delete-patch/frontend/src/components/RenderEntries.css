@@ -1,13 +1,15 @@
-.render-entries {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
 .render-entries div {
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 3rem;
+
+  min-width: 25rem;
   margin-bottom: 1.5rem;
+}
+
+.render-entries article {
+  display: flex;
+  gap: 1rem;
 }
 
 .render-entries img {
@@ -15,4 +17,9 @@
   height: 6rem;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.render-entries svg {
+  width: 20px;
+  cursor: pointer;
 }
