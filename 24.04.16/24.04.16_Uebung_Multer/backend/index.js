@@ -1,36 +1,3 @@
-// PLAN: BLOG
-// 1. Entitäten  ✅
-//      - Post
-//          - Titel
-//          - Autor
-//          - Image
-//          - Text
-//          - Datum
-// {
-//     "id": 1,
-//     "title": "How to blabla",
-//     "date": 1712908901255,
-//     "author": "Me",
-//     "text": "Lorem ipsum",
-//     "image": "409a81980aecacde908d91f1b9fa74f0"
-//  }
-
-// 2. Endpoints
-//      - GET all posts ✅
-//      - GET one post ✅
-//      - POST new post ✅
-//      - PATCH one post ✅
-//      - DELETE one post ✅
-
-// 3. Pages/Components ✅
-//      - HomePage
-//          - Nav -> AdminPage
-//          - Hero
-//          - RenderBlogPosts
-//      - BlogDetailPage
-//      - AdminPage
-//          - PostNewBlogForm
-
 import cors from "cors";
 import multer from "multer";
 import express from "express";
@@ -85,9 +52,7 @@ app.get("/blog/v1/posts/:id", (req, res) => {
 // POST new file
 // with multer for uploading data
 const upload = multer({ dest: "./uploads" });
-// middleware, die Daten aus Formular empfängt und deren Fieldname "attachment" ist
-// darüber kann ich dann den filename auslesen und in einer Variable speichern
-// # filename wird automatisch generiert?
+
 app.post("/blog/v1/files/upload", upload.single("attachment"), (req, res) => {
   res.json({ fileName: req.file.filename });
 });

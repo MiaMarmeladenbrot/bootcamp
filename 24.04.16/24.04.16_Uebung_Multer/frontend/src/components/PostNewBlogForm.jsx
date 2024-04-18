@@ -8,6 +8,7 @@ const PostNewBlogForm = () => {
 
   // state for uploading image
   const [attachment, setAttachment] = useState();
+  console.log(attachment);
 
   // state for title
   const [title, setTitle] = useState("");
@@ -37,9 +38,9 @@ const PostNewBlogForm = () => {
       .then((res) => res.json())
       .then((data) => {
         const newBlogPost = {
-          title,
-          author,
-          text,
+          title: title,
+          author: author,
+          text: text,
           image: data.fileName,
         };
         return newBlogPost;
