@@ -32,7 +32,7 @@ app.get("/api/v1/entries", (_, res) => {
     );
 });
 
-//# UPLOAD
+// UPLOAD
 // POST one file
 const upload = multer({ dest: "./uploads" });
 app.post("/api/v1/files/upload", upload.single("profileImg"), (req, res) => {

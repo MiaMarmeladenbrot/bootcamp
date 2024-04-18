@@ -51,6 +51,17 @@ const upload = multer({ dest: "./uploads" });
 // POST new file
 // lädt die angegebene Datei (nur eine, weil single) in den uploads-Ordner
 // gibt ein JSON mit dem Dateinamen zurück
+// req.file enthält folgende key-value-pairs, auf die ich zugreifen kann:
+// {
+//   fieldname: 'profileImg',
+//   originalname: 'tree1.jpeg',
+//   encoding: '7bit',
+//   mimetype: 'image/jpeg',
+//   destination: './uploads',
+//   filename: 'ee311039bdbaf3e8029e4223cef35475', //--> automatisch generiert
+//   path: 'uploads/ee311039bdbaf3e8029e4223cef35475',
+//   size: 1595834
+// }
 app.post("/api/v1/files/upload", upload.single("attachment"), (req, res) => {
   res.json({ fileName: req.file.filename });
 });

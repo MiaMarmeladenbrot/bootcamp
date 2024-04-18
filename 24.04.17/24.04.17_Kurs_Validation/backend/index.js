@@ -59,7 +59,7 @@ app.get(
 app.post(
   "/api/v1/trees",
 
-  // ! Validationn Constraints
+  // ! Validation Constraints
   //   https://express-validator.github.io/docs/api/validation-chain/
   body("age").isInt(), // muss ganze Zahl sein
   body("contact.name").isString().notEmpty(), // muss string und nicht leer sein
@@ -88,6 +88,20 @@ app.post(
       // Response: bad request (du hast mir was gesendet, das Format stimmt aber nicht)
       // außerdem sende ich ein Array mit den Fehlern als Response
     }
+
+    // validationErrors in der Backend-Konsole sieht so aus:
+    // Result {
+    //   formatter: [Function: formatter],
+    //   errors: [
+    //     {
+    //       type: 'field',
+    //       value: 'mypamailinator.com',
+    //       msg: 'Invalid value',
+    //       path: 'email',
+    //       location: 'body'
+    //     }
+    //   ]
+    // }
 
     // eigentliche Logik, um neuen Baum zu erstellen:
     const newTree = {
