@@ -23,4 +23,5 @@ form input {
 form button {
   background-color: white;
   background-color: lightblue;
+  cursor: pointer;
 }

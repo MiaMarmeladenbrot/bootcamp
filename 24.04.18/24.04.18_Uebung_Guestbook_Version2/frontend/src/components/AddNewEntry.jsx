@@ -11,7 +11,7 @@ const AddNewEntry = ({ entries, setEntries }) => {
   // state for message input
   const [message, setMessage] = useState("");
   // state for uploading profile img
-  //   const [profileImg, setProfileImg] = useState();
+  const [profileImg, setProfileImg] = useState();
 
   // * Version ohne Image Upload - funktioniert!
   // const addNewEntry = (e) => {
@@ -52,8 +52,9 @@ const AddNewEntry = ({ entries, setEntries }) => {
 
     const formData = new FormData();
     formData.append("profileImg", profileImg, profileImg.name);
+    console.log(profileImg);
 
-    fetch("/api/v1/files/upload", {
+    fetch("http://localhost:4004/api/v1/files/upload", {
       method: "POST",
       body: formData,
     })

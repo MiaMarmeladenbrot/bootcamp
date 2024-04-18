@@ -5,5 +5,14 @@
 }
 
 .render-entries div {
+  display: flex;
+  gap: 1rem;
   margin-bottom: 1.5rem;
+}
+
+.render-entries img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 50%;
 }

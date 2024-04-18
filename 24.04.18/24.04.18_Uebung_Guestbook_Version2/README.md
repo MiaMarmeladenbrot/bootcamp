@@ -16,11 +16,12 @@ Gästebucheintrags-Formular:
 
 ## Endpoints
 
-POST /api/v1/entries/
-GET /api/v1/entries/
+- POST /api/v1/entries/
+- GET /api/v1/entries/
+- POST /api/v1/files/upload
 
 ## 4. Frontend
 
 - HomePage.jsx mit Fetch
-  - AddNewEntry.jsx
+  - AddNewEntry.jsx mit Upload/POST-Fetch
   - RenderEntries.jsx
