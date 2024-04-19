@@ -84,7 +84,55 @@ app.post(
   }
 );
 
-//# PATCH one
+// PATCH one
+// without image upload
+app.patch(
+  "/api/v1/entries/:id",
+  // validation constraints
+  body("name").isString().notEmpty(),
+  body("surname").isString().notEmpty(),
+  body("email").isEmail(),
+  body("message").isString().notEmpty(),
+  (req, res) => {
+    // validation logic
+    const validationErrors = validationResult(req);
+    if (!validationErrors.isEmpty()) {
+      console.log(validationErrors);
+      return res
+        .status(400) // bad request
+        .json({
+          message: "Please use valid data",
+          errors: validationErrors.array(),
+        });
+    }
+
+    // PATCH logic
+    const updateId = Number(req.params.id);
+    const updateData = req.body;
+
+    readEntries()
+      .then((entries) =>
+        entries.map((oldEntry) => {
+          if (Number(oldEntry.id) === updateId) {
+            return {
+              ...oldEntry,
+              ...updateData,
+            };
+          } else {
+            return oldEntry;
+          }
+        })
+      )
+      .then((entries) => writeEntries(entries))
+      .then((entries) => res.status(200).json(entries))
+      .catch((err) =>
+        res.status(500).json({
+          err,
+          message: "Internal server error, could not update entry",
+        })
+      );
+  }
+);
 
 // DELETE one
 app.delete("/api/v1/entries/:id", (req, res) => {

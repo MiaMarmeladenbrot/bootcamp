@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./AddNewEntry.css";
 
 const AddNewEntry = ({ setEntries }) => {
@@ -62,13 +62,13 @@ const AddNewEntry = ({ setEntries }) => {
           return setError(data);
         }
         setEntries(data);
+        setName("");
+        setSurname("");
+        setEmail("");
+        setMessage("");
       })
       .catch((err) => console.log(err));
 
-    setName("");
-    setSurname("");
-    setEmail("");
-    setMessage("");
     setError([]);
   };
 
