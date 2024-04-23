@@ -1,7 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import { MoviesDAO } from "./db-access/moviesDAO.js";
-import { getDb } from "./db-access/getDb.js";
+import { FavoritesDAO } from "./db-access/favoritesDAO.js";
 
 const app = express();
 
@@ -77,9 +77,40 @@ app.delete("/api/v1/movies/:movieId", (req, res) => {
 });
 
 // * favorite movies
-// einen Film zu Favoriten hinzufügen: POST /api/v1/favorites
-// einen Film aus Favoriten entfernen: DELETE /api/v1/favorites/:favoriteId
-// alle Favoriten-Filme anzeigen: GET /api/v1/favorites
+// GET /api/v1/favorites
+// alle Favoriten-Filme anzeigen:
+app.get("/api/v1/favorites", (_, res) => {
+  FavoritesDAO.showFavorites()
+    .then((favoriteMovies) => res.json(favoriteMovies))
+    .catch((err) => {
+      console.log(err);
+      res.status(200).json({ err, message: "Could not find favorite movies" });
+    });
+});
+
+// POST /api/v1/favorites
+// einen Film zu Favoriten hinzufügen:
+app.post("/api/v1/favorites", (req, res) => {
+  const newFavoriteInfo = req.body;
+  FavoritesDAO.addToFavorites(newFavoriteInfo)
+    .then((addedFavorite) => res.json(addedFavorite || {}))
+    .catch((err) =>
+      res.status(500).json({ err, message: "Could not add movie to favorites" })
+    );
+});
+
+// DELETE /api/v1/favorites/:favoriteId
+// einen Film aus Favoriten entfernen:
+app.delete("/api/v1/favorites/:favoriteId", (req, res) => {
+  const favoriteId = req.params.favoriteId;
+
+  FavoritesDAO.deleteFromFavorites(favoriteId)
+    .then((deletedFavorite) => res.json(deletedFavorite || {}))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ err, message: "Could not delete movie" });
+    });
+});
 
 const PORT = 3007;
 app.listen(PORT, () => console.log("Server listening at port", PORT));
