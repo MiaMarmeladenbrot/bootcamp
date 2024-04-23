@@ -45,6 +45,7 @@ function deleteOne(id) {
   );
 }
 
+// alle Bemerkungen zu einem Rezept finden
 function findByRecipe(recipeId) {
   const recipeIdAsObjectId = ObjectId.createFromHexString(recipeId);
   return getDb().then((db) =>
