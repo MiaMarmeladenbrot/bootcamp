@@ -31,10 +31,12 @@ const RenderMovies = () => {
         )}
       </article>
 
-      {/* load more button */}
-      <button className="btn" onClick={() => setLoadItems(loadItems + 20)}>
-        Load More
-      </button>
+      {/* load more button until all movies are displayed */}
+      {movies.length > 20 && loadItems <= 2235 && (
+        <button className="btn" onClick={() => setLoadItems(loadItems + 20)}>
+          Load More
+        </button>
+      )}
     </section>
   );
 };

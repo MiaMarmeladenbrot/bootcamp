@@ -1,7 +1,7 @@
 .hero {
   background: url(/img/movie-hero.png) center no-repeat;
   background-size: cover;
-  min-height: 100lvh;
+  min-height: 90lvh;
 
   display: flex;
   flex-direction: column;
