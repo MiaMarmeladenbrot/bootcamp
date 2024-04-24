@@ -1,0 +1,24 @@
+.detailpage {
+  background-color: var(--main-bg-color);
+  padding: 10rem 4rem;
+
+  min-height: 100lvh;
+}
+
+.detailpage section {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 2rem;
+}
+
+.detailpage section article {
+  width: 50%;
+}
+
+.detailpage section article div {
+  display: flex;
+  gap: 1rem;
+
+  margin-bottom: 1.25rem;
+}

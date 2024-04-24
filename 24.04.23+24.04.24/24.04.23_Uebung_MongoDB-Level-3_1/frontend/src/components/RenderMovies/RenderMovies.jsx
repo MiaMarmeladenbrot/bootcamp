@@ -4,21 +4,11 @@ import "./RenderMovies.css";
 import { Link } from "react-router-dom";
 
 const RenderMovies = () => {
-  // context for fetched movies
+  // context for fetched movies (fetching in LoadingPage)
   const { movies, setMovies } = useContext(FetchMoviesContext);
 
   // state for load-more-button
   const [loadItems, setLoadItems] = useState(20);
-
-  useEffect(() => {
-    // # backend url noch in .env
-    fetch("http://localhost:3007/api/v1/movies")
-      .then((res) => res.json())
-      .then((data) => setMovies(data))
-      .catch((err) => console.log(err));
-  }, []);
-
-  console.log(movies);
 
   return (
     <section className="render-movies">
@@ -28,7 +18,7 @@ const RenderMovies = () => {
             <Link key={singleMovie._id} to={`/movies/${singleMovie._id}`}>
               <div>
                 <img
-                  src="public/img/placeholder-poster.jpeg"
+                  src="/img/placeholder-poster.jpeg"
                   alt={singleMovie.title}
                 />
                 <p>{singleMovie.title}</p>

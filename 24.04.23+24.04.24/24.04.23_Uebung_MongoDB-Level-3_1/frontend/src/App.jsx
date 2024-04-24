@@ -6,24 +6,34 @@ import AddMoviePage from "./pages/AddMoviePage/AddMoviePage";
 import DetailPage from "./pages/DetailPage/DetailPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import LoadingPage from "./pages/Loadingpage/Loadingpage";
 
+// Contexts
 import { FetchMoviesContext } from "./context/Context";
+import { LoadingContext } from "./context/Context";
 
 function App() {
   const [movies, setMovies] = useState("");
+  const [loading, setLoading] = useState(false);
 
   return (
     <>
       <FetchMoviesContext.Provider value={{ movies, setMovies }}>
-        <BrowserRouter>
-          <Nav />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/add-movie" element={<AddMoviePage />} />
-            <Route path="/movies/:movieId" element={<DetailPage />} />
-          </Routes>
-          <Footer />
-        </BrowserRouter>
+        <LoadingContext.Provider value={{ loading, setLoading }}>
+          {loading ? (
+            <BrowserRouter>
+              <Nav />
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/add-movie" element={<AddMoviePage />} />
+                <Route path="/movies/:movieId" element={<DetailPage />} />
+              </Routes>
+              <Footer />
+            </BrowserRouter>
+          ) : (
+            <LoadingPage />
+          )}
+        </LoadingContext.Provider>
       </FetchMoviesContext.Provider>
     </>
   );

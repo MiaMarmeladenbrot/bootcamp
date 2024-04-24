@@ -6,7 +6,6 @@ const HomePage = () => {
     <main>
       <Hero />
       <RenderMovies />
-      <h1>Home</h1>
     </main>
   );
 };
