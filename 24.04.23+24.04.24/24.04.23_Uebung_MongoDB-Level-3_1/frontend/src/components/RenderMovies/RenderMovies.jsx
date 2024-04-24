@@ -13,22 +13,15 @@ const RenderMovies = () => {
   return (
     <section className="render-movies">
       <article className="render-container">
-        {movies.length > 0 ? (
-          movies?.slice(0, loadItems).map((singleMovie) => (
-            <Link key={singleMovie._id} to={`/movies/${singleMovie._id}`}>
-              <div>
-                <img
-                  src="/img/placeholder-poster.jpeg"
-                  alt={singleMovie.title}
-                />
-                <p>{singleMovie.title}</p>
-                <p>{singleMovie.director}</p>
-              </div>
-            </Link>
-          ))
-        ) : (
-          <p>Loading</p>
-        )}
+        {movies?.slice(0, loadItems).map((singleMovie) => (
+          <Link key={singleMovie._id} to={`/movies/${singleMovie._id}`}>
+            <div>
+              <img src="/img/placeholder-poster.jpeg" alt={singleMovie.title} />
+              <p>{singleMovie.title}</p>
+              <p>{singleMovie.director}</p>
+            </div>
+          </Link>
+        ))}
       </article>
 
       {/* load more button until all movies are displayed */}

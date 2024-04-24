@@ -4,10 +4,10 @@
 
 - Get all movies -> HomePage ✅
 - Get single Movie -> DetailPage ✅
-- Patch a movie -> DetailPage
-- Get all favorites -> FavoritesPage
-- Post new movie -> AddMoviePage
+- Get all favorites -> FavoritesPage ✅
 - Post/Delete favorites -> FavoritesPage & DetailPage
+- Patch a movie -> DetailPage
+- Post new movie -> AddMoviePage
 
-- Search-Func in Nav
 - LoadingPage mit animiertem Stern
+- remove/add buttons schöner machen?

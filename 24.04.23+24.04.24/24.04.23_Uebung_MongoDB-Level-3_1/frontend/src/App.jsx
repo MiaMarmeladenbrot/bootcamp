@@ -11,6 +11,7 @@ import LoadingPage from "./pages/Loadingpage/Loadingpage";
 // Contexts
 import { FetchMoviesContext } from "./context/Context";
 import { LoadingContext } from "./context/Context";
+import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
 
 function App() {
   const [movies, setMovies] = useState("");
@@ -27,6 +28,7 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/add-movie" element={<AddMoviePage />} />
                 <Route path="/movies/:movieId" element={<DetailPage />} />
+                <Route path="/favorites" element={<FavoritesPage />} />
               </Routes>
               <Footer />
             </BrowserRouter>

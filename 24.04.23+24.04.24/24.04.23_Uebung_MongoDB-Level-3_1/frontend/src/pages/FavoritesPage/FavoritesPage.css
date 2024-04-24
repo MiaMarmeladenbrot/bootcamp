@@ -1,34 +1,27 @@
-.render-movies {
-  padding: 10rem 2rem;
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
-
+.favorites {
   background-color: var(--main-bg-color);
+  padding: 10rem 4rem;
+
+  min-height: 100lvh;
 }
 
-.render-container {
+.render-favorites {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
   gap: 3rem;
 
+
   margin-bottom: 4rem;
 }
 
-.render-container div {
+.render-favorites div {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   max-width: 20rem;
 }
 
-.render-container div p {
+.render-favorites div p {
   color: var(--secondary-font-color);
-}
-
-.render-movies button {
-  display: block;
-  margin: 0 auto;
 }
