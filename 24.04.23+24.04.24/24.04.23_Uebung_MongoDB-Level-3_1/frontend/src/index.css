@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Poppins;
+  src: url(/fonts/Poppins-VariableFont_wght.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-font-color: #a16171;
+  --main-bg-color: #264653;
+  --secondary-color: #2a9d8f;
+  --secondary-font-color: #ffffff;
+  --favorites-color: #e9c46a;
+}
+
+html {
+  font-family: Poppins;
+}
+
+img {
+  max-width: 100%;
+}
+
+h2 {
+  font-size: clamp(3rem, 4vw, 4.8rem);
+  color: var(--main-font-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 3.125rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
