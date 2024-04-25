@@ -14,6 +14,14 @@ const DetailPage = () => {
   // context for fetched movies
   const { movies } = useContext(FetchMoviesContext);
 
+  // states for input-fields in edit form
+  const [title, setTitle] = useState("");
+  const [year, setYear] = useState("");
+  const [director, setDirector] = useState("");
+  const [genre, setGenre] = useState("");
+  const [rating, setRating] = useState("");
+  const [plot, setPlot] = useState("");
+
   // get movie id of detailpage
   const { movieId } = useParams();
 
@@ -23,6 +31,22 @@ const DetailPage = () => {
     setMovieDetails(find);
   }, [movies]);
 
+  // show edit form and fill input fields with data from movieDetails
+  const openEdit = (e) => {
+    e.preventDefault();
+    setShowEditForm(!showEditForm);
+    setTitle(movieDetails.title);
+    setYear(movieDetails.year);
+    setDirector(movieDetails.director);
+    setGenre(movieDetails.genre);
+    setRating(movieDetails.imdb.rating);
+    setPlot(movieDetails.plot);
+  };
+
+  console.log(title);
+  console.log(year);
+  console.log(plot);
+
   return (
     <main className="detailpage">
       <h2>{movieDetails?.title}</h2>
@@ -30,12 +54,8 @@ const DetailPage = () => {
         {movieDetails?.year} | {movieDetails?.director}
       </p>
 
-      {/* //# hier weitermachen */}
       <button className="yellow-btn">Add to Favorites</button>
-      <button
-        className="transparent-green-btn"
-        onClick={(e) => setShowEditForm(!showEditForm)}
-      >
+      <button className="transparent-green-btn" onClick={openEdit}>
         Edit Movie
       </button>
 
@@ -62,8 +82,22 @@ const DetailPage = () => {
 
       <EditMovie
         movieDetails={movieDetails}
+        setMovieDetails={setMovieDetails}
         showEditForm={showEditForm}
         setShowEditForm={setShowEditForm}
+        // input fields
+        title={title}
+        setTitle={setTitle}
+        year={year}
+        setYear={setYear}
+        director={director}
+        setDirector={setDirector}
+        genre={genre}
+        setGenre={setGenre}
+        rating={rating}
+        setRating={setRating}
+        plot={plot}
+        setPlot={setPlot}
       />
     </main>
   );
