@@ -1,20 +1,15 @@
 import { Link } from "react-router-dom";
 import "./FavoritesPage.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import {
+  FetchFavoritesContext,
+  FetchMoviesContext,
+} from "../../context/Context";
+import MovieCard from "../../components/MovieCard/MovieCard";
 
 const FavoritesPage = () => {
-  // state for fetched favorites
-  const [favoriteMovies, setFavoriteMovies] = useState();
-
-  // fetch favorite movies
-  useEffect(() => {
-    fetch("http://localhost:3007/api/v1/favorites")
-      .then((res) => res.json())
-      .then((data) => setFavoriteMovies(data))
-      .catch((err) => console.log(err));
-  }, []);
-
-  console.log(favoriteMovies);
+  // global state for all fetched favorites
+  const { favoriteMovies } = useContext(FetchFavoritesContext);
 
   return (
     <main className="favorites">
@@ -22,17 +17,7 @@ const FavoritesPage = () => {
 
       <article className="render-favorites">
         {favoriteMovies?.map((singleMovie) => (
-          <Link key={singleMovie._id} to={`/movies/${singleMovie._id}`}>
-            <div>
-              <img src="/img/placeholder-poster.jpeg" alt={singleMovie.title} />
-              <p>{singleMovie.title}</p>
-              <p>{singleMovie.director}</p>
-              {/* //# remove favorites func einbauen */}
-              {/* //# minues-button noch einbauen */}
-              {/* //# oder schöner nur mit Icon?  */}
-              <button className="yellow-btn">Remove from Favorites</button>
-            </div>
-          </Link>
+          <MovieCard key={singleMovie._id} singleMovie={singleMovie} />
         ))}
       </article>
     </main>

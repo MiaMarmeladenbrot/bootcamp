@@ -3,6 +3,7 @@ import morgan from "morgan";
 import cors from "cors";
 import { MoviesDAO } from "./db-access/moviesDAO.js";
 import { FavoritesDAO } from "./db-access/favoritesDAO.js";
+import { ObjectId } from "mongodb";
 
 const app = express();
 
@@ -110,11 +111,11 @@ app.post("/api/v1/movies/:movieId/favorites", (req, res) => {
 
 // DELETE /api/v1/favorites/:favoriteId
 // einen Film aus Favoriten entfernen:
-app.delete("/api/v1/favorites/:favoriteId", (req, res) => {
-  const favoriteId = req.params.favoriteId;
+app.delete("/api/v1/favorites/:movieId", (req, res) => {
+  const movieId = req.params.movieId;
 
-  FavoritesDAO.deleteFromFavorites(favoriteId)
-    .then((deletedFavorite) => res.json(deletedFavorite || {}))
+  FavoritesDAO.deleteFromFavorites(movieId)
+    .then((deleted) => res.json(deleted || {}))
     .catch((err) => {
       console.log(err);
       res.status(500).json({ err, message: "Could not delete movie" });

@@ -59,7 +59,7 @@ function deleteFromFavorites(id) {
   const idAsObjectId = ObjectId.createFromHexString(id);
 
   return getDb().then((db) =>
-    db.collection("favorites").findOneAndDelete({ _id: idAsObjectId })
+    db.collection("favorites").findOneAndDelete({ movieId: idAsObjectId })
   );
 }
 

@@ -24,7 +24,6 @@ const EditMovie = ({
 }) => {
   // global context for fetched movies
   const { movies, setMovies } = useContext(FetchMoviesContext);
-  console.log(movieDetails);
 
   // function to save edited movie details
   const editMovie = (e) => {
