@@ -5,17 +5,22 @@ import { useParams } from "react-router-dom";
 import "./DetailPage.css";
 
 const DetailPage = () => {
+  // state to show or hide edit movie form
+  const [showEditForm, setShowEditForm] = useState(false);
+
+  // state for found movie details
   const [movieDetails, setMovieDetails] = useState([]);
+
+  // context for fetched movies
   const { movies } = useContext(FetchMoviesContext);
 
+  // get movie id of detailpage
   const { movieId } = useParams();
 
+  // find movie details from this id
   useEffect(() => {
-    if (movies.length > 0) {
-      const find = movies?.find((singleMovie) => singleMovie._id == movieId);
-      console.log(find);
-      setMovieDetails(find);
-    }
+    const find = movies?.find((singleMovie) => singleMovie._id == movieId);
+    setMovieDetails(find);
   }, [movies]);
 
   return (
@@ -26,8 +31,13 @@ const DetailPage = () => {
       </p>
 
       {/* //# hier weitermachen */}
-      <button>Add to Favorites</button>
-      <button>Edit Movie</button>
+      <button className="yellow-btn">Add to Favorites</button>
+      <button
+        className="transparent-green-btn"
+        onClick={(e) => setShowEditForm(!showEditForm)}
+      >
+        Edit Movie
+      </button>
 
       <section>
         <article>
@@ -40,7 +50,7 @@ const DetailPage = () => {
         <article>
           <div>
             {movieDetails?.genres?.map((genre, index) => (
-              <button key={index} className="btn">
+              <button key={index} className="green-btn">
                 {genre}
               </button>
             ))}
@@ -50,7 +60,11 @@ const DetailPage = () => {
         </article>
       </section>
 
-      <EditMovie />
+      <EditMovie
+        movieDetails={movieDetails}
+        showEditForm={showEditForm}
+        setShowEditForm={setShowEditForm}
+      />
     </main>
   );
 };

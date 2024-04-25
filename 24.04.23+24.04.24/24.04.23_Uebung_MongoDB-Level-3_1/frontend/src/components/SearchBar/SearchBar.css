@@ -3,14 +3,7 @@
   gap: 0.625rem;
 }
 
-.searchbar input {
-  border-radius: 3.125rem;
-  border: 1px solid #2a9d8f;
-  background-color: transparent;
-  padding: 10px 20px;
-  color: #2a9d8f;
-  min-width: 25rem;
-}
+/* input global im index.css gestylt */
 
 ::placeholder {
   color: #2a9d8f;

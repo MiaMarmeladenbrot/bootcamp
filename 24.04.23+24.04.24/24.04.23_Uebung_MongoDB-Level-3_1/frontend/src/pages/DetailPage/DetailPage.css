@@ -5,11 +5,25 @@
   min-height: 100lvh;
 }
 
+.detailpage p {
+  margin-bottom: 1.25rem;
+}
+
+.detailpage button {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
 .detailpage section {
   display: flex;
   justify-content: center;
+  gap: 50px;
 
   margin-top: 2rem;
+}
+
+.detailpage section article img {
+  width: 500px;
 }
 
 .detailpage section article {

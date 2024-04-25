@@ -28,7 +28,7 @@ const SearchBar = () => {
         onChange={(e) => setUserInput(e.target.value)}
         value={userInput}
       />
-      <button className="btn" onClick={findMovie}>
+      <button className="green-btn" onClick={findMovie}>
         Submit
       </button>
     </section>

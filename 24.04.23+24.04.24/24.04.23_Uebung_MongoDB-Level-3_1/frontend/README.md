@@ -9,5 +9,6 @@
 - Patch a movie -> DetailPage
 - Post new movie -> AddMoviePage
 
+- backend-url als env speichern
 - LoadingPage mit animiertem Stern
 - remove/add buttons schöner machen?

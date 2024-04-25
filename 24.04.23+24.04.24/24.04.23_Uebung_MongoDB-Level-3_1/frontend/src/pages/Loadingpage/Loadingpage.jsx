@@ -14,7 +14,6 @@ const LoadingPage = () => {
 
   // fetch all movies globally while waiting
   useEffect(() => {
-    // # backend url noch in .env
     fetch("http://localhost:3007/api/v1/movies")
       .then((res) => res.json())
       .then((data) => setMovies(data))

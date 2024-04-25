@@ -26,7 +26,10 @@ const RenderMovies = () => {
 
       {/* load more button until all movies are displayed */}
       {movies.length > 20 && loadItems <= 2235 && (
-        <button className="btn" onClick={() => setLoadItems(loadItems + 20)}>
+        <button
+          className="green-btn"
+          onClick={() => setLoadItems(loadItems + 20)}
+        >
           Load More
         </button>
       )}
