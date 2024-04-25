@@ -11,5 +11,6 @@
 
 - validation einbauen
 - backend-url als env speichern
+- reset-Btn für Suche
 - LoadingPage mit animiertem Stern
 - remove/add buttons schöner machen?

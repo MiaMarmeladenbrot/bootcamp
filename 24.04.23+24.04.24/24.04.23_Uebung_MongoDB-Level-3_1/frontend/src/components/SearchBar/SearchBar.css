@@ -3,9 +3,10 @@
   gap: 0.625rem;
 }
 
-/* input global im index.css gestylt */
+/* input global in index.css */
 
-::placeholder {
-  color: #2a9d8f;
-  font-size: 1rem;
+/* placeholder global in index.css */
+
+.searchbar a {
+  color: var(--secondary-font-color);
 }

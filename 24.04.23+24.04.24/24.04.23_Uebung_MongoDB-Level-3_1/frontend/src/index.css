@@ -18,7 +18,7 @@
 }
 
 html {
-  font-family: Poppins;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -75,4 +75,15 @@ textarea {
   padding: 10px 20px;
   color: #2a9d8f;
   min-width: 25rem;
+}
+
+textarea {
+  font-size: 1rem;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+}
+
+::placeholder {
+  color: #2a9d8f;
+  font-size: 1rem;
 }

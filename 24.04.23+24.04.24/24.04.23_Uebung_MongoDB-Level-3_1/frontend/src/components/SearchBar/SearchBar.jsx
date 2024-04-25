@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import "./SearchBar.css";
 import { FetchMoviesContext } from "../../context/Context";
+import { Link } from "react-router-dom";
 
 const SearchBar = () => {
   // global context for all fetched movies
@@ -28,8 +29,9 @@ const SearchBar = () => {
         onChange={(e) => setUserInput(e.target.value)}
         value={userInput}
       />
+
       <button className="green-btn" onClick={findMovie}>
-        Submit
+        <Link to="/"> Submit </Link>
       </button>
     </section>
   );

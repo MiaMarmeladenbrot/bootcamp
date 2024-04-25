@@ -3,9 +3,8 @@ import Hero from "../../components/Hero/Hero";
 
 const AddMoviePage = () => {
   return (
-    <main>
+    <main className="add-movie-page">
       <Hero />
-      <h1>Add a movie</h1>
       <AddMovie />
     </main>
   );
