@@ -40,6 +40,10 @@ a {
   text-decoration: none;
 }
 
+svg {
+  cursor: pointer;
+}
+
 .green-btn {
   background-color: var(--secondary-color);
   color: var(--secondary-font-color);

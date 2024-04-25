@@ -1,10 +1,6 @@
-import { Link } from "react-router-dom";
 import "./FavoritesPage.css";
-import { useContext, useEffect, useState } from "react";
-import {
-  FetchFavoritesContext,
-  FetchMoviesContext,
-} from "../../context/Context";
+import { useContext } from "react";
+import { FetchFavoritesContext } from "../../context/Context";
 import MovieCard from "../../components/MovieCard/MovieCard";
 
 const FavoritesPage = () => {
@@ -17,7 +13,11 @@ const FavoritesPage = () => {
 
       <article className="render-favorites">
         {favoriteMovies?.map((singleMovie) => (
-          <MovieCard key={singleMovie._id} singleMovie={singleMovie} />
+          <MovieCard
+            key={singleMovie._id}
+            singleMovie={singleMovie}
+            favorite={true}
+          />
         ))}
       </article>
     </main>

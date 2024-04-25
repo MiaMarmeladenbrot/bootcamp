@@ -20,7 +20,11 @@ const HomePage = () => {
       <section className="render-movies">
         <article className="render-container">
           {movies?.slice(0, loadItems).map((singleMovie) => (
-            <MovieCard key={singleMovie._id} singleMovie={singleMovie} />
+            <MovieCard
+              key={singleMovie._id}
+              singleMovie={singleMovie}
+              // favorite={true}
+            />
           ))}
         </article>
 

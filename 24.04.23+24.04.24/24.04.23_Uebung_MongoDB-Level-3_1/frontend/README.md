@@ -10,10 +10,8 @@
 - Post/Delete favorites -> FavoritesPage ✅
 - Post/Delete favorites -> DetailPage
 
-- statt add/remove Buttons ein Herz mit sich ändernder Füllung
+- fav-Status auf HomePage behalten?
 - validation einbauen
-- backend-url als env speichern
-- reset-Btn für Suche
-- LoadingPage mit animiertem Stern
-- remove/add buttons schöner machen?
+- backend-url als env speichern, api Ordner
+  export const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3007"
 - backend aufräumen -> DAO mehrere Sachen, die wir nicht brauchen

@@ -21,6 +21,12 @@ const SearchBar = () => {
     );
   };
 
+  // reset searched movies
+  const resetMovies = (e) => {
+    e.preventDefault();
+    window.location.reload(true);
+  };
+
   return (
     <section className="searchbar">
       <input
@@ -32,6 +38,9 @@ const SearchBar = () => {
 
       <button className="green-btn" onClick={findMovie}>
         <Link to="/"> Submit </Link>
+      </button>
+      <button className="green-btn" onClick={resetMovies}>
+        <Link to="/"> Reset </Link>
       </button>
     </section>
   );

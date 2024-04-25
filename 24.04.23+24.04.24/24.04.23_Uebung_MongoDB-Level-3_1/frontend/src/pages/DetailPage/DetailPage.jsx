@@ -52,11 +52,6 @@ const DetailPage = () => {
         {movieDetails?.year} | {movieDetails?.director}
       </p>
 
-      <button className="yellow-btn">Add to Favorites</button>
-      <button className="transparent-green-btn" onClick={openEdit}>
-        Edit Movie
-      </button>
-
       <section>
         <article>
           <img src="/img/placeholder-poster.jpeg" alt={movieDetails?.title} />
@@ -74,7 +69,10 @@ const DetailPage = () => {
             ))}
           </div>
           <h2>Story</h2>
-          <p>{movieDetails?.plot}</p>
+          <p>{movieDetails?.plot}</p>{" "}
+          <button className="transparent-green-btn" onClick={openEdit}>
+            Edit Movie
+          </button>
         </article>
       </section>
 
