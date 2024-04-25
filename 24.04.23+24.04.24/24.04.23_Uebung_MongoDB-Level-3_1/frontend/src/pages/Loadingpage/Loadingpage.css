@@ -10,7 +10,7 @@
 .star {
   animation: 2.5s rotate infinite linear;
 
-  margin: 30% auto;
+  margin: 30vh auto;
   width: 150px;
   height: 150px;
 }

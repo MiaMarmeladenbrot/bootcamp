@@ -10,7 +10,7 @@
 - Post/Delete favorites -> FavoritesPage ✅
 - Post/Delete favorites -> DetailPage
 
-- fav-Status auf HomePage behalten?
+- fav auf DetailPage einbauen
 - validation einbauen
 - backend-url als env speichern, api Ordner
   export const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://localhost:3007"

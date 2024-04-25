@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   FetchFavoritesContext,
   FetchMoviesContext,
@@ -12,6 +12,11 @@ const LoadingPage = () => {
   const { favoriteMovies, setFavoriteMovies } = useContext(
     FetchFavoritesContext
   );
+
+  // # Test, um Favs auch auf Home zu zeigen
+  // console.log(movies);
+  // console.log(favoriteMovies);
+  // const [movieId, setMovieId] = useState();
 
   // Loading abwarten
   useEffect(() => {
@@ -35,6 +40,14 @@ const LoadingPage = () => {
       .then((data) => setFavoriteMovies(data))
       .catch((err) => console.log(err));
   }, []);
+
+  // # Test, um Favs auch auf Home zu zeigen
+  // useEffect(() => {
+  //   if (favoriteMovies.length > 0) {
+  //     setMovieId(favoriteMovies.map((movie) => movie._id));
+  //   }
+  // }, []);
+  // console.log(movieId);
 
   return (
     <main className="loadingpage">

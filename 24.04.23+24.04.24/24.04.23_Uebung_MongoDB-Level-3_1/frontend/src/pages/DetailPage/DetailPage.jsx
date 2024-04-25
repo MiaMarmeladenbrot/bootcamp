@@ -3,8 +3,15 @@ import EditMovie from "../../components/EditMovie/EditMovie";
 import { FetchMoviesContext } from "../../context/Context";
 import { useParams } from "react-router-dom";
 import "./DetailPage.css";
+import FavToggle from "../../components/FavToggle/FavToggle";
 
 const DetailPage = () => {
+  // # Fav-Herz anzeigen:
+  // - globalen Fav Kontext importieren
+  // - movieDetails._id abgleichen mit movieIds aus fav-Kontext
+  // - falls Match, state fav === true => gefülltes Herz zeigen
+  // - falls kein Match, state fav === false => gerahmtes Herz zeigen
+
   // state to show or hide edit movie form
   const [showEditForm, setShowEditForm] = useState(false);
 
@@ -51,6 +58,8 @@ const DetailPage = () => {
       <p>
         {movieDetails?.year} | {movieDetails?.director}
       </p>
+      {/* //# Fav-Herz hinzufügen mit angezeigtem Zustand */}
+      {/* <FavToggle singleMovie={movieDetails} fav={fav} /> */}
 
       <section>
         <article>

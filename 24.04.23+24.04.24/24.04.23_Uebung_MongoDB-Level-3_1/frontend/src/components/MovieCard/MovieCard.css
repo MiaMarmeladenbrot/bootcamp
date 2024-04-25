@@ -1,0 +1,21 @@
+.moviecard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.moviecard a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  max-width: 12rem;
+  margin-bottom: 15px;
+}
+
+.moviecard p {
+  color: var(--secondary-font-color);
+  text-align: center;
+}

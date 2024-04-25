@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FetchFavoritesContext } from "../../context/Context";
+import "./MovieCard.css";
+import FavToggle from "../FavToggle/FavToggle";
 
 const MovieCard = ({ singleMovie, favorite }) => {
   // global state for all fetched favorites
@@ -8,45 +10,44 @@ const MovieCard = ({ singleMovie, favorite }) => {
     FetchFavoritesContext
   );
 
-  //# richtige Herzen auf HomePage anzeigen funzt noch nicht
   // state to toggle add/remove-Buttons
   const [fav, setFav] = useState(favorite || false);
 
-  // add a movie to favorites
-  const addMovie = () => {
-    const newFavorite = {
-      movieId: singleMovie._id,
-    };
+  // // add a movie to favorites
+  // const addMovie = () => {
+  //   const newFavorite = {
+  //     movieId: singleMovie._id,
+  //   };
 
-    fetch(`http://localhost:3007/api/v1/movies/${singleMovie._id}/favorites`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newFavorite),
-    })
-      .then((res) => res.json())
-      .then((data) => setFavoriteMovies([...favoriteMovies, singleMovie]))
-      .catch((err) => console.log(err));
+  //   fetch(`http://localhost:3007/api/v1/movies/${singleMovie._id}/favorites`, {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify(newFavorite),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => setFavoriteMovies([...favoriteMovies, singleMovie]))
+  //     .catch((err) => console.log(err));
 
-    setFav(true);
-  };
+  //   setFav(true);
+  // };
 
-  // delete a movie from favorites and show updated favorites
-  const removeMovie = () => {
-    fetch(`http://localhost:3007/api/v1/favorites/${singleMovie._id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((deletedId) =>
-        setFavoriteMovies(
-          favoriteMovies.filter(
-            (deletedId) => singleMovie._id !== deletedId._id
-          )
-        )
-      )
-      .catch((err) => console.log(err));
+  // // delete a movie from favorites and show updated favorites
+  // const removeMovie = () => {
+  //   fetch(`http://localhost:3007/api/v1/favorites/${singleMovie._id}`, {
+  //     method: "DELETE",
+  //   })
+  //     .then((res) => res.json())
+  //     .then((deletedId) =>
+  //       setFavoriteMovies(
+  //         favoriteMovies.filter(
+  //           (deletedId) => singleMovie._id !== deletedId._id
+  //         )
+  //       )
+  //     )
+  //     .catch((err) => console.log(err));
 
-    setFav(false);
-  };
+  //   setFav(false);
+  // };
 
   console.log(fav);
 
@@ -57,14 +58,10 @@ const MovieCard = ({ singleMovie, favorite }) => {
         <p>{singleMovie.title}</p>
         <p>{singleMovie.director}</p>
       </Link>
-      {/* <button className="yellow-btn" onClick={removeMovie}>
-        Remove from Favorites
-      </button>
-      <button className="transparent-green-btn" onClick={addMovie}>
-        Add to Favorites
-      </button> */}
 
-      {fav ? (
+      <FavToggle fav={fav} singleMovie={singleMovie} setFav={setFav} />
+
+      {/* {fav ? (
         <svg
           onClick={removeMovie}
           xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +89,7 @@ const MovieCard = ({ singleMovie, favorite }) => {
             stroke="#2a9d8f"
           />
         </svg>
-      )}
+      )} */}
     </div>
   );
 };

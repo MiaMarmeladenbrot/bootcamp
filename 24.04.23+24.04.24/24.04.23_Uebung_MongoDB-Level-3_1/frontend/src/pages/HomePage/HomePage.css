@@ -8,6 +8,9 @@
   background-color: var(--main-bg-color);
 }
 
+.render-movies svg {
+  display: none;
+}
 .render-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -17,17 +20,7 @@
   margin-bottom: 4rem;
 }
 
-.render-container div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  max-width: 20rem;
-}
-
-.render-container div p {
-  color: var(--secondary-font-color);
-}
-
+/* load more button */
 .render-movies button {
   display: block;
   margin: 0 auto;

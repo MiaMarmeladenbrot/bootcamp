@@ -7,7 +7,8 @@ const Nav = () => {
     <header>
       <nav>
         <div>
-          <NavLink to="/" onClick="window.location.reload(true)">
+          <NavLink to="/">
+            {/* onClick="window.location.reload(true)" */}
             <h2>MMDb</h2>
           </NavLink>
           <NavLink to="/">
