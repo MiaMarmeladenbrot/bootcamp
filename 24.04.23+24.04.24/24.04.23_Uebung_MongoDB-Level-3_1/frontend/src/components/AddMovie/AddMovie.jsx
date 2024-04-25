@@ -76,7 +76,7 @@ const AddMovie = () => {
         type="text"
         value={genre}
         onChange={(e) => setGenre(e.target.value)}
-        placeholder="Genre"
+        placeholder="Genres (separated by comma)"
       />
 
       <input

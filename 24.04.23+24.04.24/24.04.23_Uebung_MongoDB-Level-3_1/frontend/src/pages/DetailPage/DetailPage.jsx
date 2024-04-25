@@ -21,6 +21,7 @@ const DetailPage = () => {
   const [genre, setGenre] = useState("");
   const [rating, setRating] = useState("");
   const [plot, setPlot] = useState("");
+  const [runtime, setRuntime] = useState("");
 
   // get movie id of detailpage
   const { movieId } = useParams();
@@ -38,14 +39,11 @@ const DetailPage = () => {
     setTitle(movieDetails.title);
     setYear(movieDetails.year);
     setDirector(movieDetails.director);
-    setGenre(movieDetails.genre);
+    setGenre(movieDetails.genres.join(", "));
     setRating(movieDetails.imdb.rating);
     setPlot(movieDetails.plot);
+    setRuntime(movieDetails.runtime);
   };
-
-  console.log(title);
-  console.log(year);
-  console.log(plot);
 
   return (
     <main className="detailpage">
@@ -98,6 +96,8 @@ const DetailPage = () => {
         setRating={setRating}
         plot={plot}
         setPlot={setPlot}
+        runtime={runtime}
+        setRuntime={setRuntime}
       />
     </main>
   );

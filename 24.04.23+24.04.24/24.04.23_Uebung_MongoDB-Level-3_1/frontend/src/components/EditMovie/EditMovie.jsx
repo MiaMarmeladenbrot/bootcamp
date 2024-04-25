@@ -19,6 +19,8 @@ const EditMovie = ({
   setRating,
   plot,
   setPlot,
+  runtime,
+  setRuntime,
 }) => {
   // global context for fetched movies
   const { movies, setMovies } = useContext(FetchMoviesContext);
@@ -32,9 +34,10 @@ const EditMovie = ({
       title,
       year,
       director,
-      // genre,
-      rating,
+      genres: genre.split(","),
+      imdb: { rating },
       plot,
+      runtime,
     };
 
     fetch(`http://localhost:3007/api/v1/movies/${movieDetails._id}`, {
@@ -71,16 +74,23 @@ const EditMovie = ({
         onChange={(e) => setDirector(e.target.value)}
       />
 
-      {/* <input
+      <input
         type="text"
         value={genre}
         onChange={(e) => setGenre(e.target.value)}
-      /> */}
+      />
 
       <input
         type="number"
         value={rating}
         onChange={(e) => setRating(e.target.value)}
+      />
+
+      <input
+        type="number"
+        value={runtime}
+        onChange={(e) => setRuntime(e.target.value)}
+        placeholder="Duration (in minutes)"
       />
 
       <textarea
