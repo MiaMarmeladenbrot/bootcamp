@@ -71,6 +71,15 @@ const findByMovie = (movieId) => {
   );
 };
 
+// * Funktion, um einen favorisierten Film zu finden
+const getOneFavorite = (movieId) => {
+  const idAsObjectId = ObjectId.createFromHexString(movieId);
+
+  return getDb().then((db) =>
+    db.collection("favorites").findOne({ movieId: idAsObjectId })
+  );
+};
+
 export const FavoritesDAO = {
   // findFavorites,
   showFavoriteMovies,
@@ -78,4 +87,5 @@ export const FavoritesDAO = {
   addToFavorites,
   deleteFromFavorites,
   findByMovie,
+  getOneFavorite,
 };

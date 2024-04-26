@@ -122,5 +122,18 @@ app.delete("/api/v1/favorites/:movieId", (req, res) => {
     });
 });
 
+// GET /api/v1/favorites/:movieId
+// einen Favoriten nach movieId finden
+app.get("/api/v1/favorites/:movieId", (req, res) => {
+  const movieId = req.params.movieId;
+
+  FavoritesDAO.getOneFavorite(movieId)
+    .then((favorite) => res.json(favorite || {}))
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({ err, message: "Favorite does not exist" });
+    });
+});
+
 const PORT = 3007;
 app.listen(PORT, () => console.log("Server listening at port", PORT));

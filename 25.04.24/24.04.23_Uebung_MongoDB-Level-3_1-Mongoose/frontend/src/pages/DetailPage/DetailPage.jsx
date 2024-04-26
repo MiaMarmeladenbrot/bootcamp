@@ -9,12 +9,9 @@ import "./DetailPage.css";
 import FavToggle from "../../components/FavToggle/FavToggle";
 
 const DetailPage = () => {
-  // # Fav-Herz anzeigen:
-  // - globalen Fav Kontext importieren
-  // - movieDetails._id abgleichen mit movieIds aus fav-Kontext
-  // - falls Match, state fav === true => gefülltes Herz zeigen
-  // - falls kein Match, state fav === false => gerahmtes Herz zeigen
+  // global context for fetched favorite movies
   const { favoriteMovies } = useContext(FetchFavoritesContext);
+
   // state to toggle add/remove-Buttons
   const [fav, setFav] = useState(false);
 
@@ -43,7 +40,22 @@ const DetailPage = () => {
   useEffect(() => {
     const find = movies?.find((singleMovie) => singleMovie._id == movieId);
     setMovieDetails(find);
-  }, [movies]);
+  }, []);
+
+  // fetch one favorite for this id
+  // if there is one, set fav to true to use the filled heart svg with remove-function
+  // if there's not, set fav to false to use the bordered heart svg with add-function
+  useEffect(() => {
+    fetch(`http://localhost:3007/api/v1/favorites/${movieId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.movieId === movieId) {
+          setFav(true);
+        } else {
+          setFav(false);
+        }
+      });
+  }, []);
 
   // show edit form and fill input fields with data from movieDetails
   const openEdit = (e) => {
@@ -57,14 +69,6 @@ const DetailPage = () => {
     setPlot(movieDetails.plot);
     setRuntime(movieDetails.runtime);
   };
-
-  // # fav-state ändert sich für alle movies, nicht in Abhängigkeit von der movieId - warum?
-  useEffect(() => {
-    const movieInFavorite = favoriteMovies?.find(
-      (favorite) => favorite.movieId === movieDetails._id
-    );
-    movieInFavorite ? setFav(true) : setFav(false);
-  }, [favoriteMovies]);
 
   return (
     <main className="detailpage">

@@ -16,9 +16,7 @@ export function getDb() {
   return client.connect().then((connectedClient) => {
     const dbName = "video";
     const db = connectedClient.db(dbName);
-    // console.log("client", client);
-    // console.log("DB:", db);
+
     return db;
   });
 }
-// getDb();
