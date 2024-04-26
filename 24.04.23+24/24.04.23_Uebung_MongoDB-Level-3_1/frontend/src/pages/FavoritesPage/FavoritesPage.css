@@ -1,0 +1,27 @@
+.favorites {
+  background-color: var(--main-bg-color);
+  padding: 10rem 4rem;
+
+  min-height: 100lvh;
+}
+
+.render-favorites {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 3rem;
+
+
+  margin-bottom: 4rem;
+}
+
+.render-favorites div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 20rem;
+}
+
+.render-favorites div p {
+  color: var(--secondary-font-color);
+}

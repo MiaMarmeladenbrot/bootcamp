@@ -1,0 +1,12 @@
+.searchbar {
+  display: flex;
+  gap: 0.625rem;
+}
+
+/* input global in index.css */
+
+/* placeholder global in index.css */
+
+.searchbar a {
+  color: var(--secondary-font-color);
+}

@@ -1,0 +1,10 @@
+.editMovie {
+  display: none;
+}
+
+.editMovie.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}

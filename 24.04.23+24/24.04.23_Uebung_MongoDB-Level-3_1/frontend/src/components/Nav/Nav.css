@@ -1,0 +1,30 @@
+header {
+  position: fixed;
+  width: 100vw;
+  background-color: #264653;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding: 2rem 4rem;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+nav h2 {
+  font-size: 2rem;
+  margin-bottom: unset;
+}
+
+nav h2,
+nav a {
+  color: var(--secondary-color);
+}
