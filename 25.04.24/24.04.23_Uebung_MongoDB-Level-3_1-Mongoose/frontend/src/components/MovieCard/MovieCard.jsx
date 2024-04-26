@@ -13,44 +13,6 @@ const MovieCard = ({ singleMovie, favorite }) => {
   // state to toggle add/remove-Buttons
   const [fav, setFav] = useState(favorite || false);
 
-  // // add a movie to favorites
-  // const addMovie = () => {
-  //   const newFavorite = {
-  //     movieId: singleMovie._id,
-  //   };
-
-  //   fetch(`http://localhost:3007/api/v1/movies/${singleMovie._id}/favorites`, {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(newFavorite),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => setFavoriteMovies([...favoriteMovies, singleMovie]))
-  //     .catch((err) => console.log(err));
-
-  //   setFav(true);
-  // };
-
-  // // delete a movie from favorites and show updated favorites
-  // const removeMovie = () => {
-  //   fetch(`http://localhost:3007/api/v1/favorites/${singleMovie._id}`, {
-  //     method: "DELETE",
-  //   })
-  //     .then((res) => res.json())
-  //     .then((deletedId) =>
-  //       setFavoriteMovies(
-  //         favoriteMovies.filter(
-  //           (deletedId) => singleMovie._id !== deletedId._id
-  //         )
-  //       )
-  //     )
-  //     .catch((err) => console.log(err));
-
-  //   setFav(false);
-  // };
-
-  console.log(fav);
-
   return (
     <div className="moviecard">
       <Link to={`/movies/${singleMovie._id}`}>

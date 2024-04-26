@@ -1,6 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import EditMovie from "../../components/EditMovie/EditMovie";
-import { FetchMoviesContext } from "../../context/Context";
+import {
+  FetchFavoritesContext,
+  FetchMoviesContext,
+} from "../../context/Context";
 import { useParams } from "react-router-dom";
 import "./DetailPage.css";
 import FavToggle from "../../components/FavToggle/FavToggle";
@@ -11,6 +14,9 @@ const DetailPage = () => {
   // - movieDetails._id abgleichen mit movieIds aus fav-Kontext
   // - falls Match, state fav === true => gefülltes Herz zeigen
   // - falls kein Match, state fav === false => gerahmtes Herz zeigen
+  const { favoriteMovies } = useContext(FetchFavoritesContext);
+  // state to toggle add/remove-Buttons
+  const [fav, setFav] = useState(false);
 
   // state to show or hide edit movie form
   const [showEditForm, setShowEditForm] = useState(false);
@@ -52,14 +58,21 @@ const DetailPage = () => {
     setRuntime(movieDetails.runtime);
   };
 
+  // # fav-state ändert sich für alle movies, nicht in Abhängigkeit von der movieId - warum?
+  useEffect(() => {
+    const movieInFavorite = favoriteMovies?.find(
+      (favorite) => favorite.movieId === movieDetails._id
+    );
+    movieInFavorite ? setFav(true) : setFav(false);
+  }, [favoriteMovies]);
+
   return (
     <main className="detailpage">
       <h2>{movieDetails?.title}</h2>
       <p>
         {movieDetails?.year} | {movieDetails?.director}
       </p>
-      {/* //# Fav-Herz hinzufügen mit angezeigtem Zustand */}
-      {/* <FavToggle singleMovie={movieDetails} fav={fav} /> */}
+      <FavToggle singleMovie={movieDetails} fav={fav} setFav={setFav} />
 
       <section>
         <article>
