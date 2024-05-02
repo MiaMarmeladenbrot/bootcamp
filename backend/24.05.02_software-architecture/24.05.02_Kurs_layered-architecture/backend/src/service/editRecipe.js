@@ -8,6 +8,7 @@ export function editRecipe(recipeId, recipeUpdateInfo) {
   );
 }
 
+// * Ausführlichere Alternative:
 // export function editRecipe(recipeId, recipeUpdateInfo) {
 //   const updateRecipe = () =>
 //     Rezept.findByIdAndUpdate(
