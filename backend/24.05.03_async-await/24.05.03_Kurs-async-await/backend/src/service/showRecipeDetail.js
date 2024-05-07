@@ -8,6 +8,7 @@ export async function showRecipeDetail(recipeId) {
   return { ...foundRecipe.toObject(), ratings };
 }
 
+// * Schreibweise mit Promise.all
 // export async function showRecipeDetail(recipeId) {
 //   const [foundRecipe, ratings] = await Promise.all([
 //     Rezept.findById(recipeId),
