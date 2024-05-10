@@ -20,6 +20,8 @@ export async function addUser({ name, surname, email, password }) {
     passwordSalt,
   });
 
+  // await sendVerificationEmail(user)
+
   // const userToView = {
   //   name: user.name,
   //   surname: user.surname,
