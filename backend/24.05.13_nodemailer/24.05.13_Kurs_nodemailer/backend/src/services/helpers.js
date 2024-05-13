@@ -1,8 +1,9 @@
 export function userToView(user) {
   return {
     _id: user._id,
-    name: user.name,
-    surname: user.surname,
+    firstname: user.firstname,
+    lastname: user.lastname,
     email: user.email,
+    bio: user.bio,
   };
 }
