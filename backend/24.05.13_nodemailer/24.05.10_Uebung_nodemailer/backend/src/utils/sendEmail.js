@@ -31,24 +31,6 @@ export async function sendEmail({ to, subject, text }) {
 
     // 1. email transporter erstellen mit nodemailer
     // darin sind alle für den transport der email wichtigen Informationen enthalten
-    // # stattdessen das hier: https://stackoverflow.com/questions/59188483/error-invalid-login-535-5-7-8-username-and-password-not-accepted
-    // 1. Open this link https://myaccount.google.com/security
-    // 2. Enable 2 factor authentication
-    // 3. Click on App passwords just below the 2 factor authentication // Update after July 2023-> There is a change in the 3rd step, i.e. App passwords can be found at the bottom of the page of the Two-Factor Authentication screen.
-    // 4. From Select App options select Other and write your app name it could be any name like mycustomapp
-    // 5. It will generate you the password copy the password from the popup and use the following code.
-    // 6. Use that copied password in the auth password section of the code
-    // const transporter = nodemailer.createTransport({
-    //   service: 'gmail',
-    //   host: 'smtp.gmail.com',
-    //   port: 465,
-    //   secure: true,
-    //   auth: {
-    //    user: 'your gmail here',
-    //    pass: 'your app generated password here',
-    //   },
-    //  });
-
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
