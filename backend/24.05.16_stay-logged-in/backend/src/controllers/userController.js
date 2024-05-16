@@ -50,7 +50,7 @@ async function postVerifyUserEmailCtrl(req, res) {
 }
 
 // ! AccessToken refreshen
-// doJwtAuth wird vorher im Router aufgerufen
+// doJwtAuth und validateRefreshTokenInCookieSession werden vorher im Router aufgerufen
 async function postRefreshToken(req, res) {
   try {
     // rufen den refresh-Service auf mit der authentifizierten User-Id
@@ -79,7 +79,7 @@ async function deleteUserCtrl(req, res) {
 // ! Logout => refrehToken auf 0 setzen
 async function logoutUser(req, res) {
   req.session.refreshToken = null;
-  res.json(200).json({ result: { message: "You are now logged out." } });
+  res.status(200).json({ result: { message: "You are now logged out" } });
 }
 
 export const UserController = {

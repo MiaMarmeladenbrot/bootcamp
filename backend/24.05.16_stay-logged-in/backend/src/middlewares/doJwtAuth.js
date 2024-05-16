@@ -4,41 +4,42 @@ import dotenv from "dotenv";
 dotenv.config();
 const jwtSecret = process.env.JWT_SECRET;
 
-export async function doJwtAuth(req, res, next) {
-  const _invalidAuth = (message) =>
-    res.status(401).json({ message: message || "Invalid auth" }); // 401 Status Unauthorized!
+// Funktion für die invalid-Authorization-message:
+const _invalidAuth = (res, message) =>
+  res.status(401).json({ message: message || "Invalid auth" });
 
-  if (!req.headers.authorization) return _invalidAuth();
+// Funktion, um den User zu authentifizieren:
+export async function doJwtAuth(req, res, next) {
+  if (!req.headers.authorization) return _invalidAuth(res);
 
   // req.headers.authorization ====> "Bearer eyJhbGciOiJIUzI1Ni..."
   const [authType, tokenString] = req.headers.authorization.split(" ");
-  if (authType !== "Bearer" || !tokenString) return _invalidAuth();
+  if (authType !== "Bearer" || !tokenString) return _invalidAuth(res);
 
-  try {
-    const verifiedTokenClaims = jwt.verify(tokenString, jwtSecret); // Claims sind Behauptungen der TokenPayload
-
-    req.authenticatedUserId = verifiedTokenClaims.sub; // verifiedTokenClaims = TokenPayload = { sub, type, iat, exp }
-    req.verifiedTokenClaims = verifiedTokenClaims; // extra für refresh token
-    next();
-  } catch (err) {
-    console.log(err);
-    return _invalidAuth();
-  }
+  const verifyToken = createTokenVerifier(req, res, next);
+  verifyToken(tokenString, "access");
 }
 
+// Funktion, um den refreshToken des users zu validieren:
+// damit können wir dann einen neuen accessToken generieren und an den Client zurücksenden
 export async function validateRefreshTokenInCookieSession(req, res, next) {
-  const _invalidAuth = (message) =>
-    res.status(401).json({ message: message || "Invalid auth" }); // 401 Status Unauthorized!
+  if (!req.session.refreshToken) return _invalidAuth(res);
+  const verifyToken = createTokenVerifier(req, res, next);
+  verifyToken(req.session.refreshToken, "refresh");
+}
 
-  if (!req.session.refreshToken) return _invalidAuth();
-
-  try {
-    const verifiedTokenClaims = jwt.verify(req.session.refreshToken, jwtSecret); // Claims sind Behauptungen der TokenPayload
-    if (verifiedTokenClaims.type !== "Refresh") return _invalidAuth();
-    req.authenticatedUserId = verifiedTokenClaims.sub; // verifiedTokenClaims = TokenPayload = { sub, type, iat, exp }
-    next();
-  } catch (err) {
-    console.log(err);
-    return _invalidAuth();
-  }
+// Funktion, um try/catch der Validierungen auszulagern
+// nur wenn User authentifiziert ist bzw. refreshToken validiert ist, soll next() aufgerufen werden
+function createTokenVerifier(req, res, next) {
+  return function (token, expectType = "access") {
+    try {
+      const verifiedTokenClaims = jwt.verify(token, jwtSecret);
+      if (verifiedTokenClaims.type !== expectType) return _invalidAuth(res);
+      req.authenticatedUserId = verifiedTokenClaims.sub;
+      next();
+    } catch (err) {
+      console.log(err);
+      return _invalidAuth(res);
+    }
+  };
 }
