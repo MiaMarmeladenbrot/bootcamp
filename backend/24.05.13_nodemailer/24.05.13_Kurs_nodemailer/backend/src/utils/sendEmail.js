@@ -17,10 +17,12 @@ const oAuth2Client = new google.auth.OAuth2(
   CLIENT_SECRET,
   REDIRECT_URI
 );
-// refresh token aufrufen (1 Monat gültig):
+
+// google refresh token aufrufen (1 Monat gültig)
+// unseren eigenen Refresh-Token setzen, den wir an Google senden, um einen accessToken zu bekommen, mit dem wir dann die Email versenden können
 oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
 
-// Funktion, um die Email tatsächlich auch zuversenden
+// Funktion, um die Email tatsächlich auch zu versenden
 // die braucht 3 Infos: Empfänger, Betreff, Textinhalt
 // bekommt sie beim Auruf in registerUser.js mit dem dort gefundenen user
 export async function sendEmail({ to, subject, text }) {

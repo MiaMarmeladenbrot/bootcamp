@@ -7,9 +7,9 @@ import {
 
 export const usersRouter = express
   .Router()
-  .post("/login", UserController.postLoginUserCtrl)
   .post("/register", UserController.postRegisterUserCtrl)
   .post("/verifyEmail", UserController.postVerifyUserEmailCtrl)
+  .post("/login", UserController.postLoginUserCtrl)
 
   // ! Refresh Token Endpunkt
   // hier wird Authentifizieruung durchgeführt, dann wird der Controller aufgerufen, in dem der token-Typ überprüft wird und der refresh-Service aufgerufen wird

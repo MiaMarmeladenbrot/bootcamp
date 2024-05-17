@@ -34,13 +34,13 @@ export async function registerUser({ firstname, lastname, email, password }) {
 async function sendEmailVerification(user) {
   return sendEmail({
     to: user.email,
-    subject: "Welcomne to Todo.io",
+    subject: "Welcome to quizzio",
     text: `Hi ${user.firstname},
-welcome to Todo.io 🎉!!!
+welcome to quizzio 🎉!!!
 Please enter the below six-digit-code verify your account to be able to login.
 ${user.sixDigitCode}
 See you on the other side :)
-- Ahmed from Todo.io
+- Mia from quizzio
 `,
   });
 }

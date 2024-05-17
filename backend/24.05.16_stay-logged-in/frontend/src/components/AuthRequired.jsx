@@ -12,9 +12,10 @@ import { backendUrl } from "../api/api";
 
 const AuthRequired = ({ token, setToken, children }) => {
   //* state, der bestimmt, ob neugeladen werden muss oder nicht
-  // während er lädt (auf false ist), prüft er, ob es bereits einen Token gibt
+  // solange es noch kein Token gesetzt ist, ist der loading-state auf true gesetzt
+  // sobald es einen gibt, wird er auf false gesetzt
   // falls es einen Token gibt, müssen wir nicht neu laden, weil wir bereits eingeloggt sind
-  // falls wir keinen Token haben, müssen wir neu laden, um einen Token zu bekommen
+  // falls wir keinen Token haben, müssen wir neu laden, um einen Token zu bekommen -> Weiterleitung zum Login
   const [loading, setLoading] = useState(token ? false : true);
 
   //* Variable, um den aktuellen timeout für den Refresh zu speichern
