@@ -12,8 +12,9 @@ export async function refreshToken(authenticatedUserId) {
   if (!user) throw new Error("User not found");
 
   if (!user.isEmailVerified) throw new Error("User is not verified");
-  //   if (user.isBlocked) throw new Error("User blocked");
+  // und weitere Abfragen dieser Art würden dann hier stattfinden, zB
+  // if (user.isBlocked) throw new Error("User blocked");
 
   const newAccessToken = createToken(user, "access");
-  return { newAccessToken };
+  return { newAccessToken }; //--> in Objekt-Klammern, damit wir es als Objekt ansprechen können
 }

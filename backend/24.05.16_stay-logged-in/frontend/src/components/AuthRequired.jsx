@@ -10,12 +10,14 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { backendUrl } from "../api/api";
 
+// erhält die props von app.jsx: token, setToken und alles, was zwischen den open- und closing-Tag von AuthRequired steht (=> alle children)
 const AuthRequired = ({ token, setToken, children }) => {
   //* state, der bestimmt, ob neugeladen werden muss oder nicht
-  // solange es noch kein Token gesetzt ist, ist der loading-state auf true gesetzt
-  // sobald es einen gibt, wird er auf false gesetzt
-  // falls es einen Token gibt, müssen wir nicht neu laden, weil wir bereits eingeloggt sind
-  // falls wir keinen Token haben, müssen wir neu laden, um einen Token zu bekommen -> Weiterleitung zum Login
+  // solange noch kein accessToken gesetzt ist, ist der loading-state auf true gesetzt und zeigt "... loading ..." an
+  // sobald es einen accessToken gibt, wird loading-state auf false gesetzt
+  // denn falls es einen accessToken gibt, müssen wir nicht neu laden, weil wir bereits eingeloggt sind
+  // falls wir keinen accessToken und keinen refreshToken haben, müssen wir uns einloggen -> Weiterleitung zum Login "überschreibt" quasi dann den loading-state
+  // bzw. der loading-state = true wird nur so lange angezeigt wie useEffect/fetch passiert - sobald beim fetch rauskommt, dass weder access- noch refreshToken gültig sind, navigieren wir dann weiter zu Login
   const [loading, setLoading] = useState(token ? false : true);
 
   //* Variable, um den aktuellen timeout für den Refresh zu speichern
@@ -23,7 +25,7 @@ const AuthRequired = ({ token, setToken, children }) => {
   // gibt ein Objekt namens current zurück
   // in dieser Variable will ich also den jeweils aktuellen Wert für den Timeout speichern, ohne dass sich dadurch etwas am Rendern ändert
   const timeoutRef = useRef(null);
-  console.log(timeoutRef);
+  // console.log(timeoutRef);
 
   const navigate = useNavigate();
 
@@ -124,12 +126,12 @@ const AuthRequired = ({ token, setToken, children }) => {
       return nextFetchAfter * 1000;
     }
 
-    //# bevor die Funktion beendet wird, muss der aktuelle Timeout-Wert wieder gecleared werden
-    // ansonsten vermehren sich die Timeouts proportional?
+    //* bevor die Funktion beendet wird, muss der jeweils aktuelle Timeout-Wert wieder gecleared werden
+    // ansonsten vermehren sich die Timeouts exponentiell
     return () => clearTimeout(timeoutRef.current);
   }, []);
 
-  // * während loading auf true steht, soll nur "loading" angezeigt werden
+  // * während loading auf true steht, also noch kein accessToken vorhanden ist, soll nur "loading" angezeigt werden
   if (loading) return "... loading ...";
   // * sobald loading auf false steht (also ein accessToken und ein refreshToken vorliegen), sollen die Kinder von AuthRequired angezeigt werden, also zB das Dashboard
   else return <>{children}</>;

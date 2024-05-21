@@ -16,6 +16,7 @@ const LoginPage = ({ setToken, setUser }) => {
     const res = await fetch(`${backendUrl}/api/v1/users/login`, {
       headers: { "Content-Type": "application/json" },
       method: "POST",
+      // Signal ans Backend, gehört zu den cookie-session, dorthin wird vom Backend der accessToken gespeichert
       credentials: "include",
       body: JSON.stringify({ email, password }),
     });

@@ -15,8 +15,8 @@ export const usersRouter = express
   // hier wird Authentifizieruung durchgeführt, dann wird der Controller aufgerufen, in dem der token-Typ überprüft wird und der refresh-Service aufgerufen wird
   .post(
     "/refresh-token",
-    // zuerst wird der User authentifiziert
-    doJwtAuth,
+    // // zuerst wird der User authentifiziert
+    // doJwtAuth,
     // dann wird der Refresh Token validiert
     validateRefreshTokenInCookieSession,
     // erst wenn beide Validierungen true sind, wird der Controller aufgerufen

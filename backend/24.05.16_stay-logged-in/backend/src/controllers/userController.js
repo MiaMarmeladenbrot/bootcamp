@@ -25,6 +25,7 @@ async function postLoginUserCtrl(req, res) {
     // der RefreshToken wird nicht länger nur mit der response mitgesendet
     // sondern auch mit cookie-session in die http only cookies
     // so ist der RefreshToken am sichersten und geschützten
+    // ist solange existent, bis er abläuft oder wir ihn löschen (logout)
     if (result.tokens.refreshToken) {
       req.session.refreshToken = result.tokens.refreshToken;
     }
