@@ -7,11 +7,11 @@ const jwtSecret = process.env.JWT_SECRET;
 
 // default-params: vergeben so einen default-Wert für den Parameter an letzter Stelle in den Klammern, der hier entweder der beim Funktionsaufruf übergebene Wert ist oder in allen anderen Fällen autoamtisch "access"
 export function createToken(user, tokenType = "access") {
-  const issuedAtSeconds = Math.ceil(Date.now() / 1000);
+  const issuedAtMilliseconds = Math.ceil(Date.now() / 1000);
   const tokenPayload = {
     sub: user._id,
     type: tokenType,
-    iat: issuedAtSeconds,
+    iat: issuedAtMilliseconds,
     // exp: issuedAtSeconds + 1 * 60 * 60 // 1h (manuell)
   };
 
@@ -24,7 +24,7 @@ export function createToken(user, tokenType = "access") {
     {
       access: "10min",
       refresh: "2w",
-      // verifEmail: "1h" ...
+      // verifyEmail: "1h" ...
     }[tokenType] || "10min"; // bracket notation, mit der wir dynamisch auf das Feld im Objekt zugreifen können: je nachdem welcher Value hinter tokenType aus Parameter-Klammern liegt, wird der entsprechende Key ausgewählt und der darin gespeicherte Value verwendet
 
   const token = jwt.sign(tokenPayload, jwtSecret, { expiresIn });
