@@ -16,7 +16,7 @@ import AuthRequired from "./components/AuthRequired";
 import { backendUrl } from "./api/api";
 
 function App() {
-  const [token, setToken] = useState(); // current access token, der, der gerade aktuell ist
+  const [token, setToken] = useState(); // current access token; der, der gerade aktuell ist
   const [user, setUser] = useState();
   const [refreshToken, setRefreshToken] = useState();
 
