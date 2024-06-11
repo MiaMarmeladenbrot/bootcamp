@@ -80,10 +80,15 @@ async function deleteUserCtrl(req, res) {
 }
 
 // ! Logout => refreshToken auf 0 setzen
-async function logoutUser(req, res) {
+async function postLogoutUserCtrl(req, res) {
   req.session.refreshToken = null;
   res.status(200).json({ result: { message: "You are now logged out" } });
 }
+// Alternative zum Logout:
+// async function postLogoutUserCtrl(req, res) {
+//   res.clearCookie("refreshToken");
+//   res.status(200).json({ result: { message: "You are now logged out" } });
+// }
 
 export const UserController = {
   postRegisterUserCtrl,
@@ -91,5 +96,5 @@ export const UserController = {
   postVerifyUserEmailCtrl,
   postRefreshToken,
   deleteUserCtrl,
-  logoutUser,
+  postLogoutUserCtrl,
 };

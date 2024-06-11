@@ -22,4 +22,5 @@ export const usersRouter = express
     // erst wenn beide Validierungen true sind, wird der Controller aufgerufen
     UserController.postRefreshToken
   )
-  .delete("/:userId", doJwtAuth, UserController.deleteUserCtrl);
+  .delete("/:userId", doJwtAuth, UserController.deleteUserCtrl)
+  .post("/logout", UserController.postLogoutUserCtrl);
